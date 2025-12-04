@@ -20,6 +20,19 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Optimización de rendimiento */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Mejora de rendimiento para animaciones */
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
 .titulosResponsive{
   @apply text-5xl font-bold mb-4 p-8 text-justify;
 }
@@ -132,7 +145,199 @@ bg-fuchsia-950
 
 }
 
+/* Botón flotante con efectos */
+.button-float {
+  --black-700: hsla(250 60% 20% / 0.9);
+  --border_radius: 9999px;
+  --transtion: 0.3s ease-in-out;
+  --offset: 2px;
 
+  cursor: pointer;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  transform-origin: center;
+
+  padding: 1rem 2rem;
+  background-color: transparent;
+
+  border: none;
+  border-radius: var(--border_radius);
+  transform: scale(calc(1 + (var(--active, 0) * 0.1)));
+
+  transition: transform var(--transtion);
+  box-shadow: 0 8px 24px rgba(82, 22, 224, 0.453);
+}
+
+.button-float::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, hsl(260, 80%, 45%) 0%, hsl(280, 85%, 55%) 100%);
+
+  border-radius: var(--border_radius);
+  box-shadow: inset 0 1px 2px hsl(0, 0%, 100% / 0.3), 
+    inset 0 -2px 4px hsl(0, 0%, 0% / 0.2),
+    0px 6px 16px -4px hsla(260 80% 45% / calc(0.4 + var(--active, 0) * 0.3)),
+    0 0 0 calc(var(--active, 0) * 0.5rem) hsl(260 90% 65% / 0.6);
+
+  transition: all var(--transtion);
+  z-index: 0;
+}
+
+.button-float::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 100%;
+  height: 100%;
+  background-color: hsla(260 90% 70% / 0.85);
+  background-image: radial-gradient(
+      at 51% 89%,
+      rgb(82, 27, 155) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 100% 100%, rgb(155, 83, 191) 0px, transparent 60%),
+    radial-gradient(at 22% 91%, rgb(113, 44, 183) 0px, transparent 60%);
+  background-position: top;
+
+  opacity: var(--active, 0);
+  border-radius: var(--border_radius);
+  transition: opacity var(--transtion);
+  z-index: 2;
+}
+
+.button-float:is(:hover, :focus-visible) {
+  --active: 1;
+}
+
+.button-float:active {
+  transform: scale(1);
+}
+
+.button-float .dots_border {
+  --size_border: calc(100% + 2px);
+
+  overflow: hidden;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: var(--size_border);
+  height: var(--size_border);
+  background-color: transparent;
+
+  border-radius: var(--border_radius);
+  z-index: -10;
+}
+
+.button-float .dots_border::before {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: left;
+
+  width: 100%;
+  height: 2rem;
+  background: linear-gradient(90deg, hsl(260, 90%, 70%), hsl(280, 95%, 80%));
+
+  mask: linear-gradient(transparent 0%, white 120%);
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.button-float .logo-float {
+  position: relative;
+  z-index: 10;
+  border-radius: 50%;
+}
+
+.button-float .sparkle {
+  position: relative;
+  z-index: 10;
+
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.button-float .sparkle .path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+
+  transform-origin: center;
+
+  color: hsl(0, 0%, 100%);
+}
+
+.button-float:is(:hover, :focus) .sparkle .path {
+  animation: path 1.5s linear 0.5s infinite;
+}
+
+.button-float .sparkle .path:nth-child(1) {
+  --scale_path_1: 1.2;
+}
+.button-float .sparkle .path:nth-child(2) {
+  --scale_path_2: 1.2;
+}
+.button-float .sparkle .path:nth-child(3) {
+  --scale_path_3: 1.2;
+}
+
+@keyframes path {
+  0%,
+  34%,
+  71%,
+  100% {
+    transform: scale(1);
+  }
+  17% {
+    transform: scale(var(--scale_path_1, 1));
+  }
+  49% {
+    transform: scale(var(--scale_path_2, 1));
+  }
+  83% {
+    transform: scale(var(--scale_path_3, 1));
+  }
+}
+
+.button-float .text_button {
+  position: relative;
+  z-index: 10;
+
+  background-image: linear-gradient(
+    90deg,
+    hsla(0 0% 100% / 1) 0%,
+    hsla(0 0% 100% / var(--active, 0)) 120%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  font-size: 1rem;
+  font-weight: 600;
+  color: transparent;
+}
 
 
 

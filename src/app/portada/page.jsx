@@ -21,7 +21,7 @@ export default function Portada() {
       </div>
 
       {/* Contenido */}
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 pb-12 sm:pt-24 sm:pb-16">
+      <div className="mt-24 relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 pb-12 sm:pt-24 sm:pb-16">
         {/* Cinta/top badge */}
         <div className="flex justify-center sm:justify-start">
           <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-[13px] font-semibold text-white/80 backdrop-blur">
@@ -34,20 +34,20 @@ export default function Portada() {
           {/* Columna de texto */}
           <div className="lg:col-span-7">
             <h1
-              className={`${michroma.className} antialiased flex items-center gap-3 text-[clamp(2rem,8.5vw,6rem)] md:text-[clamp(3rem,6.5vw,7rem)] lg:text-[clamp(3.5rem,5vw,8rem)] leading-[1.05] tracking-tight text-white drop-shadow-[0_0_12px_rgba(255,255,255,0.9)] max-w-full whitespace-nowrap`}
+              className={`${michroma.className} mt-5 antialiased flex items-center gap-3 text-[clamp(2rem,8.5vw,6rem)] md:text-[clamp(3rem,6.5vw,7rem)] lg:text-[clamp(3.5rem,5vw,8rem)] leading-[1.05] tracking-tight text-white drop-shadow-[0_0_12px_rgba(255,255,255,0.9)] max-w-full whitespace-nowrap`}
               style={{ fontFamily: michroma.style.fontFamily }}
             >
               NativeCode
             </h1>
 
-            <p className="mt-5 text-pretty text-base sm:text-lg md:text-xl text-white/80 max-w-2xl">
+            <p className="mt-8 text-pretty text-justify text-base sm:text-lg md:text-xl text-white/80 max-w-2xl">
               Creamos páginas web y aplicaciones a medida que ayudan a empresas y profesionales a 
               simplificar su trabajo, atraer más clientes y mostrar una imagen moderna y confiable. 
               Soluciones digitales pensadas para optimizar tus procesos y hacer crecer tu negocio.
             </p>
 
             {/* CTA */}
-            <div className="mt-8 flex flex-wrap items-center gap-4">
+            <div className="mt-32 flex flex-wrap items-center gap-4">
               <a
                 href="https://wa.me/56966091038?text=Quiero%20cotizar%20proyecto"
                 target="_blank"
@@ -78,7 +78,7 @@ export default function Portada() {
           <div className="lg:col-span-5">
 
                         {/* Indicadores de confianza / highlights */}
-            <div className="mt-8 grid grid-cols-2 gap-4 max-w-xl sm:grid-cols-3 sm:ml-20 justify-items-center">
+            <div className="mt-0 grid grid-cols-2 gap-4 max-w-xl sm:grid-cols-3 sm:ml-20 justify-items-center">
   <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-center hover:scale-105 transition-transform h-28 w-full flex flex-col justify-center">
     <p className="text-2xl font-extrabold text-cyan-400">99.9%</p>
     <p className="text-xs text-white/80">Disponibilidad garantizada</p>

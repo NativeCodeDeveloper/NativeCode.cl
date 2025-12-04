@@ -2,7 +2,7 @@
 import * as React from 'react';
 import { Michroma } from "next/font/google";
 import Image from "next/image";
-import Link from 'next/link';
+import { Link } from 'next-view-transitions';
 const michroma = Michroma({ subsets: ["latin"], weight: "400", display: "swap" });
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -53,7 +53,7 @@ function ResponsiveAppBar() {
         <Box style={{ color: 'white' }}>
           <Toolbar disableGutters sx={{ minHeight: { xs: 64, md: 72 }, gap: { xs: 1, md: 2 } }}>
             <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center', gap: 1.5, mr: 2 }}>
-              <a
+              <Link
                 href="/"
                 style={{ textDecoration: 'none' }}
               >
@@ -64,7 +64,7 @@ function ResponsiveAppBar() {
                   height={44}
                   style={{ objectFit: 'contain', borderRadius: '12px', padding: '4px' }}
                 />
-              </a>
+              </Link>
               <Typography
                 className={michroma.className}
                 component="a"
