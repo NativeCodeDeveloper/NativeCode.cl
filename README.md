@@ -1,14 +1,14 @@
 
 ## PAGINA WEB / LANDING PAGE PRO NativeCode ##
 
-1️⃣ Hero / Portada llamativa
+1️ Hero / Portada llamativa
 	•	Título fuerte: “Creamos sitios web modernos y rápidos”
 	•	Subtítulo: “Diseño profesional, tecnología de vanguardia y resultados medibles”
 	•	Un CTA (Call to Action): “Pide tu cotización” o “Agenda una reunión”
 	•	Imagen o ilustración (puede ser una animación, un mockup, etc.)
 
 
- 2️⃣ Sección de Servicios
+ 2️ Sección de Servicios
 Aquí explicas qué tipo de sitios web haces.
 	•	Landing Pages → para campañas y productos.
 	•	Sitios Corporativos → empresas y profesionales.
@@ -16,25 +16,25 @@ Aquí explicas qué tipo de sitios web haces.
 	•	Desarrollo a medida → sistemas personalizados.
 
 
-📌 Cada servicio debería tener:
+ Cada servicio debería tener:
 	•	Un icono/imagen.
 	•	Un título claro.
 	•	Una breve descripción (2–3 líneas).
 	•	Opción de “Ver más” o “Solicitar info”.
 
 
-3️⃣ Beneficios / Por qué elegirnos
+3️ Beneficios / Por qué elegirnos
 
 Diferénciate de la competencia:
-	•	🔥 Velocidad y rendimiento (optimización SEO, Core Web Vitals)
-	•	🎨 Diseño moderno y responsive
-	•	⚙️ Tecnologías actualizadas (Next.js, React, Tailwind, etc.)
-	•	🔒 Seguridad y buenas prácticas
-	•	📞 Soporte y mantenimiento
+	•	Velocidad y rendimiento (optimización SEO, Core Web Vitals)
+	•	Diseño moderno y responsive
+	•	Tecnologías actualizadas (Next.js, React, Tailwind, etc.)
+	•	Seguridad y buenas prácticas
+	•	Soporte y mantenimiento
 
 
 
-4️⃣ Proceso de trabajo
+4️ Proceso de trabajo
 
 Explica cómo trabajas en pasos simples:
 	1.	Reunión inicial → Entendemos tu necesidad.
@@ -48,27 +48,27 @@ Explica cómo trabajas en pasos simples:
 
  5️⃣ Portafolio (Proyectos recientes)
 
-📌 Si ya tienes trabajos previos, muestra ejemplos:
+ Si ya tienes trabajos previos, muestra ejemplos:
 	•	Capturas de pantalla / mockups.
 	•	Links a las páginas en vivo.
 	•	Breve descripción del proyecto y resultados.
 
 
 
-7️⃣ Sección de precios (opcional)
+7️ Sección de precios (opcional)
 	•	Puedes mostrar planes básicos (ej. “Landing desde $XXX”) o invitar a solicitar cotización personalizada.
 
 
 
-✅ 8️⃣ Llamado a la acción (CTA) final
+ 8️ Llamado a la acción (CTA) final
 	•	Un bloque fuerte para que el visitante actúe:
-👉 “¿Listo para tu nuevo sitio web?”
-👉 Botón grande: Contactar ahora / Solicitar presupuesto.
+ “¿Listo para tu nuevo sitio web?”
+ Botón grande: Contactar ahora / Solicitar presupuesto.
 
 
 
 
-✅ 9️⃣ Footer
+ 9️ Footer
 	•	Información de contacto (email, teléfono, redes sociales).
 	•	Links importantes (inicio, servicios, portafolio, política de privacidad).
 
