@@ -1,6 +1,6 @@
 "use client"
 import React from 'react';
-import { HeroParallaxDemo } from "@/components/ui/hero-parallax";
+import PortfolioCarousel from "@/componentes/PortfolioCarousel";
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 import Image from 'next/image';
 import GlowingBorderCard from "@/components/ui/glowingbordercard";
@@ -15,7 +15,7 @@ export default function Portafolio(){
 
   return(
     <div className="bg-black">
-      <HeroParallaxDemo />
+      <PortfolioCarousel />
       
       {/* Sección "¿Por qué confiar en NativeCode?" */}
       <section className="relative bg-neutral-900/10 ring-1 ring-white/10 rounded-4xl shadow-2xl backdrop-blur-sm px-6 md:px-10 lg:px-14 py-16 md:py-24 mt-20 overflow-hidden">

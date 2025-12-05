@@ -65,7 +65,6 @@ export const MacbookScroll = ({
     <div
       ref={ref}
       className="flex min-h-[150vh] shrink-0 scale-[0.55] transform flex-col items-center justify-start py-0 [perspective:800px] sm:scale-75 md:scale-100 lg:scale-125 md:py-40"
-      style={{ willChange: 'transform' }}
     >
       <motion.h2
         style={{
@@ -73,7 +72,6 @@ export const MacbookScroll = ({
           opacity: textOpacity,
         }}
         className="mb-20 text-center text-3xl font-bold text-neutral-800 dark:text-white"
-        transition={{ type: "spring", stiffness: 100, damping: 30 }}
       >
         {title || (
           <span>

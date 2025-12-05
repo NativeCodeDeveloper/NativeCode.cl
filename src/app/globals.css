@@ -26,22 +26,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Optimización para animaciones de scroll */
-@media (prefers-reduced-motion: no-preference) {
-  :root {
-    scroll-behavior: smooth;
-  }
-  
-  /* GPU acceleration para transforms */
-  [style*="transform"],
-  [style*="translate"],
-  [style*="rotate"],
-  [style*="scale"] {
-    will-change: transform;
-    transform: translateZ(0);
-    backface-visibility: hidden;
-    perspective: 1000px;
-  }
+/* Optimización para scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Mejorar rendimiento de scroll */
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 /* Animación de gradiente para botones */

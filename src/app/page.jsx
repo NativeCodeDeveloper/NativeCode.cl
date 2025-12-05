@@ -9,24 +9,24 @@ import FadeInSection from "@/componentes/FadeInSection";
 
 // Lazy load componentes pesados con loading optimization
 const SobreNosotros = dynamic(() => import("./sobreNosotros/page"), { 
-  ssr: false,
-  loading: () => <div className="min-h-[400px] bg-transparent" />
+  ssr: true,
+  loading: () => null
 });
 const Servicios = dynamic(() => import("./servicios/page"), { 
-  ssr: false,
-  loading: () => <div className="min-h-[600px] bg-transparent" />
+  ssr: true,
+  loading: () => null
 });
 const Footer = dynamic(() => import("./Footer/page"), { 
-  ssr: false,
-  loading: () => <div className="min-h-[200px] bg-transparent" />
+  ssr: true,
+  loading: () => null
 });
 const Portafolio = dynamic(() => import("./portafolio/page"), { 
-  ssr: false,
-  loading: () => <div className="min-h-[800px] bg-transparent" />
+  ssr: true,
+  loading: () => null
 });
 const MacbookScroll = dynamic(() => import("@/componentes/MacbookScroll").then(mod => ({ default: mod.MacbookScroll })), { 
   ssr: false,
-  loading: () => <div className="min-h-screen bg-black" />
+  loading: () => null
 });
 
 export default function Home() {
@@ -40,7 +40,7 @@ export default function Home() {
 
       {/* Sección 2: MacBook Scroll Animation */}
       <FadeInSection delay={0}>
-        <div className="relative w-full min-h-screen overflow-hidden bg-black dark will-change-auto">
+        <div className="relative w-full min-h-screen overflow-hidden bg-black">
           <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black to-transparent pointer-events-none z-10"></div>
           <MacbookScroll
             src="/loginmac.png"
@@ -60,7 +60,7 @@ export default function Home() {
 
       {/* Separador con imagen de fondo - E-Commerce */}
       <motion.div 
-        className="relative overflow-hidden bg-[url('/wall3.png')] bg-cover bg-center w-full ring-1 ring-white/10 rounded-4xl shadow-2xl my-32 min-h-[600px] will-change-auto"
+        className="relative overflow-hidden bg-[url('/wall3.png')] bg-cover bg-center w-full ring-1 ring-white/10 rounded-4xl shadow-2xl my-32 min-h-[600px]"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "0px", amount: 0.1 }}
@@ -168,7 +168,7 @@ export default function Home() {
 
       {/* Sección 3: Servicios */}
       <FadeInSection delay={0}>
-        <div className="relative my-32 will-change-auto">
+        <div className="relative my-32">
           <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black to-transparent pointer-events-none z-10"></div>
           <Servicios></Servicios>
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent pointer-events-none z-10"></div>
@@ -177,7 +177,7 @@ export default function Home() {
 
       {/* Sección 4: Portafolio */}
       <FadeInSection delay={0}>
-        <div className="relative my-32 z-0 will-change-auto">
+        <div className="relative my-32 z-0">
           <Portafolio></Portafolio>
         </div>
       </FadeInSection>
@@ -215,7 +215,7 @@ export default function Home() {
 
       {/* Sección 6: Sobre Nosotros */}
       <FadeInSection delay={0}>
-        <div className="relative overflow-hidden bg-[url('/morado1.png')] bg-cover bg-center w-full ring-1 ring-white/10 rounded-4xl shadow-2xl px-6 md:px-10 lg:px-14 py-24 md:py-32 will-change-auto">
+        <div className="relative overflow-hidden bg-[url('/morado1.png')] bg-cover bg-center w-full ring-1 ring-white/10 rounded-4xl shadow-2xl px-6 md:px-10 lg:px-14 py-24 md:py-32">
         <div className="absolute inset-0 bg-black/20" aria-hidden="true"></div>
         <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black to-transparent pointer-events-none z-10"></div>
         <div className="relative">
