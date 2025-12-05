@@ -7,6 +7,88 @@ import {
   useSpring,
 } from "motion/react";
 
+export function HeroParallaxDemo() {
+  return <HeroParallax products={products} />;
+}
+
+export const products = [
+  {
+    title: "Runa Joyas",
+    link: "https://runajoyas.cl/",
+    thumbnail: "/runajoyas1.png",
+  },
+  {
+    title: "JPA Ingeniería",
+    link: "https://jpaingenieriasolutions.cl/",
+    thumbnail: "/jpaing.png",
+  },
+  {
+    title: "Medify.cl",
+    link: "https://medify.cl/",
+    thumbnail: "/medifyport.png",
+  },
+  {
+    title: "Macar-Repuestos",
+    link: "https://www.repuestosmacar.cl/",
+    thumbnail: "/macarrep.png",
+  },
+  {
+    title: "Dennis Psicología",
+    link: "https://dennispsicologia.cl/",
+    thumbnail: "/dennismed.png",
+  },
+  {
+    title: "JPA Ingeniería - Proyecto 3",
+    link: "https://jpaingenieriasolutions.cl/",
+    thumbnail: "/jpa.png",
+  },
+  {
+    title: "Runa Joyas - Proyecto 4",
+    link: "https://runajoyas.cl/",
+    thumbnail: "/runa.png",
+  },
+  {
+    title: "JPA Ingeniería - Proyecto 4",
+    link: "https://jpaingenieriasolutions.cl/",
+    thumbnail: "/jpa.png",
+  },
+  {
+    title: "Runa Joyas - Proyecto 5",
+    link: "https://runajoyas.cl/",
+    thumbnail: "/runa.png",
+  },
+  {
+    title: "JPA Ingeniería - Proyecto 5",
+    link: "https://jpaingenieriasolutions.cl/",
+    thumbnail: "/jpa.png",
+  },
+  {
+    title: "Runa Joyas - Proyecto 6",
+    link: "https://runajoyas.cl/",
+    thumbnail: "/runa.png",
+  },
+  {
+    title: "JPA Ingeniería - Proyecto 6",
+    link: "https://jpaingenieriasolutions.cl/",
+    thumbnail: "/jpa.png",
+  },
+  {
+    title: "Runa Joyas - Proyecto 7",
+    link: "https://runajoyas.cl/",
+    thumbnail: "/runa.png",
+  },
+  {
+    title: "JPA Ingeniería - Proyecto 7",
+    link: "https://jpaingenieriasolutions.cl/",
+    thumbnail: "/jpa.png",
+  },
+  {
+    title: "Runa Joyas - Proyecto 8",
+    link: "https://runajoyas.cl/",
+    thumbnail: "/runa.png",
+  },
+];
+
 export const HeroParallax = ({ products }) => {
   const firstRow = products.slice(0, 5);
   const secondRow = products.slice(5, 10);
@@ -46,7 +128,7 @@ export const HeroParallax = ({ products }) => {
   return (
     <div
       ref={ref}
-      className="h-[300vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="h-[320vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
       style={{ willChange: 'transform' }}
     >
       <Header />
@@ -97,7 +179,7 @@ export const Header = () => {
       <h1 className="text-2xl md:text-7xl font-bold text-white">
         Nuestro <br /> Portafolio
       </h1>
-      <p className="max-w-2xl text-base md:text-xl mt-8 text-gray-300">
+      <p className="max-w-2xl text-justify text-base md:text-xl mt-8 text-gray-300">
         Algunos de los proyectos que ya confían en <span className="text-indigo-400 font-semibold">NativeCode</span>.
         Combinamos diseño y performance para entregar productos digitales sólidos, escalables y fáciles de usar.
       </p>
@@ -116,7 +198,7 @@ export const ProductCard = ({ product, translate }) => {
         y: -20,
       }}
       key={product.title}
-      className="group/product h-[28rem] w-[30rem] relative shrink-0"
+      className="group/product h-[26rem] w-[28rem] relative shrink-0"
     >
       <a
         href={product.link}
@@ -126,11 +208,11 @@ export const ProductCard = ({ product, translate }) => {
       >
         <img
           src={product.thumbnail}
-          height="600"
-          width="600"
+          height="700"
+          width="700"
           loading="lazy"
           decoding="async"
-          className="object-cover object-center absolute h-full w-full inset-0 rounded-2xl ring-1 ring-white/10"
+          className="object-cover object-top absolute h-full w-full inset-0 rounded-2xl ring-1 ring-white/10"
           alt={product.title}
         />
       </a>

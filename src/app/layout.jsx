@@ -4,6 +4,7 @@ import { Poppins, Dancing_Script } from "next/font/google";
 import Footer from "./Footer/page";
 import Navbar from "@/componentes/Navbar";
 import PageTransition from "@/componentes/PageTransition";
+import FloatingContactButton from "@/componentes/FloatingContactButton";
 import Script from "next/script";
 
 // ==========================
@@ -164,6 +165,7 @@ export default function RootLayout({ children }) {
             </PageTransition>
           </main>
           <Footer />
+          <FloatingContactButton />
         </div>
       </body>
     </html>

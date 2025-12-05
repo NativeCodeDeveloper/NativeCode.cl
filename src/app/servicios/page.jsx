@@ -28,7 +28,7 @@ export default function Pricing1() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-tighter w-full text-center font-regular whitespace-nowrap">
               Elige el plan ideal para tu E-commerce
             </h2>
-            <p className="mt-8 text-lg leading-relaxed tracking-tight text-muted-foreground max-w-2xl text-center">
+            <p className="mt-8 text-lg text-center text-gray-300 max-w-3xl mx-auto">
               Desde tiendas online listas para vender, hasta soluciones empresariales escalables con IA y gestión multi-sucursal. Todos nuestros planes incluyen diseño personalizado y tecnología de última generación.
             </p>
           </div>

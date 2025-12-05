@@ -1,6 +1,6 @@
 "use client"
 import React from 'react';
-import { HeroParallax } from "@/components/ui/hero-parallax";
+import { HeroParallaxDemo } from "@/components/ui/hero-parallax";
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 import Image from 'next/image';
 import GlowingBorderCard from "@/components/ui/glowingbordercard";
@@ -13,90 +13,12 @@ export default function Portafolio(){
     setMounted(true);
   }, []);
 
-  const products = React.useMemo(() => [
-    {
-      title: "Runa Joyas",
-      link: "https://runajoyas.cl/",
-      thumbnail: "/runajoyas1.png",
-    },
-    {
-      title: "JPA Ingeniería",
-      link: "https://jpaingenieriasolutions.cl/",
-      thumbnail: "/jpaing.png",
-    },
-    {
-      title: "Medify.cl",
-      link: "https://medify.cl/",
-      thumbnail: "/medifyport.png",
-    },
-    {
-      title: "Macar-Repuestos",
-      link: "https://www.repuestosmacar.cl/",
-      thumbnail: "/macarrep.png",
-    },
-    {
-      title: "Dennis Psicología",
-      link: "https://dennispsicologia.cl/",
-      thumbnail: "/dennismed.png",
-    },
-    {
-      title: "JPA Ingeniería - Proyecto 3",
-      link: "https://jpaingenieriasolutions.cl/",
-      thumbnail: "/jpa.png",
-    },
-    {
-      title: "Runa Joyas - Proyecto 4",
-      link: "https://runajoyas.cl/",
-      thumbnail: "/runa.png",
-    },
-    {
-      title: "JPA Ingeniería - Proyecto 4",
-      link: "https://jpaingenieriasolutions.cl/",
-      thumbnail: "/jpa.png",
-    },
-    {
-      title: "Runa Joyas - Proyecto 5",
-      link: "https://runajoyas.cl/",
-      thumbnail: "/runa.png",
-    },
-    {
-      title: "JPA Ingeniería - Proyecto 5",
-      link: "https://jpaingenieriasolutions.cl/",
-      thumbnail: "/jpa.png",
-    },
-    {
-      title: "Runa Joyas - Proyecto 6",
-      link: "https://runajoyas.cl/",
-      thumbnail: "/runa.png",
-    },
-    {
-      title: "JPA Ingeniería - Proyecto 6",
-      link: "https://jpaingenieriasolutions.cl/",
-      thumbnail: "/jpa.png",
-    },
-    {
-      title: "Runa Joyas - Proyecto 7",
-      link: "https://runajoyas.cl/",
-      thumbnail: "/runa.png",
-    },
-    {
-      title: "JPA Ingeniería - Proyecto 7",
-      link: "https://jpaingenieriasolutions.cl/",
-      thumbnail: "/jpa.png",
-    },
-    {
-      title: "Runa Joyas - Proyecto 8",
-      link: "https://runajoyas.cl/",
-      thumbnail: "/runa.png",
-    },
-  ], []);
-
   return(
-    <div>
-      <HeroParallax products={products} />
+    <div className="bg-black">
+      <HeroParallaxDemo />
       
       {/* Sección "¿Por qué confiar en NativeCode?" */}
-      <section className="relative bg-neutral-900/10 ring-1 ring-white/10 rounded-4xl shadow-2xl backdrop-blur-sm px-6 md:px-10 lg:px-14 py-16 md:py-24 mt-16 md:mt-24 overflow-hidden">
+      <section className="relative bg-neutral-900/10 ring-1 ring-white/10 rounded-4xl shadow-2xl backdrop-blur-sm px-6 md:px-10 lg:px-14 py-16 md:py-24 mt-20 overflow-hidden">
         <LightRays 
           count={5}
           color="rgba(168, 85, 247, 0.25)"
