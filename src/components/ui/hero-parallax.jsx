@@ -17,7 +17,7 @@ export const HeroParallax = ({ products }) => {
     offset: ["start start", "end start"],
   });
 
-  const springConfig = { stiffness: 100, damping: 30, bounce: 0 };
+  const springConfig = { stiffness: 60, damping: 25, bounce: 0 };
 
   const translateX = useSpring(
     useTransform(scrollYProgress, [0, 1], [0, 1000]),
@@ -28,25 +28,26 @@ export const HeroParallax = ({ products }) => {
     springConfig
   );
   const rotateX = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [15, 0]),
+    useTransform(scrollYProgress, [0, 0.3], [15, 0]),
     springConfig
   );
   const opacity = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [0.2, 1]),
+    useTransform(scrollYProgress, [0, 0.3], [0.2, 1]),
     springConfig
   );
   const rotateZ = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [20, 0]),
+    useTransform(scrollYProgress, [0, 0.3], [20, 0]),
     springConfig
   );
   const translateY = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
+    useTransform(scrollYProgress, [0, 0.3], [-700, 500]),
     springConfig
   );
   return (
     <div
       ref={ref}
-      className="h-[280vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="h-[300vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      style={{ willChange: 'transform' }}
     >
       <Header />
       <motion.div
@@ -109,12 +110,13 @@ export const ProductCard = ({ product, translate }) => {
     <motion.div
       style={{
         x: translate,
+        willChange: 'transform',
       }}
       whileHover={{
         y: -20,
       }}
       key={product.title}
-      className="group/product h-96 w-[30rem] relative shrink-0"
+      className="group/product h-[28rem] w-[30rem] relative shrink-0"
     >
       <a
         href={product.link}
