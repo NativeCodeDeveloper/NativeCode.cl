@@ -48,20 +48,18 @@ export const MacbookScroll = ({
   // Optimizado para mejor performance
   const scaleX = useTransform(
     scrollYProgress,
-    [0, 0.3],
-    [1.2, isMobile ? 1.2 : 1.25],
-    { clamp: true }
+    [0, 0.25],
+    [1.2, isMobile ? 1.2 : 1.25]
   );
   const scaleY = useTransform(
     scrollYProgress,
-    [0, 0.3],
-    [0.6, isMobile ? 1.2 : 1.25],
-    { clamp: true }
+    [0, 0.25],
+    [0.6, isMobile ? 1.2 : 1.25]
   );
-  const translate = useTransform(scrollYProgress, [0, 1], [0, 1500], { clamp: false });
-  const rotate = useTransform(scrollYProgress, [0.1, 0.2, 0.3], [-28, -28, 0], { clamp: true });
-  const textTransform = useTransform(scrollYProgress, [0, 0.2], [0, 100], { clamp: true });
-  const textOpacity = useTransform(scrollYProgress, [0, 0.15], [1, 0], { clamp: true });
+  const translate = useTransform(scrollYProgress, [0, 1], [0, 1500]);
+  const rotate = useTransform(scrollYProgress, [0.1, 0.25], [-28, 0]);
+  const textTransform = useTransform(scrollYProgress, [0, 0.2], [0, 100]);
+  const textOpacity = useTransform(scrollYProgress, [0, 0.1], [1, 0]);
 
   return (
     <div
