@@ -45,33 +45,37 @@ export const MacbookScroll = ({
     }
   }, []);
 
-  // Optimizado: rangos ultra cortos para scroll instantáneo
+  // Optimizado para mejor performance
   const scaleX = useTransform(
     scrollYProgress,
-    [0, 0.15],
+    [0, 0.3],
     [1.2, isMobile ? 1.2 : 1.25],
+    { clamp: true }
   );
   const scaleY = useTransform(
     scrollYProgress,
-    [0, 0.15],
+    [0, 0.3],
     [0.6, isMobile ? 1.2 : 1.25],
+    { clamp: true }
   );
-  const translate = useTransform(scrollYProgress, [0, 1], [0, 1500]);
-  const rotate = useTransform(scrollYProgress, [0.08, 0.1, 0.15], [-28, -28, 0]);
-  const textTransform = useTransform(scrollYProgress, [0, 0.1], [0, 100]);
-  const textOpacity = useTransform(scrollYProgress, [0, 0.08], [1, 0]);
+  const translate = useTransform(scrollYProgress, [0, 1], [0, 1500], { clamp: false });
+  const rotate = useTransform(scrollYProgress, [0.1, 0.2, 0.3], [-28, -28, 0], { clamp: true });
+  const textTransform = useTransform(scrollYProgress, [0, 0.2], [0, 100], { clamp: true });
+  const textOpacity = useTransform(scrollYProgress, [0, 0.15], [1, 0], { clamp: true });
 
   return (
     <div
       ref={ref}
-      className="flex min-h-[150vh] shrink-0 scale-[0.55] transform flex-col items-center justify-start py-0 [perspective:800px] sm:scale-75 md:scale-100 lg:scale-125 md:py-40 will-change-auto"
+      className="flex min-h-[150vh] shrink-0 scale-[0.55] transform flex-col items-center justify-start py-0 [perspective:800px] sm:scale-75 md:scale-100 lg:scale-125 md:py-40"
+      style={{ willChange: 'transform' }}
     >
       <motion.h2
         style={{
           translateY: textTransform,
           opacity: textOpacity,
         }}
-        className="mb-20 text-center text-3xl font-bold text-neutral-800 dark:text-white will-change-auto"
+        className="mb-20 text-center text-3xl font-bold text-neutral-800 dark:text-white"
+        transition={{ type: "spring", stiffness: 100, damping: 30 }}
       >
         {title || (
           <span>
@@ -151,13 +155,16 @@ export const Lid = ({
           translateY: translate,
           transformStyle: "preserve-3d",
           transformOrigin: "top",
+          willChange: "transform",
         }}
+        transition={{ type: "spring", stiffness: 50, damping: 25 }}
         className="absolute inset-0 h-96 w-[32rem] rounded-2xl bg-[#010101] p-2"
       >
         <div className="absolute inset-0 rounded-lg bg-[#272729]" />
         <img
           src={src}
           alt="aceternity logo"
+          loading="eager"
           className="absolute inset-0 h-full w-full rounded-lg object-cover object-center"
         />
       </motion.div>
