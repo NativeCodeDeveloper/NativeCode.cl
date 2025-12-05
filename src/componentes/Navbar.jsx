@@ -2,7 +2,7 @@
 import * as React from 'react';
 import { Michroma } from "next/font/google";
 import Image from "next/image";
-import { Link } from 'next-view-transitions';
+import Link from 'next/link';
 const michroma = Michroma({ subsets: ["latin"], weight: "400", display: "swap" });
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';

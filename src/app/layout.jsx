@@ -3,8 +3,8 @@ import "./globals.css";
 import { Poppins, Dancing_Script } from "next/font/google";
 import Footer from "./Footer/page";
 import Navbar from "@/componentes/Navbar";
+import PageTransition from "@/componentes/PageTransition";
 import Script from "next/script";
-import { ViewTransitions } from 'next-view-transitions';
 
 // ==========================
 // SEO Metadata (App Router)
@@ -116,8 +116,7 @@ const geistMono = Geist_Mono({
 
 export default function RootLayout({ children }) {
   return (
-    <ViewTransitions>
-      <html lang="es" suppressHydrationWarning>
+    <html lang="es" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -160,12 +159,13 @@ export default function RootLayout({ children }) {
         <div className="min-h-screen flex flex-col">
           <Navbar />
           <main className="flex-1">
-            {children}
+            <PageTransition>
+              {children}
+            </PageTransition>
           </main>
           <Footer />
         </div>
       </body>
     </html>
-    </ViewTransitions>
   );
 }
