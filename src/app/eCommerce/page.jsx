@@ -1,14 +1,10 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import Image from "next/image";
 import { Michroma } from "next/font/google";
 import { motion } from "framer-motion";
 import { ShoppingCart, Sparkles, Zap, Shield, TrendingUp, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
-
-// Lazy load Aurora para mejor performance
-const Aurora = dynamic(() => import("@/componentes/Aurora"), { ssr: false });
 
 const michroma = Michroma({ subsets: ["latin"], weight: "400" });
 
@@ -107,18 +103,13 @@ export default function Ecommerce() {
   ];
 
   return (
-    <div className="relative min-h-screen overflow-hidden">
-      {/* Hero Section con Aurora */}
-      <div className="relative">
-        <Aurora
-          colorStops={["#3A29FF", "#FF94B4", "#FF3232"]}
-          blend={0.5}
-          amplitude={1.0}
-          speed={0.5}
-        />
+    <div className="min-h-screen bg-black text-white overflow-hidden">
+      {/* Hero Section */}
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-cyan-900/30 via-purple-900/30 to-black">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-cyan-600/20 via-purple-600/10 to-transparent"></div>
         
         <motion.div 
-          className="container mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-32"
+          className="relative z-10 text-center px-6 max-w-5xl mx-auto"
           initial="initial"
           animate="animate"
           variants={staggerContainer}
@@ -137,10 +128,10 @@ export default function Ecommerce() {
             Soluciones de comercio electrónico diseñadas a medida para impulsar tu negocio al siguiente nivel
           </motion.p>
         </motion.div>
-      </div>
+      </section>
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 -mt-16 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
         
         {/* Intro Section */}
         <motion.div 
@@ -167,13 +158,13 @@ export default function Ecommerce() {
                 diseñada completamente a medida sin plantillas genéricas.
               </p>
               
-              <p>
-                En <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 font-semibold">NativeCode</span> desarrollamos 
+              <p className="text-justify">
+                En <span className="text-transparent text-justify bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 font-semibold">NativeCode</span> desarrollamos 
                 soluciones e-commerce únicas que se adaptan 100% a tu modelo de negocio, 
                 con código personalizado y arquitectura escalable.
               </p>
               
-              <p>
+              <p className="text-justify">
                 Integra pasarelas de pago, gestión automática de inventario, sistemas de 
                 cupones, recuperación de carritos abandonados, facturación electrónica 
                 y todo lo que tu empresa necesite para crecer sin límites.
@@ -245,7 +236,7 @@ export default function Ecommerce() {
             {plans.map((plan, index) => (
               <motion.div
                 key={index}
-                className={`relative bg-gradient-to-br ${plan.gradient} backdrop-blur-sm border ${plan.borderColor} rounded-2xl p-6 sm:p-8 transition-all duration-300 hover:shadow-2xl hover:scale-105 group`}
+                className={`relative bg-gradient-to-br ${plan.gradient} backdrop-blur-sm border ${plan.borderColor} rounded-2xl p-6 sm:p-8 transition-all duration-300 hover:shadow-2xl hover:scale-105 group flex flex-col`}
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 + index * 0.05 }}
@@ -258,31 +249,33 @@ export default function Ecommerce() {
                   </div>
                 )}
 
-                <div className="mb-6">
-                  <div className={`${plan.textColor} mb-4`}>
-                    {plan.icon}
+                <div className="flex-1">
+                  <div className="mb-6">
+                    <div className={`${plan.textColor} mb-4`}>
+                      {plan.icon}
+                    </div>
+                    <h3 className={`${michroma.className} text-2xl sm:text-3xl font-bold mb-2`}>
+                      {plan.name}
+                    </h3>
+                    <div className="flex items-baseline gap-2">
+                      <span className={`text-4xl sm:text-5xl font-bold ${plan.textColor}`}>
+                        {plan.price}
+                      </span>
+                      <span className="text-gray-400 text-sm">+ IVA</span>
+                    </div>
                   </div>
-                  <h3 className={`${michroma.className} text-2xl sm:text-3xl font-bold mb-2`}>
-                    {plan.name}
-                  </h3>
-                  <div className="flex items-baseline gap-2">
-                    <span className={`text-4xl sm:text-5xl font-bold ${plan.textColor}`}>
-                      {plan.price}
-                    </span>
-                    <span className="text-gray-400 text-sm">+ IVA</span>
-                  </div>
+
+                  <ul className="space-y-3 mb-8">
+                    {plan.features.map((feature, i) => (
+                      <li key={i} className="flex items-start gap-3 text-gray-300 text-sm">
+                        <CheckCircle2 className={`w-5 h-5 ${plan.textColor} flex-shrink-0 mt-0.5`} />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, i) => (
-                    <li key={i} className="flex items-start gap-3 text-gray-300 text-sm">
-                      <CheckCircle2 className={`w-5 h-5 ${plan.textColor} flex-shrink-0 mt-0.5`} />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <Link href="/servicios">
+                <Link href="/servicios" className="mt-auto">
                   <button className={`w-full bg-gradient-to-r ${plan.gradient} border ${plan.borderColor} text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-105`}>
                     Ver detalles
                   </button>
