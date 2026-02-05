@@ -1,0 +1,60 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-nebula-primary: #1e1e2e;
+  --color-nebula-secondary: #0f172a;
+}
+
+@utility font-sans {
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+@utility font-mono {
+  font-family: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+}
+
+@utility font-display {
+  font-family: var(--font-michroma), sans-serif;
+}
+
+:root {
+  --background: #000000;
+  --foreground: #ffffff;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+
+  .glass-panel {
+    @apply backdrop-blur-md bg-white/5 border border-white/10;
+  }
+}
+
+/* Animations */
+@keyframes nebula-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+}
+
+.animate-nebula {
+  animation: nebula-pulse 8s infinite alternate ease-in-out;
+}
