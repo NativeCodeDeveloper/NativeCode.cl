@@ -13,12 +13,8 @@ export default function Navbar() {
             <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
 
                 {/* Logo */}
-                <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-                    <img 
-                        src="/logos/ico2.png" 
-                        alt="NativeCode" 
-                        className="h-14 w-auto object-contain"
-                    />
+                <Link href="/" className="flex items-center hover:opacity-80 transition-opacity font-sawah text-xs text-zinc-400 hover:text-white uppercase tracking-widest">
+                    NATIVECODE
                 </Link>
 
                 {/* Desktop Links */}

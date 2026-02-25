@@ -39,12 +39,12 @@ export default function Hero() {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     className="w-full flex justify-center"
                 >
-                    <h1 className="mt-40 hidden md:block text-[10vw] md:text-[8rem] lg:text-[10rem] font-display font-bold tracking-tighter leading-none text-transparent bg-clip-text bg-gradient-to-r from-white/05 via-white/45 to-white/95 select-none drop-shadow-3xl">
-                        <strong>NativeCode</strong>
+                    <h1 className="mt-40 hidden md:block text-[2.8rem] lg:text-[3.4rem] font-sawah tracking-tight leading-relaxed pb-2 text-transparent bg-clip-text bg-gradient-to-r from-white/05 via-white/45 to-white/95 select-none drop-shadow-3xl">
+                        NATIVECODE
                     </h1>
 
-                    <h1 className=" block md:hidden mt-40 text-[10vw] md:text-[8rem] lg:text-[10rem] font-display font-bold tracking-tighter leading-none text-transparent bg-clip-text bg-gradient-to-r from-white/05 via-white/45 to-white/95 select-none drop-shadow-3xl">
-                        <strong>NativeCode</strong>
+                    <h1 className="block md:hidden mt-40 text-[5.5vw] font-sawah tracking-tight leading-relaxed pb-2 text-transparent bg-clip-text bg-gradient-to-r from-white/05 via-white/45 to-white/95 select-none drop-shadow-3xl">
+                        NATIVECODE
                     </h1>
                 </motion.div>
 

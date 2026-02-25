@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono, Michroma } from 'next/font/google';
+import localFont from 'next/font/local';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import './globals.css';
@@ -84,13 +85,19 @@ const michroma = Michroma({
     weight: '400',
 });
 
+const sawah = localFont({
+    src: '../public/fonts/Sawah.ttf',
+    variable: '--font-sawah',
+    display: 'swap',
+});
+
 export default function RootLayout({
     children,
 }) {
     return (
         <html lang="es" className="dark scroll-smooth">
             <body
-                className={`${geistSans.variable} ${geistMono.variable} ${michroma.variable} antialiased bg-black text-white selection:bg-white selection:text-black`}
+                className={`${geistSans.variable} ${geistMono.variable} ${michroma.variable} ${sawah.variable} antialiased bg-black text-white selection:bg-white selection:text-black`}
             >
                 <Navbar />
                 {children}

@@ -17,6 +17,10 @@
   font-family: var(--font-michroma), sans-serif;
 }
 
+@utility font-sawah {
+  font-family: var(--font-sawah), sans-serif;
+}
+
 :root {
   --background: #000000;
   --foreground: #ffffff;
