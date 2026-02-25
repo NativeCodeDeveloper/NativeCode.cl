@@ -15,7 +15,7 @@ export default function InfoSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="-mt-40 flex items-center justify-center"
+          className="-mt-40 mb-6 md:mb-0 flex items-center justify-center"
         >
           <img
             src="/logos/agendaclinica-logo.png"
