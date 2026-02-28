@@ -41,6 +41,22 @@ export default function Hero() {
                     className="w-full flex justify-center"
                 >
 
+                    <h1 className="mt-20 mb-8 text-center font-display tracking-tight leading-none text-[clamp(2.0rem,9vw,7.6rem)]">
+                        <span
+                        className="inline-block max-w-full whitespace-nowrap px-3 mt-[19vh] sm:mt-[16vh] md:mt-[10vh] lg:mt-[8vh] text-transparent bg-clip-text bg-gradient-to-r from-white/18 via-white/72 to-white/95"
+                        style={{
+                            WebkitMaskImage:
+                                "linear-gradient(to right, rgba(0,0,0,0.30) 15%, rgba(0,0,0,0.80) 50%, rgba(0,0,0,10) 95%)",
+                            maskImage:
+                                "linear-gradient(to right, rgba(0,0,0,0.30) 15%, rgba(0,0,0,0.80) 50%, rgba(0,0,0,10) 95%)",
+                        }}
+                        >
+                        <strong className="tracking-[0.09em]">NativeCode</strong>
+                        </span>
+                    </h1>
+
+                    {/* Logo 
+                    
                     <img
                         src="/logos/logoport1.png"
                         alt="logoportada"
@@ -52,7 +68,7 @@ export default function Hero() {
                                 "linear-gradient(to right, transparent 1%, rgba(0,0,0,0.4) 30%, rgba(0,0,0,1) 80%)",
                         }}
                     />
-
+                        */}
 
 
                 </motion.div>
@@ -62,12 +78,12 @@ export default function Hero() {
                     initial={{ opacity: 1 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 0.3 }}
-                    className="text-xs md:text-2xl text-zinc-300 max-w-2xl font-normal leading-relaxed tracking-wide font-display font-michroma mt-10"
+                    className="text-xs md:text-2xl text-zinc-300 max-w-2xl font-normal leading-relaxed tracking-wide font-display font-michroma mt-0 mb-8"
                 >
                     <span className='hidden md:block'>Automatización y Desarrollo de Software</span>
 
                     {/* Mobile: Minimal Startup Design */}
-                    <span className='block md:hidden text-sm text-zinc-400 font-light tracking-wider'>
+                    <span className='block md:hidden text-sm text-zinc-400 font-light tracking-wider mb-4'>
                         Automatización y Desarrollo de Software
                     </span>
                 </motion.p>
@@ -108,7 +124,7 @@ export default function Hero() {
                             </h2>
 
                             {/* Minimalist Feature Pills */}
-                            <div className="mt-0 flex flex-wrap gap-2 justify-center">
+                            <div className="mt-4 flex flex-wrap gap-2 justify-center">
                                 <span className="px-3 py-1.5 text-xs border border-zinc-700/50 rounded-full text-zinc-300 backdrop-blur-sm bg-black/30">
                                     Web Apps
                                 </span>
