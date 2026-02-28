@@ -14,7 +14,10 @@ export default function Navbar() {
 
                 {/* Logo */}
                 <Link href="/" className="flex items-center hover:opacity-80 transition-opacity font-sawah text-xs text-zinc-400 hover:text-white uppercase tracking-widest">
-                    NATIVECODE
+                    <img src="/logos/ico2.png" 
+                    alt="NativeCode Logo"
+                    className="w-14 h-14 mr-4 object-contain" />
+
                 </Link>
 
                 {/* Desktop Links */}

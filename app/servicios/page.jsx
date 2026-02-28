@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { jetbrains } from "next/font/google";
 import { ArrowUpRight, Smartphone, Globe, Database, Code2, Zap, Shield } from "lucide-react";
 
 const services = [

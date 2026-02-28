@@ -5,6 +5,10 @@
   --color-nebula-secondary: #0f172a;
 }
 
+@utility font-michroma {
+  font-family: var(--font-michroma), sans-serif;
+}
+
 @utility font-sans {
   font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }

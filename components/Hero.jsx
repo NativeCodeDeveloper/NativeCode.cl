@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import LaserFlow from "./LaserFlow";
 
+
 export default function Hero() {
     return (
         <section className="relative h-screen flex flex-col items-center justify-center overflow-hidden bg-black">
@@ -12,10 +13,10 @@ export default function Hero() {
             <div className="absolute inset-0 md:inset-5 z-10 md:top-4 -top-40">
                 <LaserFlow
                     horizontalBeamOffset={0.9}
-                    verticalBeamOffset={0.46}
+                    verticalBeamOffset={0.49}
                     color="#CF9EFF"
                     horizontalSizing={2.0}
-                    verticalSizing={2.5}
+                    verticalSizing={2.0}
                     wispDensity={1.5}
                     wispSpeed={10}
                     wispIntensity={5.1}
@@ -39,18 +40,26 @@ export default function Hero() {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     className="w-full flex justify-center"
                 >
-                    <h1 className="mt-40 hidden md:block text-[2.8rem] lg:text-[3.4rem] font-sawah tracking-tight leading-relaxed pb-2 text-transparent bg-clip-text bg-gradient-to-r from-white/05 via-white/45 to-white/95 select-none drop-shadow-3xl">
-                        NATIVECODE
-                    </h1>
 
-                    <h1 className="block md:hidden mt-40 text-[5.5vw] font-sawah tracking-tight leading-relaxed pb-2 text-transparent bg-clip-text bg-gradient-to-r from-white/05 via-white/45 to-white/95 select-none drop-shadow-3xl">
-                        NATIVECODE
-                    </h1>
+                    <img
+                        src="/logos/logoport1.png"
+                        alt="logoportada"
+                        className="mt-[28vh] sm:mt-[16vh] md:mt-[10vh] lg:mt-[8vh] w-[74vw] sm:w-[82vw] md:w-[80vw] lg:w-[64vw] xl:w-[60vw] max-w-[64rem] h-auto object-contain"
+                        style={{
+                            WebkitMaskImage:
+                                "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.8) 100%)",
+                            maskImage:
+                                "linear-gradient(to right, transparent 1%, rgba(0,0,0,0.4) 30%, rgba(0,0,0,1) 80%)",
+                        }}
+                    />
+
+
+
                 </motion.div>
 
                 {/* Subtitle */}
                 <motion.p
-                    initial={{ opacity: 0 }}
+                    initial={{ opacity: 1 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 0.3 }}
                     className="text-xs md:text-2xl text-zinc-300 max-w-2xl font-normal leading-relaxed tracking-wide font-display font-michroma mt-10"
@@ -92,14 +101,14 @@ export default function Hero() {
                         {/* Minimal Value Proposition */}
                         <div className="space-y-4">
                             <h2 className="text-xl font-light text-white/90 tracking-wide">
-                                Tu Socio en<br/>
+                                Tu Socio en<br />
                                 <span className="text-2xl font-semibold bg-gradient-to-r from-purple-300 to-white bg-clip-text text-transparent">
                                     Innovación Digital
                                 </span>
                             </h2>
 
                             {/* Minimalist Feature Pills */}
-                            <div className="flex flex-wrap gap-2 justify-center">
+                            <div className="mt-0 flex flex-wrap gap-2 justify-center">
                                 <span className="px-3 py-1.5 text-xs border border-zinc-700/50 rounded-full text-zinc-300 backdrop-blur-sm bg-black/30">
                                     Web Apps
                                 </span>
@@ -120,7 +129,7 @@ export default function Hero() {
                             href="https://wa.me/56966091038"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group w-full bg-white hover:bg-zinc-100 text-black text-sm font-medium py-2.5 px-5 rounded-full transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
+                            className="mt-4 group w-full bg-white hover:bg-zinc-100 text-black text-sm font-medium py-2.5 px-5 rounded-full transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
                         >
                             <span>Contáctanos</span>
                             <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />

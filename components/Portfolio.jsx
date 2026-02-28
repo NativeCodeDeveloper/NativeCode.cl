@@ -65,6 +65,8 @@ const projects = [
 ];
 
 export default function Portfolio() {
+    const featuredProjects = projects.slice(0, 4);
+
     return (
         <section className="bg-black py-24 border-t border-[rgba(31,34,40)] relative">
             
@@ -73,7 +75,7 @@ export default function Portfolio() {
             
             <div className="max-w-7xl mx-auto px-6 space-y-24">
 
-                {projects.map((project, index) => (
+                {featuredProjects.map((project, index) => (
                     <div key={index} className="group border-t border-[rgba(31,34,40)] pt-12 first:border-none first:pt-0">
                         <div className="grid grid-cols-1 md:grid-cols-[15%_45%_40%] gap-8 items-start">
 
@@ -118,6 +120,15 @@ export default function Portfolio() {
                         </div>
                     </div>
                 ))}
+
+                <div className="flex justify-center pt-4">
+                    <Link
+                        href="/proyectos"
+                        className="px-8 py-3 rounded-full border border-[rgba(255,255,255,0.2)] bg-white/5 text-xs font-mono text-white tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-all duration-300"
+                    >
+                        Ver más
+                    </Link>
+                </div>
 
             </div>
         </section>
