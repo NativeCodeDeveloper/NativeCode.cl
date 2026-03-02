@@ -51,8 +51,8 @@ export const metadata = {
         'Chile'
     ],
     icons: {
-        icon: '/logos/ico2.png',
-        shortcut: '/logos/ico2.png',
+        icon: '/favicon.ico',
+        shortcut: '/favicon.ico',
         apple: '/logos/ico2.png',
     },
     openGraph: {

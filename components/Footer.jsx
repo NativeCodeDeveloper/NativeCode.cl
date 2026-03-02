@@ -87,9 +87,10 @@ export default function Footer() {
                 <div className="flex flex-col gap-6 text-xs text-zinc-500 md:flex-row md:items-center md:justify-between">
                     <div className="flex flex-col items-center gap-3 text-center md:flex-row md:items-center md:gap-4 md:text-left">
                         <p>© {new Date().getFullYear()} NativeCode ®. Todos los derechos reservados.</p>
-                        <div className="flex items-center justify-center gap-4 md:justify-start">
-                            <Link href="#" className="hover:text-white transition-colors">Privacidad</Link>
-                            <Link href="#" className="hover:text-white transition-colors">Términos</Link>
+                        <div className="flex items-center justify-center gap-4 md:justify-start px-45 py-6">
+                            <Link href="/politicas#privacidad" className="hover:text-white transition-colors">Privacidad</Link>
+                            <Link href="/politicas#terminos" className="hover:text-white transition-colors">Términos</Link>
+                            <Link href="/politicas#seguridad" className="hover:text-white transition-colors">Seguridad</Link>
                         </div>
                     </div>
 
