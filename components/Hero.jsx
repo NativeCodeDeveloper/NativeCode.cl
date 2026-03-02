@@ -21,12 +21,12 @@ export default function Hero() {
                     wispSpeed={10}
                     wispIntensity={5.1}
                     flowSpeed={0.50}
-                    flowStrength={0.25}
-                    fogIntensity={0.50}
-                    fogScale={0.05}
-                    fogFallSpeed={0.5}
-                    decay={1.3}
-                    falloffStart={1.5}
+                    flowStrength={0.30}
+                    fogIntensity={1.0}
+                    fogScale={0.030}
+                    fogFallSpeed={0.3}
+                    decay={1.2}
+                    falloffStart={1.6}
                 />
             </div>
 
