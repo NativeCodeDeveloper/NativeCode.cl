@@ -4,7 +4,23 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 const projects = [
-     {
+    {
+        date: "MARZO 01, 2026",
+        title: "CLÍNICA ORTEGA & SCHMUCK",
+        description: "Arquitectura digital diseñada para clínica Dental, de alta complejidad. Centralizamos la operación clínica en un solo ecosistema donde la agenda inteligente, el historial médico y la facturación automática serán un alivio.",
+        tag: "ECOSYSTEM",
+        image: "images/ortega.png",
+        link: "https://www.ortegayschmuck.cl"
+    },
+    {
+        date: "MARZO 01, 2026",
+        title: "CLÍNICA INNOVADENT",
+        description: "Arquitectura digital diseñada para clínica Dental, transformmamos la operación y gestión de un Excel a una plataforma de agendamiento automático, automatizando a los profesionales la gestión de sus reservas.",
+        tag: "ECOSYSTEM",
+        image: "images/innovadent.png",
+        link: "https://www.innovadenttalca.cl"
+    },
+    {
         date: "FEBRERO 04, 2026",
         title: "SILUETA CHIC",
         description: "Transformamos la operación de Silueta Chic eliminando la gestión manual. Implementamos un ecosistema de agendamiento inteligente sincronizado con recordatorios automáticos y una pasarela de pagos blindada. Ahora, la clínica no solo gestiona pacientes, sino que asegura sus ingresos antes de cada cita.",
@@ -33,7 +49,7 @@ const projects = [
         title: "MEDIFY CLINIC",
         description: "Arquitectura digital para salud de alta complejidad. Centralizamos la operación clínica en un solo ecosistema donde la agenda inteligente, el historial médico y la facturación automática coexisten sin fricción, permitiendo que los profesionales se enfoquen en la medicina y no en el software",
         tag: "ECOSYSTEM",
-        image: "images/medify.png",
+        image: "images/medify1.png",
         link: "https://www.medifyclinic.cl"
     },
     {

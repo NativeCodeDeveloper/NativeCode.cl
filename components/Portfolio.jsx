@@ -3,6 +3,23 @@ import Link from 'next/link';
 import { cn } from "@/lib/utils";
 
 const projects = [
+
+    {
+        date: "MARZO 03, 2026",
+        title: "CLÍNICA ORTEGA & SCHMUCK",
+        description: "Arquitectura digital diseñada para clínica Dental, de alta complejidad. Centralizamos la operación clínica en un solo ecosistema donde la agenda inteligente, el historial médico y la facturación automática serán un alivio.",
+        tag: "ECOSYSTEM",
+        image: "images/ortega.png",
+        link: "https://www.ortegayschmuck.cl"
+    },
+    {
+        date: "MARZO 01, 2026",
+        title: "CLÍNICA INNOVADENT",
+        description: "Arquitectura digital diseñada para clínica Dental, transformmamos la operación y gestión de un Excel a una plataforma de agendamiento automático, automatizando a los profesionales la gestión de sus reservas.",
+        tag: "ECOSYSTEM",
+        image: "images/innovadent.png",
+        link: "https://www.innovadenttalca.cl"
+    },
     {
         date: "FEBRERO 04, 2026",
         title: "SILUETA CHIC",
