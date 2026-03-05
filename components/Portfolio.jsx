@@ -13,6 +13,14 @@ const projects = [
         link: "https://www.ortegayschmuck.cl"
     },
     {
+        date: "MARZO 02, 2026",
+        title: "DR. RENZO TAIS",
+        description: "Desarrollo de un sitio web profesional para el Dr. Renzo Tais, orientado a la promoción de servicios de medicina estética no invasiva. La plataforma presenta tratamientos especializados como lifting facial y corporal, reducción de arrugas y eliminación de grasa localizada.",
+        tag: "ECOSYSTEM",
+        image: "images/renzot.png",
+        link: "https://www.ortegayschmuck.cl"
+    },
+    {
         date: "MARZO 01, 2026",
         title: "CLÍNICA INNOVADENT",
         description: "Arquitectura digital diseñada para clínica Dental, transformmamos la operación y gestión de un Excel a una plataforma de agendamiento automático, automatizando a los profesionales la gestión de sus reservas.",
