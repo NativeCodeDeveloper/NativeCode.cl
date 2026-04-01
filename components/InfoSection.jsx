@@ -37,6 +37,8 @@ const projects = [
     subtitle:
       "Nuestra próxima plataforma para impulsar el control financiero de empresas en tiempo real.",
     ctaLabel: "Coming Soon",
+    logoSrc: "/logos/logoblanco.png",
+    logoAlt: "Finance by Nativecode - Financial Management Platform",
     ctaHref: null,
     status: "Coming Soon",
     infoItems: [

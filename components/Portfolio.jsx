@@ -18,7 +18,7 @@ const projects = [
         description: "Desarrollo de un sitio web profesional para el Dr. Renzo Tais orientado a la promoción de tratamientos de medicina estética y a la gestión digital de citas médicas. La plataforma integra un sistema de agendamiento online para pacientes, registro de usuarios, panel administrativo y gestión de agenda clínica, permitiendo centralizar la reserva de horas y mejorar la organización de la atención médica.",
         tag: "ECOSYSTEM",
         image: "images/renzot.png",
-        link: "https://www.ortegayschmuck.cl"
+        link: "https://www.drtais.com/"
     },
     {
         date: "MARZO 01, 2026",

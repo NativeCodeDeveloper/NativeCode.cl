@@ -34,7 +34,7 @@ const projects = [
         description: "Desarrollo de un sitio web profesional para el Dr. Renzo Tais, orientado a la promoción de servicios de medicina estética no invasiva. La plataforma presenta tratamientos especializados como lifting facial y corporal, reducción de arrugas y eliminación de grasa localizada.",
         tag: "ECOSYSTEM",
         image: "images/renzot.png",
-        link: "https://www.ortegayschmuck.cl"
+        link: "https://www.drtais.com/"
     },
     {
         date: "MARZO 03, 2026",
