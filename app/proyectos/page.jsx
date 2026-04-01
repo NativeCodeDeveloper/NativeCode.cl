@@ -5,6 +5,22 @@ import Link from "next/link";
 
 const projects = [
     {
+        date: "MARZO 30, 2026",
+        title: "Centro Essenza",
+        description: "Una platoforma diseñada y creada para el bienestar completo, con atencion profesional, cercana y personalizada en medicina, psicologia, estetica y terapias complementarias.",
+        tag: "ECOSYSTEM",
+        image: "images/esse.png",
+        link: "https://centroessenza.agendaclinicas.cl"
+    },
+    {
+        date: "MARZO 26, 2026",
+        title: "Espacio Descubrirte",
+        description: "La plataforma Espacio Descubrirte es un lugar pensado para profesionales de la salud mental que buscan boxes completamente equipados y un ambiente calido, profesional y cuidadosamente disenado para la atencion clinica.",
+        tag: "ECOSYSTEM",
+        image: "images/espc.png",
+        link: "https://www.descubrirte.cl"
+    },
+    {
         date: "MARZO 01, 2026",
         title: "CLÍNICA ORTEGA & SCHMUCK",
         description: "Arquitectura digital diseñada para clínica Dental, de alta complejidad. Centralizamos la operación clínica en un solo ecosistema donde la agenda inteligente, el historial médico y la facturación automática serán un alivio.",
