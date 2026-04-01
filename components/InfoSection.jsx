@@ -33,7 +33,7 @@ const projects = [
     ],
   },
   {
-    name: "Finance by Native Code",
+    name: "Finance by Nativecode",
     subtitle:
       "Nuestra próxima plataforma para impulsar el control financiero de empresas en tiempo real.",
     ctaLabel: "Coming Soon",

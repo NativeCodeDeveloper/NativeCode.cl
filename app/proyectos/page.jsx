@@ -6,7 +6,7 @@ import Link from "next/link";
 const projects = [
     {
         date: "MARZO 30, 2026",
-        title: "Centro Essenza",
+        title: "CENTRO ESSENZA",
         description: "Una platoforma diseñada y creada para el bienestar completo, con atencion profesional, cercana y personalizada en medicina, psicologia, estetica y terapias complementarias.",
         tag: "ECOSYSTEM",
         image: "images/esse.png",
@@ -14,7 +14,7 @@ const projects = [
     },
     {
         date: "MARZO 26, 2026",
-        title: "Espacio Descubrirte",
+        title: "ESPACIO DESCUBRIRTE",
         description: "La plataforma Espacio Descubrirte es un lugar pensado para profesionales de la salud mental que buscan boxes completamente equipados y un ambiente calido, profesional y cuidadosamente disenado para la atencion clinica.",
         tag: "ECOSYSTEM",
         image: "images/espc.png",
