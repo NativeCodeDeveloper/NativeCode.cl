@@ -8,10 +8,11 @@ const projects = [
   {
     name: "Agenda Clínica",
     subtitle: "No es un software de gestión, es el nuevo motor de tu clínica.",
-    logoSrc: "/logos/agendalogo1.png",
+    logoSrc: "/logos/logoac2.png",
     logoAlt: "AgendaClinica - Healthcare Information System",
+    logoClassName: "h-full w-full max-w-xl scale-[1.75] object-contain opacity-70",
     ctaLabel: "Ver más",
-    ctaHref: "https://agendaclinica.nativecode.cl",
+    ctaHref: "https://www.agendaclinicas.cl/",
     status: null,
     infoItems: [
       {
@@ -37,8 +38,9 @@ const projects = [
     subtitle:
       "Nuestra próxima plataforma para impulsar el control financiero de empresas en tiempo real.",
     ctaLabel: "Coming Soon",
-    logoSrc: "/logos/logoFinance.png",
+    logoSrc: "/logos/ncflogo.png",
     logoAlt: "Finance by Nativecode - Financial Management Platform",
+    logoClassName: "h-full w-full max-w-xl object-contain opacity-70",
     ctaHref: null,
     status: "Coming Soon",
     infoItems: [
@@ -82,38 +84,41 @@ export default function InfoSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: index * 0.08 }}
-            className="rounded-2xl border border-white/10 bg-white/[0.02] p-6 backdrop-blur-sm md:p-8"
+            className="flex flex-col rounded-2xl border border-white/10 bg-white/2 p-6 backdrop-blur-sm md:p-8"
           >
-            {project.logoSrc ? (
-              <div className="mb-5 flex justify-center md:mb-6">
+            {/* Logo — altura fija para alinear entre tarjetas */}
+            <div className="mb-5 flex h-20 items-center justify-center md:mb-6">
+              {project.logoSrc ? (
                 <img
                   src={project.logoSrc}
                   alt={project.logoAlt}
-                  className="h-auto w-full max-w-xl object-contain opacity-70"
+                  className={project.logoClassName}
                 />
-              </div>
-            ) : (
-              <div className="mb-5 text-center md:mb-6">
-                <p className="text-xs font-mono uppercase tracking-[0.2em] text-zinc-400">
-                  Proyecto
-                </p>
-                <h3 className="mt-2 text-2xl font-semibold text-zinc-100">{project.name}</h3>
-              </div>
-            )}
+              ) : (
+                <div className="text-center">
+                  <p className="text-xs font-mono uppercase tracking-[0.2em] text-zinc-400">
+                    Proyecto
+                  </p>
+                  <h3 className="mt-2 text-2xl font-semibold text-zinc-100">{project.name}</h3>
+                </div>
+              )}
+            </div>
 
-            {project.status ? (
-              <div className="mb-5 flex justify-center md:mb-6">
+            {/* Badge de estado — espacio reservado aunque esté vacío */}
+            <div className="mb-5 flex h-7 items-center justify-center md:mb-6">
+              {project.status ? (
                 <span className="rounded-full border border-amber-300/40 bg-amber-300/10 px-3 py-1 text-xs font-mono uppercase tracking-[0.14em] text-amber-200">
                   {project.status}
                 </span>
-              </div>
-            ) : null}
+              ) : null}
+            </div>
 
-            <p className="mx-auto max-w-3xl text-center text-[clamp(1rem,1.7vw,1.35rem)] font-light leading-snug text-zinc-300">
+            {/* Subtítulo — altura mínima para alinear el inicio de los items */}
+            <p className="mx-auto min-h-16 max-w-3xl text-center text-[clamp(1rem,1.7vw,1.35rem)] font-light leading-snug text-zinc-300">
               {project.subtitle}
             </p>
 
-            <ul className="mx-auto mt-6 space-y-3 text-left md:mt-7">
+            <ul className="mx-auto mt-6 grow space-y-3 text-left md:mt-7">
               {project.infoItems.map((item) => (
                 <li
                   key={item.title}
