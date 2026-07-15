@@ -5,18 +5,18 @@ import { cn } from "@/lib/utils";
 const features = [
     {
         title: "Automatizaciones",
-        description: "¿Sigues perdiendo horas en tareas manuales? El caos de fin de mes y los errores en Excel son síntomas de un sistema que ya te quedó pequeño. Nosotros tomamos tus procesos manuales y los transformamos en una plataforma web automática, eficiente y escalable.",
+        description: "El agendamiento manual, las planillas y las confirmaciones por WhatsApp tienen un límite. Diseñamos plataformas a medida que ordenan la operación diaria de tu clínica o centro de salud, del primer contacto con el paciente al cierre de caja.",
         icon: <Code2 size={24} />,
         link: "#services"
     },
     {
-        title: "Sistemas de E-commerce",
-        description: "Basta de sitios costosos que solo se ven bien. En un mercado saturado de \"páginas bonitas\", construimos herramientas funcionales diseñadas para vender. No adaptamos tu empresa a una plantilla; desarrollamos tecnología que se amolda a tu flujo de trabajo real.",
+        title: "Cobro y Facturación en Salud",
+        description: "Integramos pasarelas de pago directamente en tu flujo clínico: presupuestos, boletas y cobros recurrentes sin fricción para el paciente ni trabajo extra para tu equipo administrativo.",
         icon: <Globe size={24} />,
         link: "#services"
     },
     {
-        title: "Agenda Clinca",
+        title: "Agenda Clínica",
         description: "Olvida las confirmaciones manuales por WhatsApp y el desorden en los pagos. Llevamos toda tu operación a una plataforma donde los pacientes se agendan solos, el sistema les cobra y tú recibes reportes limpios a fin de mes.",
         icon: <Database size={24} />,
         link: "#services"

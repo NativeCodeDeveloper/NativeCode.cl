@@ -80,11 +80,11 @@ export default function Hero() {
                     transition={{ duration: 1, delay: 0.3 }}
                     className="text-xs md:text-2xl text-zinc-300 max-w-2xl font-normal leading-relaxed tracking-wide font-display font-michroma mt-0 mb-8"
                 >
-                    <span className='hidden md:block'>Automatización y Desarrollo de Software</span>
+                    <span className='hidden md:block'>Ingeniería de Software para Sistemas de Salud</span>
 
                     {/* Mobile: Minimal Startup Design */}
                     <span className='block md:hidden text-sm text-zinc-400 font-light tracking-wider mb-4'>
-                        Automatización y Desarrollo de Software
+                        Ingeniería de Software para Sistemas de Salud
                     </span>
                 </motion.p>
 
@@ -119,23 +119,23 @@ export default function Hero() {
                             <h2 className="text-xl font-light text-white/90 tracking-wide">
                                 Tu Socio en<br />
                                 <span className="text-2xl font-semibold bg-gradient-to-r from-purple-300 to-white bg-clip-text text-transparent">
-                                    Innovación Digital
+                                    Salud Digital
                                 </span>
                             </h2>
 
                             {/* Minimalist Feature Pills */}
                             <div className="mt-4 flex flex-wrap gap-2 justify-center">
                                 <span className="px-3 py-1.5 text-xs border border-zinc-700/50 rounded-full text-zinc-300 backdrop-blur-sm bg-black/30">
-                                    Web Apps
+                                    Agendamiento
+                                </span>
+                                <span className="px-3 py-1.5 text-xs border border-zinc-700/50 rounded-full text-zinc-300 backdrop-blur-sm bg-black/30">
+                                    Fichas Clínicas
                                 </span>
                                 <span className="px-3 py-1.5 text-xs border border-zinc-700/50 rounded-full text-zinc-300 backdrop-blur-sm bg-black/30">
                                     Automatización
                                 </span>
                                 <span className="px-3 py-1.5 text-xs border border-zinc-700/50 rounded-full text-zinc-300 backdrop-blur-sm bg-black/30">
-                                    Integración
-                                </span>
-                                <span className="px-3 py-1.5 text-xs border border-zinc-700/50 rounded-full text-zinc-300 backdrop-blur-sm bg-black/30">
-                                    Consultoría
+                                    Pagos
                                 </span>
                             </div>
                         </div>

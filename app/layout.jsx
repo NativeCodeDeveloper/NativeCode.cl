@@ -8,15 +8,23 @@ import './globals.css';
 // SEO Metadata (App Router)
 // ==========================
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://nativecode.cl';
+
 export const metadata = {
-    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
+    metadataBase: new URL(siteUrl),
     applicationName: 'NativeCode',
     title: {
-        default: 'NativeCode | Desarrollo de Software',
+        default: 'NativeCode | Software para Sistemas de Salud',
         template: '%s | NativeCode',
     },
-    description: 'Agencia de Desarrollo de Software: Automatización de empresas, páginas web profesionales y aplicaciones web a medida.',
+    description: 'Diseñamos y construimos la infraestructura de software que hace funcionar a clínicas y centros de salud: agendamiento, fichas clínicas, cobros y automatización de procesos, con estándares de ingeniería internacionales.',
     keywords: [
+        'software para clínicas',
+        'sistemas de salud digital',
+        'automatización clínica',
+        'ficha clínica digital',
+        'agendamiento médico',
+        'software para centros médicos',
         'NativeCode',
         'páginas web',
         'paginas web',
@@ -35,7 +43,6 @@ export const metadata = {
         'diseño web',
         'desarrollo web',
         'desarrollo a medida',
-        'ecommerce',
         'automatizacion',
         'wordpress',
         'shopify',
@@ -50,6 +57,23 @@ export const metadata = {
         'Antofagasta',
         'Chile'
     ],
+    authors: [{ name: 'NativeCode', url: siteUrl }],
+    creator: 'NativeCode',
+    publisher: 'NativeCode',
+    alternates: {
+        canonical: '/',
+    },
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            'max-video-preview': -1,
+            'max-image-preview': 'large',
+            'max-snippet': -1,
+        },
+    },
     icons: {
         icon: '/favicon.ico',
         shortcut: '/favicon.ico',
@@ -58,15 +82,55 @@ export const metadata = {
     openGraph: {
         type: 'website',
         locale: 'es_CL',
+        url: '/',
         siteName: 'NativeCode',
-        title: 'NativeCode | Agencia de Desarrollo de Software',
-        description: 'Agencia de Desarrollo de Software: Automatización de empresas, páginas web profesionales y aplicaciones web a medida.',
+        title: 'NativeCode | Software para Sistemas de Salud',
+        description: 'Diseñamos y construimos la infraestructura de software que hace funcionar a clínicas y centros de salud: agendamiento, fichas clínicas, cobros y automatización de procesos, con estándares de ingeniería internacionales.',
+        images: [
+            {
+                url: '/logos/logo-native-new.png',
+                width: 1024,
+                height: 1024,
+                alt: 'NativeCode — Ingeniería de Software para Sistemas de Salud',
+            },
+        ],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'NativeCode | Agencia de Desarrollo de Software',
-        description: 'Agencia de Desarrollo de Software: Automatización de empresas, páginas web profesionales y aplicaciones web a medida.',
+        title: 'NativeCode | Software para Sistemas de Salud',
+        description: 'Diseñamos y construimos la infraestructura de software que hace funcionar a clínicas y centros de salud: agendamiento, fichas clínicas, cobros y automatización de procesos, con estándares de ingeniería internacionales.',
+        images: ['/logos/logo-native-new.png'],
     },
+};
+
+export const viewport = {
+    themeColor: '#000000',
+};
+
+const organizationJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'NativeCode',
+    alternateName: 'NativeCode.cl',
+    url: siteUrl,
+    logo: `${siteUrl}/logos/logo-native-new.png`,
+    description: 'Empresa de ingeniería de software especializada en la automatización de sistemas de salud: agendamiento clínico, fichas médicas digitales y cobros para clínicas y centros de salud.',
+    email: 'ingenieria.software@nativecode.cl',
+    telephone: '+56966091038',
+    address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Santiago',
+        addressCountry: 'CL',
+    },
+    areaServed: 'CL',
+    knowsAbout: [
+        'Software para clínicas',
+        'Automatización de sistemas de salud',
+        'Agendamiento médico',
+        'Fichas clínicas digitales',
+        'Arquitectura de software',
+        'Infraestructura cloud',
+    ],
 };
 
 const geistSans = Geist({
@@ -99,6 +163,10 @@ export default function RootLayout({
             <body
                 className={`${geistSans.variable} ${geistMono.variable} ${michroma.variable} ${sawah.variable} antialiased bg-black text-white selection:bg-white selection:text-black`}
             >
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+                />
                 <Navbar />
                 {children}
                 <Footer />

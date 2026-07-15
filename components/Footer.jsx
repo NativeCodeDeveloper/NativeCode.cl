@@ -23,11 +23,11 @@ export default function Footer() {
                             className="h-22 object-contain" />
                             <div>
                                 <h3 className="text-lg font-bold tracking-tight">NativeCode</h3>
-                                <p className="text-xs text-zinc-500">Professional Development</p>
+                                <p className="text-xs text-zinc-500">Healthcare Engineering</p>
                             </div>
                         </div>
                         <p className="mb-6 max-w-xl text-sm leading-relaxed text-zinc-400 md:text-left">
-                            Soluciones digitales de alto valor para personas, clínicas y empresas que buscan excelencia tecnológica.
+                            Soluciones digitales de alto valor para clínicas, centros de salud y empresas que buscan excelencia tecnológica.
                         </p>
                         <div className="space-y-2.5">
                             <a href="mailto:ingenieria.software@nativecode.cl" className="flex items-center gap-2 text-sm text-zinc-500 transition-colors hover:text-white">
