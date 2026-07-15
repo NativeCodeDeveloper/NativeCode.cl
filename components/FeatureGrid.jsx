@@ -5,13 +5,13 @@ import { cn } from "@/lib/utils";
 const features = [
     {
         title: "Automatizaciones",
-        description: "El agendamiento manual, las planillas y las confirmaciones por WhatsApp tienen un límite. Diseñamos plataformas a medida que ordenan la operación diaria de tu clínica o centro de salud, del primer contacto con el paciente al cierre de caja.",
+        description: "El agendamiento manual, las planillas y las confirmaciones por WhatsApp tienen un límite. Llevamos la operación diaria de tu clínica o centro de salud a una plataforma ordenada, del primer contacto con el paciente al cierre de caja.",
         icon: <Code2 size={24} />,
         link: "#services"
     },
     {
-        title: "Cobro y Facturación en Salud",
-        description: "Integramos pasarelas de pago directamente en tu flujo clínico: presupuestos, boletas y cobros recurrentes sin fricción para el paciente ni trabajo extra para tu equipo administrativo.",
+        title: "Pagos en Salud",
+        description: "Integramos pasarelas de pago directamente en tu flujo clínico: presupuestos y cobros recurrentes sin fricción para el paciente ni trabajo extra para tu equipo administrativo.",
         icon: <Globe size={24} />,
         link: "#services"
     },

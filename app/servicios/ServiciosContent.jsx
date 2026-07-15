@@ -7,8 +7,8 @@ import { ArrowUpRight, Smartphone, Globe, Database, Code2, Zap, Shield } from "l
 const services = [
     {
         icon: Smartphone,
-        title: "Plataformas Clínicas a Medida",
-        description: "Sistemas de agendamiento, fichas clínicas y gestión de pacientes diseñados desde cero para la operación real de tu centro de salud — no plantillas genéricas forzadas a encajar.",
+        title: "Plataformas de Agendamiento Clínico",
+        description: "Una plataforma de gestión de salud robusta, probada en clínicas reales, que configuramos y adaptamos al flujo de trabajo de tu centro: agendamiento, fichas clínicas y gestión de pacientes en un solo lugar.",
     },
     {
         icon: Globe,
@@ -33,7 +33,7 @@ const services = [
     {
         icon: Shield,
         title: "Seguridad & Cumplimiento",
-        description: "Protección de datos clínicos con los estándares que exige la industria de la salud. Autenticación OAuth 2.0 & JWT, encriptación end-to-end, cumplimiento GDPR & HIPAA.",
+        description: "Protección de datos clínicos alineada a la Ley 19.628 de Protección de Datos Personales. Autenticación OAuth 2.0 & JWT, encriptación end-to-end, buenas prácticas de seguridad de la industria.",
     }
 ];
 
