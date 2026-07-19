@@ -10,13 +10,18 @@ export default function Navbar() {
 
     return (
         <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-black/80 backdrop-blur-md border-b border-white/5">
-            <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
 
                 {/* Logo */}
                 <Link href="/" className="flex items-center hover:opacity-80 transition-opacity font-sawah text-xs text-zinc-400 hover:text-white uppercase tracking-widest">
-                    <img src="/logos/ico2.png" 
-                    alt="NativeCode Logo"
-                    className="w-14 h-14 mr-4 object-contain" />
+                    <Image
+                        src="/logo2.png"
+                        alt="NativeCode Logo"
+                        width={160}
+                        height={72}
+                        className="w-40 h-auto object-contain"
+                        priority
+                    />
 
                 </Link>
 
@@ -50,7 +55,7 @@ export default function Navbar() {
 
             {/* Mobile Menu */}
             {isOpen && (
-                <div className="md:hidden absolute top-16 left-0 right-0 bg-black border-b border-white/10 p-6 flex flex-col gap-6 animate-in slide-in-from-top-2">
+                <div className="md:hidden absolute top-20 left-0 right-0 bg-black border-b border-white/10 p-6 flex flex-col gap-6 animate-in slide-in-from-top-2">
                     <Link href="/" className="text-zinc-400 hover:text-white font-mono uppercase tracking-widest text-sm" onClick={() => setIsOpen(false)}>Inicio</Link>
                     <Link href="/servicios" className="text-zinc-400 hover:text-white font-mono uppercase tracking-widest text-sm" onClick={() => setIsOpen(false)}>Servicios</Link>
                     <Link href="/proyectos" className="text-zinc-400 hover:text-white font-mono uppercase tracking-widest text-sm" onClick={() => setIsOpen(false)}>Proyectos</Link>

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { HiMail, HiPhone, HiLocationMarker } from "react-icons/hi";
 
 export default function Footer() {
@@ -17,14 +18,14 @@ export default function Footer() {
                     
                     {/* Company Info */}
                     <div className="min-w-0">
-                        <div className="mb-6 flex items-center gap-3">
-                            <img src="/logos/ico2.png" 
-                            alt="NativeCode" 
-                            className="h-22 object-contain" />
-                            <div>
-                                <h3 className="text-lg font-bold tracking-tight">NativeCode</h3>
-                                <p className="text-xs text-zinc-500">Healthcare Engineering</p>
-                            </div>
+                        <div className="mb-6">
+                            <Image
+                                src="/logo2.png"
+                                alt="NativeCode"
+                                width={256}
+                                height={115}
+                                className="w-64 max-w-full h-auto object-contain"
+                            />
                         </div>
                         <p className="mb-6 max-w-xl text-sm leading-relaxed text-zinc-400 md:text-left">
                             Soluciones digitales de alto valor para clínicas, centros de salud y empresas que buscan excelencia tecnológica.
