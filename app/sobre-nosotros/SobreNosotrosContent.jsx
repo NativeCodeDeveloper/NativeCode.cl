@@ -77,7 +77,7 @@ export default function SobreNosotrosContent() {
                 >
                     <h2 className="text-2xl font-display mb-8">¿Listo para construir el futuro?</h2>
                     <a
-                        href="https://wa.me/56966091038"
+                        href="https://wa.me/56932912943"
                         target="_blank"
                         className="inline-block px-12 py-4 rounded-full bg-white text-black font-mono uppercase tracking-widest text-sm hover:bg-zinc-200 transition-colors"
                     >

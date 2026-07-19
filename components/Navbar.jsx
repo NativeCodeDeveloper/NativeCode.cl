@@ -36,7 +36,7 @@ export default function Navbar() {
                 {/* CTA */}
                 <div className="hidden md:flex items-center">
                     <Link
-                        href="https://wa.me/56966091038"
+                        href="https://wa.me/56932912943"
                         target="_blank"
                         className="px-5 py-2 rounded-full border border-white/20 text-xs font-mono uppercase tracking-widest hover:bg-white hover:text-black transition-all"
                     >
@@ -60,7 +60,7 @@ export default function Navbar() {
                     <Link href="/servicios" className="text-zinc-400 hover:text-white font-mono uppercase tracking-widest text-sm" onClick={() => setIsOpen(false)}>Servicios</Link>
                     <Link href="/proyectos" className="text-zinc-400 hover:text-white font-mono uppercase tracking-widest text-sm" onClick={() => setIsOpen(false)}>Proyectos</Link>
                     <Link href="/sobre-nosotros" className="text-zinc-400 hover:text-white font-mono uppercase tracking-widest text-sm" onClick={() => setIsOpen(false)}>Sobre nosotros</Link>
-                    <Link href="https://wa.me/56966091038" target="_blank" className="w-full text-center py-3 border border-white/20 rounded-full font-mono uppercase text-xs" onClick={() => setIsOpen(false)}>
+                    <Link href="https://wa.me/56932912943" target="_blank" className="w-full text-center py-3 border border-white/20 rounded-full font-mono uppercase text-xs" onClick={() => setIsOpen(false)}>
                         Comienza tu proyecto
                     </Link>
                 </div>

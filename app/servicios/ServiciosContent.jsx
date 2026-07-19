@@ -125,7 +125,7 @@ export default function ServiciosContent() {
                         </p>
                         <div className="pt-4">
                             <a
-                                href="https://wa.me/56966091038"
+                                href="https://wa.me/56932912943"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="group inline-flex items-center gap-3 bg-white text-black px-8 py-4 rounded text-lg font-semibold hover:bg-zinc-200 transition-all"

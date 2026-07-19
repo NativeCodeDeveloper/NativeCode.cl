@@ -1,156 +1,274 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import {
+    BellRing,
+    CheckCircle2,
+    ClipboardCheck,
+    LineChart,
+    MessageCircle,
+    Microscope,
+    ShieldCheck,
+} from "lucide-react";
 import { StarsBackground } from "@/components/animate-ui/components/backgrounds/stars";
 
-const projects = [
-  {
-    name: "Agenda Clínica",
-    subtitle: "No es un software de gestión, es el nuevo motor de tu clínica.",
-    logoSrc: "/logos/logoac2.png",
-    logoAlt: "AgendaClinica - Healthcare Information System",
-    logoClassName: "h-full w-full max-w-xl scale-[1.75] object-contain opacity-70",
-    ctaLabel: "Ver más",
-    ctaHref: "https://www.agendaclinicas.cl/",
-    status: null,
-    infoItems: [
-      {
-        title: "Gestión de Flujo",
-        body: "Agenda inteligente con recordatorios automáticos para reducir el ausentismo.",
-      },
-      {
-        title: "Terminal de Pagos",
-        body: "Integración nativa con Mercado Pago para cobros de servicios y productos en tiempo real.",
-      },
-      {
-        title: "Expediente Digital",
-        body: "Fichas clínicas centralizadas y gestión de pacientes bajo estándares de seguridad profesional.",
-      },
-      {
-        title: "Inteligencia de Negocio",
-        body: "Reportes automáticos y control de caja para que sepas exactamente qué pasa con tu dinero.",
-      },
-    ],
-  },
-  {
-    name: "Medify",
-    subtitle:
-      "La red donde los profesionales de la salud son encontrados por sus pacientes.",
-    ctaLabel: "Ver más",
-    logoSrc: "/logos/logonavar.png",
-    logoAlt: "Medify - Red de Profesionales de la Salud",
-    logoClassName: "h-full w-full max-w-xl object-contain opacity-70",
-    ctaHref: "https://www.medifyclinic.cl",
-    status: null,
-    infoItems: [
-      {
-        title: "Perfil Profesional",
-        body: "Cada especialista cuenta con su propio perfil visible para pacientes en toda la red.",
-      },
-      {
-        title: "Búsqueda de Especialistas",
-        body: "Los pacientes encuentran al profesional ideal según especialidad, ubicación y disponibilidad.",
-      },
-      {
-        title: "Conexión Directa",
-        body: "Canal directo entre paciente y profesional para agendar atención sin intermediarios.",
-      },
-    ],
-  },
+const demoLeveyResults = [
+    { x: 60, y: 126 },
+    { x: 88, y: 116 },
+    { x: 116, y: 102 },
+    { x: 144, y: 134 },
+    { x: 172, y: 148 },
+    { x: 200, y: 112 },
+    { x: 228, y: 96 },
+    { x: 256, y: 80 },
+    { x: 284, y: 106 },
+    { x: 312, y: 121 },
+    { x: 340, y: 132 },
+    { x: 368, y: 159 },
+    { x: 396, y: 142 },
+    { x: 424, y: 118 },
+    { x: 452, y: 108 },
+    { x: 480, y: 88 },
+    { x: 508, y: 99 },
+    { x: 536, y: 126 },
+    { x: 564, y: 137 },
+    { x: 592, y: 115 },
+];
+
+const leveyBenefits = [
+    {
+        title: "Detección oportuna",
+        description: "Identifica desviaciones antes de validar resultados clínicos.",
+        icon: LineChart,
+    },
+    {
+        title: "Reglas de Westgard",
+        description: "Aplica criterios de control automáticamente sobre cada serie.",
+        icon: ShieldCheck,
+    },
+    {
+        title: "Alertas y acciones correctivas",
+        description: "Registra incidencias, responsables y decisiones en un mismo flujo.",
+        icon: BellRing,
+    },
+    {
+        title: "Trazabilidad completa",
+        description: "Conserva cada resultado y acción para revisiones y auditorías.",
+        icon: ClipboardCheck,
+    },
+    {
+        title: "Menos tareas manuales",
+        description: "Reemplaza cálculos, planillas y registros difíciles de controlar.",
+        icon: CheckCircle2,
+    },
+    {
+        title: "Supervisión analítica",
+        description: "Centraliza equipos, analitos, lotes y niveles de control.",
+        icon: Microscope,
+    },
 ];
 
 export default function InfoSection() {
-  return (
-    <section className="relative flex min-h-[90svh] items-center overflow-hidden border-t border-[rgba(31,34,40)] bg-black px-6 py-16 md:min-h-[94svh] md:py-20">
-      <StarsBackground
-        starColor="#e8f2ff"
-        speed={90}
-        factor={0.02}
-        pointerEvents={false}
-        className="pointer-events-none absolute inset-0 opacity-65"
-      />
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-36 left-1/2 h-[32rem] w-[45rem] -translate-x-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(93,143,255,0.22),transparent_65%)]" />
-        <div className="absolute -top-24 left-[20%] h-[24rem] w-[24rem] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(255,124,72,0.2),transparent_70%)]" />
-        <div className="absolute bottom-0 left-0 right-0 h-40 bg-linear-to-t from-black to-transparent" />
-      </div>
+    const demoPolyline = demoLeveyResults
+        .map(({ x, y }) => `${x},${y}`)
+        .join(" ");
 
-      <div className="relative z-10 mx-auto grid w-full max-w-6xl gap-6 px-2 md:grid-cols-2 md:px-0">
-        {projects.map((project, index) => (
-          <motion.article
-            key={project.name}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: index * 0.08 }}
-            className="flex flex-col rounded-2xl border border-white/10 bg-white/2 p-6 backdrop-blur-sm md:p-8"
-          >
-            {/* Logo — altura fija para alinear entre tarjetas */}
-            <div className="mb-5 flex h-20 items-center justify-center md:mb-6">
-              {project.logoSrc ? (
-                <img
-                  src={project.logoSrc}
-                  alt={project.logoAlt}
-                  className={project.logoClassName}
-                />
-              ) : (
-                <div className="text-center">
-                  <p className="text-xs font-mono uppercase tracking-[0.2em] text-zinc-400">
-                    Proyecto
-                  </p>
-                  <h3 className="mt-2 text-2xl font-semibold text-zinc-100">{project.name}</h3>
+    return (
+        <section
+            id="leveyqc"
+            className="relative overflow-hidden border-b border-white/10 bg-[#020405]"
+        >
+            <StarsBackground
+                starColor="#bdebf2"
+                speed={70}
+                factor={0.018}
+                pointerEvents={false}
+                className="pointer-events-none absolute inset-0 opacity-35"
+            />
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-linear-to-t from-black to-transparent" />
+
+            <div className="relative z-10 mx-auto w-full max-w-7xl px-6 py-20 sm:py-24 lg:py-28">
+                <div className="grid items-center gap-14 lg:grid-cols-[minmax(0,0.9fr)_minmax(34rem,1.1fr)] lg:gap-16">
+                    <motion.div
+                        initial={{ opacity: 0, y: 18 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.25 }}
+                        transition={{ duration: 0.65 }}
+                        className="max-w-2xl"
+                    >
+                        <p className="mb-5 font-mono text-xs uppercase text-cyan-300">
+                            Nuestro tercer producto
+                        </p>
+
+                        <h2 className="font-display text-4xl leading-tight text-white sm:text-5xl">
+                            LeveyQC
+                        </h2>
+
+                        <p className="mt-5 max-w-xl text-xl leading-8 text-zinc-100 sm:text-2xl">
+                            Control de calidad clínico, centralizado y trazable.
+                        </p>
+
+                        <div className="mt-7 flex max-w-xl flex-col gap-4 text-base leading-7 text-zinc-400">
+                            <p>
+                                LeveyQC es una plataforma especializada en control de calidad interno para laboratorios clínicos. Permite registrar y analizar resultados, visualizar gráficos de Levey-Jennings y aplicar reglas de Westgard desde un solo lugar.
+                            </p>
+                            <p>
+                                Centraliza equipos, analitos, lotes y niveles de control para que cada resultado, alerta y decisión permanezca completamente trazable.
+                            </p>
+                        </div>
+
+                        <p className="mt-8 max-w-xl font-display text-lg leading-8 text-white">
+                            ¿Tu laboratorio todavía depende de planillas, cálculos manuales o registros dispersos?
+                        </p>
+
+                        <a
+                            href="https://wa.me/56932912943?text=Hola%2C%20quiero%20solicitar%20una%20demostraci%C3%B3n%20de%20LeveyQC."
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="mt-9 inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-white px-6 py-3 text-sm font-medium text-black transition-colors hover:bg-zinc-200"
+                        >
+                            <MessageCircle aria-hidden="true" className="size-4" />
+                            Solicitar una demostración
+                        </a>
+                    </motion.div>
+
+                    <motion.div
+                        initial={{ opacity: 0, y: 18 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.25 }}
+                        transition={{ duration: 0.65, delay: 0.08 }}
+                        className="overflow-hidden rounded-md border border-white/10 bg-black/70 backdrop-blur-sm"
+                    >
+                        <div className="flex flex-col gap-3 border-b border-white/10 px-5 py-4 sm:flex-row sm:items-center sm:justify-between">
+                            <div>
+                                <p className="font-mono text-xs uppercase text-zinc-500">
+                                    Levey-Jennings
+                                </p>
+                                <p className="mt-1 text-sm font-medium text-zinc-100">
+                                    Glucosa · Vitros-5200 · Nivel 2
+                                </p>
+                            </div>
+                            <span className="inline-flex w-fit items-center gap-2 text-xs text-emerald-300">
+                                <span className="size-2 rounded-full bg-emerald-400" />
+                                Proceso bajo control
+                            </span>
+                        </div>
+
+                        <div className="px-3 py-5 sm:px-5">
+                            <svg
+                                viewBox="0 0 640 240"
+                                role="img"
+                                aria-label="Vista demostrativa de un gráfico de control Levey-Jennings"
+                                className="aspect-[8/3] w-full"
+                            >
+                                {[30, 60, 90, 120, 150, 180, 210].map((y, index) => (
+                                    <line
+                                        key={y}
+                                        x1="48"
+                                        x2="620"
+                                        y1={y}
+                                        y2={y}
+                                        stroke={index === 3 ? "#67e8f9" : "#27272a"}
+                                        strokeWidth={index === 3 ? "1.4" : "1"}
+                                        strokeDasharray={index === 3 ? undefined : "5 6"}
+                                    />
+                                ))}
+
+                                {[
+                                    { y: 30, label: "+3 DE" },
+                                    { y: 60, label: "+2 DE" },
+                                    { y: 90, label: "+1 DE" },
+                                    { y: 120, label: "MEDIA" },
+                                    { y: 150, label: "-1 DE" },
+                                    { y: 180, label: "-2 DE" },
+                                    { y: 210, label: "-3 DE" },
+                                ].map(({ y, label }) => (
+                                    <text
+                                        key={label}
+                                        x="4"
+                                        y={y + 4}
+                                        fill="#71717a"
+                                        fontSize="10"
+                                    >
+                                        {label}
+                                    </text>
+                                ))}
+
+                                <polyline
+                                    points={demoPolyline}
+                                    fill="none"
+                                    stroke="#67e8f9"
+                                    strokeWidth="2.5"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                />
+
+                                {demoLeveyResults.map(({ x, y }, index) => (
+                                    <circle
+                                        key={`${x}-${y}`}
+                                        cx={x}
+                                        cy={y}
+                                        r="3.5"
+                                        fill={index === 11 ? "#fbbf24" : "#ecfeff"}
+                                        stroke="#083344"
+                                        strokeWidth="1.5"
+                                    />
+                                ))}
+                            </svg>
+                        </div>
+
+                        <div className="grid grid-cols-3 border-t border-white/10">
+                            {[
+                                { label: "Media", value: "102.4" },
+                                { label: "CV", value: "2.1%" },
+                                { label: "Resultados", value: "20" },
+                            ].map(({ label, value }, index) => (
+                                <div
+                                    key={label}
+                                    className={`px-4 py-4 ${index > 0 ? "border-l border-white/10" : ""}`}
+                                >
+                                    <p className="font-mono text-xs text-zinc-600">{label}</p>
+                                    <p className="mt-1 text-sm font-medium text-zinc-200">{value}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </motion.div>
                 </div>
-              )}
+
+                <div className="mt-20 grid gap-10 border-t border-white/10 pt-12 lg:grid-cols-[0.7fr_1.3fr] lg:gap-16">
+                    <div className="max-w-md">
+                        <p className="font-display text-2xl leading-9 text-white sm:text-3xl">
+                            Más que generar gráficos.
+                        </p>
+                        <p className="mt-4 text-base leading-7 text-zinc-400">
+                            LeveyQC ayuda al laboratorio a detectar desviaciones, documentar incidencias y tomar decisiones antes de validar resultados clínicos.
+                        </p>
+                    </div>
+
+                    <div className="grid sm:grid-cols-2">
+                        {leveyBenefits.map(({ title, description, icon: Icon }, index) => (
+                            <div
+                                key={title}
+                                className={`flex gap-4 border-t border-white/10 py-5 sm:px-5 ${
+                                    index % 2 === 1 ? "sm:border-l sm:border-white/10" : ""
+                                }`}
+                            >
+                                <Icon
+                                    aria-hidden="true"
+                                    className="mt-0.5 size-5 shrink-0 text-cyan-300"
+                                    strokeWidth={1.5}
+                                />
+                                <div>
+                                    <h3 className="text-sm font-medium text-white">{title}</h3>
+                                    <p className="mt-2 text-sm leading-6 text-zinc-500">
+                                        {description}
+                                    </p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
             </div>
-
-            {/* Badge de estado — espacio reservado aunque esté vacío */}
-            <div className="mb-5 flex h-7 items-center justify-center md:mb-6">
-              {project.status ? (
-                <span className="rounded-full border border-amber-300/40 bg-amber-300/10 px-3 py-1 text-xs font-mono uppercase tracking-[0.14em] text-amber-200">
-                  {project.status}
-                </span>
-              ) : null}
-            </div>
-
-            {/* Subtítulo — altura mínima para alinear el inicio de los items */}
-            <p className="mx-auto min-h-16 max-w-3xl text-center text-[clamp(1rem,1.7vw,1.35rem)] font-light leading-snug text-zinc-300">
-              {project.subtitle}
-            </p>
-
-            <ul className="mx-auto mt-6 grow space-y-3 text-left md:mt-7">
-              {project.infoItems.map((item) => (
-                <li
-                  key={item.title}
-                  className="rounded-xl border border-white/8 bg-white/[0.02] px-4 py-2.5 text-zinc-400 md:px-5"
-                >
-                  <span className="mr-2 text-[0.85rem] text-zinc-300">●</span>
-                  <strong className="text-zinc-100">{item.title}:</strong>{" "}
-                  <span className="leading-relaxed">{item.body}</span>
-                </li>
-              ))}
-            </ul>
-
-            <div className="mt-7 flex justify-center md:mt-8">
-              {project.ctaHref ? (
-                <a
-                  href={project.ctaHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/8 px-7 py-3 text-xs font-mono uppercase tracking-[0.2em] text-white transition-all duration-300 hover:bg-white hover:text-black"
-                >
-                  <span>{project.ctaLabel}</span>
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </a>
-              ) : (
-                <span className="inline-flex cursor-not-allowed items-center gap-3 rounded-full border border-zinc-500/40 bg-zinc-700/30 px-7 py-3 text-xs font-mono uppercase tracking-[0.2em] text-zinc-300">
-                  {project.ctaLabel}
-                </span>
-              )}
-            </div>
-          </motion.article>
-        ))}
-      </div>
-    </section>
-  );
+        </section>
+    );
 }

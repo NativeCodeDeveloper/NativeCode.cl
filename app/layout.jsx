@@ -116,7 +116,7 @@ const organizationJsonLd = {
     logo: `${siteUrl}/logos/logo-native-new.png`,
     description: 'Empresa de ingeniería de software especializada en la automatización de sistemas de salud: agendamiento clínico, fichas médicas digitales y cobros para clínicas y centros de salud.',
     email: 'ingenieria.software@nativecode.cl',
-    telephone: '+56966091038',
+    telephone: '+56932912943',
     address: {
         '@type': 'PostalAddress',
         addressLocality: 'Santiago',

@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { cn } from "@/lib/utils";
+import Image from 'next/image';
 
 const projects = [
 
@@ -100,6 +100,18 @@ export default function Portfolio() {
             
             <div className="max-w-7xl mx-auto px-6 space-y-24">
 
+                <header className="max-w-4xl">
+                    <p className="font-mono text-xs uppercase text-zinc-500">
+                        Clientes que ya confían en NativeCode
+                    </p>
+                    <h2 className="mt-5 font-display text-3xl leading-tight text-white sm:text-4xl md:text-5xl">
+                        Tecnología diseñada para operar, crecer y permanecer.
+                    </h2>
+                    <p className="mt-6 max-w-2xl text-base leading-7 text-zinc-400 sm:text-lg">
+                        Clínicas y empresas que transformaron procesos complejos en soluciones digitales claras, confiables y preparadas para avanzar.
+                    </p>
+                </header>
+
                 {featuredProjects.map((project, index) => (
                     <div key={index} className="group border-t border-[rgba(31,34,40)] pt-12 first:border-none first:pt-0">
                         <div className="grid grid-cols-1 md:grid-cols-[15%_45%_40%] gap-8 items-start">
@@ -135,10 +147,12 @@ export default function Portfolio() {
 
                             {/* Image Column */}
                             <div className="relative aspect-video overflow-hidden rounded-sm group-hover:opacity-90 transition-opacity">
-                                <img
-                                    src={project.image}
+                                <Image
+                                    src={`/${project.image}`}
                                     alt={project.title}
-                                    className="w-full h-full object-cover grayscale-20 group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-105"
+                                    fill
+                                    sizes="(min-width: 768px) 40vw, calc(100vw - 48px)"
+                                    className="object-cover grayscale-20 group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-105"
                                 />
                             </div>
 

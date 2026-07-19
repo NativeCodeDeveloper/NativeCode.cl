@@ -35,9 +35,9 @@ export default function Footer() {
                                 <HiMail className="text-sm" />
                                 <span>ingenieria.software@nativecode.cl</span>
                             </a>
-                            <a href="tel:+56966091038" className="flex items-center gap-2 text-sm text-zinc-500 transition-colors hover:text-white">
+                            <a href="tel:+56932912943" className="flex items-center gap-2 text-sm text-zinc-500 transition-colors hover:text-white">
                                 <HiPhone className="text-sm" />
-                                <span>+56 9 6609 1038</span>
+                                <span>+56 9 3291 2943</span>
                             </a>
                             <div className="flex items-center gap-2 text-sm text-zinc-500">
                                 <HiLocationMarker className="text-sm" />
