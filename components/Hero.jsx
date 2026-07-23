@@ -42,10 +42,10 @@ export default function Hero() {
                     <motion.h1
                         variants={reveal}
                         transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
-                        className="max-w-[56rem] font-display text-2xl leading-[1.25] text-white drop-shadow-[0_2px_18px_rgba(0,0,0,0.75)] sm:text-3xl md:text-4xl lg:text-[2.75rem]"
+                        className="max-w-[56rem] font-display text-xl leading-[1.3] text-white drop-shadow-[0_2px_18px_rgba(0,0,0,0.75)] sm:text-2xl md:text-3xl lg:text-4xl xl:text-[2.75rem]"
                     >
                         Ingeniería de software
-                        <span className="mt-2 block text-4xl text-white sm:text-5xl md:text-6xl">
+                        <span className="mt-2 block text-3xl text-white sm:text-4xl md:text-5xl lg:text-6xl">
                             en salud
                         </span>
                     </motion.h1>

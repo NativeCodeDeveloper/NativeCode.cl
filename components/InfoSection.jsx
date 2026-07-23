@@ -100,20 +100,20 @@ export default function InfoSection() {
                             LeveyQC
                         </h2>
 
-                        <p className="mt-5 max-w-xl text-xl leading-8 text-zinc-100 sm:text-2xl">
+                        <p className="mt-5 max-w-xl text-justify text-xl leading-8 text-zinc-100 sm:text-2xl">
                             Control de calidad clínico, centralizado y trazable.
                         </p>
 
                         <div className="mt-7 flex max-w-xl flex-col gap-4 text-base leading-7 text-zinc-400">
-                            <p>
+                            <p className="text-justify">
                                 LeveyQC es una plataforma especializada en control de calidad interno para laboratorios clínicos. Permite registrar y analizar resultados, visualizar gráficos de Levey-Jennings y aplicar reglas de Westgard desde un solo lugar.
                             </p>
-                            <p>
+                            <p className="text-justify">
                                 Centraliza equipos, analitos, lotes y niveles de control para que cada resultado, alerta y decisión permanezca completamente trazable.
                             </p>
                         </div>
 
-                        <p className="mt-8 max-w-xl font-display text-lg leading-8 text-white">
+                        <p className="mt-8 max-w-xl text-justify font-display text-lg leading-8 text-white">
                             ¿Tu laboratorio todavía depende de planillas, cálculos manuales o registros dispersos?
                         </p>
 
@@ -239,7 +239,7 @@ export default function InfoSection() {
                         <p className="font-display text-2xl leading-9 text-white sm:text-3xl">
                             Más que generar gráficos.
                         </p>
-                        <p className="mt-4 text-base leading-7 text-zinc-400">
+                        <p className="mt-4 text-justify text-base leading-7 text-zinc-400">
                             LeveyQC ayuda al laboratorio a detectar desviaciones, documentar incidencias y tomar decisiones antes de validar resultados clínicos.
                         </p>
                     </div>
@@ -254,7 +254,7 @@ export default function InfoSection() {
                                 />
                                 <div>
                                     <h3 className="text-sm font-medium text-white">{title}</h3>
-                                    <p className="mt-2 text-sm leading-6 text-zinc-500">
+                                    <p className="mt-2 text-justify text-sm leading-6 text-zinc-500">
                                         {description}
                                     </p>
                                 </div>

@@ -3,6 +3,7 @@ import {
     CircleHelp,
     FilePenLine,
     MessagesSquare,
+    Sparkles,
     Zap,
 } from "lucide-react";
 import { StarsBackground } from "@/components/animate-ui/components/backgrounds/stars";
@@ -53,26 +54,33 @@ export default function CortexSection() {
                             Cortex AI
                         </h2>
 
-                        <p className="mt-5 max-w-xl text-xl leading-8 text-zinc-100 sm:text-2xl">
+                        <p className="mt-5 max-w-xl text-justify text-xl leading-8 text-zinc-100 sm:text-2xl">
                             Inteligencia clínica que entiende tu trabajo.
                         </p>
 
                         <div className="mt-7 flex max-w-xl flex-col gap-4 text-base leading-7 text-zinc-400">
-                            <p>
+                            <p className="text-justify">
                                 Cortex AI es una herramienta complementaria integrada a Agenda Clínica. Transforma instrucciones en lenguaje natural en acciones útiles, ayuda a redactar documentos, organizar información clínica y agilizar tareas administrativas.
                             </p>
-                            <p>
+                            <p className="text-justify">
                                 No funciona como un producto independiente ni como un chat aislado. Forma parte del flujo de Agenda Clínica y acompaña al profesional mientras trabaja dentro de la plataforma.
                             </p>
                         </div>
 
-                        <div className="mt-8 border-l-2 border-violet-400 pl-5">
-                            <p className="font-display text-lg leading-8 text-white sm:text-xl">
-                                Menos clics, menos tareas repetitivas y más tiempo para tus pacientes.
-                            </p>
-                            <p className="mt-3 text-sm leading-6 text-zinc-400">
-                                Cortex AI no solo conversa contigo. Trabaja dentro de Agenda Clínica.
-                            </p>
+                        <div className="mt-10 flex items-start gap-3">
+                            <Sparkles
+                                aria-hidden="true"
+                                className="mt-1 size-5 shrink-0 text-violet-300"
+                                strokeWidth={1.5}
+                            />
+                            <div>
+                                <p className="text-justify font-display text-lg leading-8 text-white sm:text-xl">
+                                    Menos clics, menos tareas repetitivas y más tiempo para tus pacientes.
+                                </p>
+                                <p className="mt-3 text-justify text-sm leading-6 text-zinc-400">
+                                    Cortex AI no solo conversa contigo. Trabaja dentro de Agenda Clínica.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -101,7 +109,7 @@ export default function CortexSection() {
                                 <h3 className="text-sm font-medium text-white">
                                     {title}
                                 </h3>
-                                <p className="mt-2 text-sm leading-6 text-zinc-500">
+                                <p className="mt-2 text-justify text-sm leading-6 text-zinc-500">
                                     {description}
                                 </p>
                             </div>
