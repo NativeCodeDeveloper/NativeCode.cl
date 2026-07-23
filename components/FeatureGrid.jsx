@@ -7,6 +7,7 @@ import {
     MessageCircle,
     UsersRound,
 } from "lucide-react";
+import { StarsBackground } from "@/components/animate-ui/components/backgrounds/stars";
 
 const benefits = [
     {
@@ -35,20 +36,23 @@ export default function FeatureGrid() {
     return (
         <section
             id="agenda-clinica"
-            className="relative border-y border-white/10 bg-black"
+            className="relative overflow-hidden border-y border-white/10 bg-black"
         >
-            <div className="mx-auto w-full max-w-7xl px-6 py-20 sm:py-24 lg:py-28">
+            <StarsBackground
+                starColor="#e8f2ff"
+                speed={70}
+                factor={0.018}
+                pointerEvents={false}
+                className="pointer-events-none absolute inset-0 opacity-35"
+            />
+            <div className="relative z-10 mx-auto w-full max-w-7xl px-6 py-20 sm:py-24 lg:py-28">
                 <div className="grid items-center gap-14 lg:grid-cols-[minmax(0,0.95fr)_minmax(32rem,1.05fr)] lg:gap-16">
                     <div className="max-w-2xl">
-                        <p className="mb-5 font-mono text-xs uppercase text-violet-300">
-                            Nuestro principal producto
-                        </p>
-
                         <h2 className="font-display text-4xl leading-tight text-white sm:text-5xl">
                             Agenda Clínica
                         </h2>
 
-                        <p className="mt-5 max-w-xl text-xl leading-8 text-zinc-200 sm:text-2xl">
+                        <p className="mt-5 max-w-xl text-xl leading-8 text-zinc-100 sm:text-2xl">
                             Gestión clínica y administrativa en una sola plataforma.
                         </p>
 
@@ -66,7 +70,7 @@ export default function FeatureGrid() {
                                 href="https://www.agendaclinicas.cl/"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-white px-6 py-3 text-sm font-medium text-black transition-colors hover:bg-zinc-200"
+                                className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-medium text-black transition-colors hover:bg-zinc-200"
                             >
                                 Conocer Agenda Clínica
                                 <ArrowUpRight
@@ -78,7 +82,7 @@ export default function FeatureGrid() {
                                 href="https://wa.me/56966091038?text=Hola%2C%20quiero%20solicitar%20una%20demostraci%C3%B3n%20de%20Agenda%20Cl%C3%ADnica."
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md border border-white/20 bg-white/5 px-6 py-3 text-sm font-medium text-white transition-colors hover:border-white/40 hover:bg-white/10"
+                                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm font-medium text-white transition-colors hover:border-white/40 hover:bg-white/10"
                             >
                                 <MessageCircle aria-hidden="true" className="size-4" />
                                 Solicitar una demostración
@@ -97,21 +101,16 @@ export default function FeatureGrid() {
                     </div>
                 </div>
 
-                <div className="mt-16 grid border-t border-white/10 sm:grid-cols-2 lg:mt-20 lg:grid-cols-4">
-                    {benefits.map(({ title, description, icon: Icon }, index) => (
-                        <div
-                            key={title}
-                            className={`flex min-h-48 flex-col justify-between gap-8 border-b border-white/10 px-1 py-7 sm:px-6 lg:border-b-0 lg:px-7 ${
-                                index % 2 === 1 ? "sm:border-l sm:border-white/10" : ""
-                            } ${index > 0 ? "lg:border-l lg:border-white/10" : "lg:border-l-0"}`}
-                        >
+                <div className="mt-20 grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:mt-24 lg:grid-cols-4">
+                    {benefits.map(({ title, description, icon: Icon }) => (
+                        <div key={title} className="flex flex-col gap-3">
                             <Icon
                                 aria-hidden="true"
-                                className="size-6 text-violet-300"
+                                className="size-5 text-zinc-400"
                                 strokeWidth={1.5}
                             />
                             <div>
-                                <h3 className="text-base font-medium text-white">
+                                <h3 className="text-sm font-medium text-white">
                                     {title}
                                 </h3>
                                 <p className="mt-2 text-sm leading-6 text-zinc-500">

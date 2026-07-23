@@ -45,7 +45,7 @@ export default function Hero() {
                         className="max-w-[56rem] font-display text-2xl leading-[1.25] text-white drop-shadow-[0_2px_18px_rgba(0,0,0,0.75)] sm:text-3xl md:text-4xl lg:text-[2.75rem]"
                     >
                         Ingeniería de software
-                        <span className="mt-2 block text-4xl text-violet-400 sm:text-5xl md:text-6xl">
+                        <span className="mt-2 block text-4xl text-white sm:text-5xl md:text-6xl">
                             en salud
                         </span>
                     </motion.h1>
@@ -55,7 +55,7 @@ export default function Hero() {
                         transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
                         className="mt-7 max-w-2xl font-michroma text-xs leading-6 text-zinc-300 drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)] sm:text-sm md:mt-8 md:text-base"
                     >
-                        Tecnología que conecta, <span className="text-violet-300">innova</span> y <span className="text-violet-300">transforma</span>
+                        Tecnología que conecta, <span className="text-white">innova</span> y <span className="text-white">transforma</span>
                     </motion.p>
                 </div>
             </motion.div>

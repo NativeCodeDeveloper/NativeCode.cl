@@ -5,6 +5,7 @@ import {
     MessagesSquare,
     Zap,
 } from "lucide-react";
+import { StarsBackground } from "@/components/animate-ui/components/backgrounds/stars";
 
 const cortexBenefits = [
     {
@@ -48,10 +49,6 @@ export default function CortexSection() {
 
                 <div className="mx-auto w-full max-w-7xl px-6 py-20 sm:py-24 lg:py-28">
                     <div className="max-w-2xl">
-                        <p className="mb-5 font-mono text-xs uppercase text-violet-300">
-                            Complemento inteligente de Agenda Clínica
-                        </p>
-
                         <h2 className="font-display text-4xl leading-tight text-white sm:text-5xl">
                             Cortex AI
                         </h2>
@@ -81,30 +78,34 @@ export default function CortexSection() {
                 </div>
             </div>
 
-            <div className="border-t border-white/10 bg-black">
+            <div className="relative overflow-hidden border-t border-white/10 bg-black">
+                <StarsBackground
+                    starColor="#e8f2ff"
+                    speed={70}
+                    factor={0.018}
+                    pointerEvents={false}
+                    className="pointer-events-none absolute inset-0 opacity-35"
+                />
                 <div
                     id="cortex-beneficios"
-                    className="mx-auto grid w-full max-w-7xl gap-3 scroll-mt-28 px-6 py-12 sm:grid-cols-2 sm:py-14 lg:grid-cols-4"
+                    className="relative z-10 mx-auto grid w-full max-w-7xl gap-x-10 gap-y-12 scroll-mt-28 px-6 py-16 sm:grid-cols-2 sm:py-20 lg:grid-cols-4"
                 >
                     {cortexBenefits.map(({ title, description, icon: Icon }) => (
-                        <article
-                            key={title}
-                            className="flex min-h-44 flex-col justify-between rounded-md border border-white/10 bg-black/65 p-5 backdrop-blur-md transition-colors hover:border-white/20 hover:bg-black/75"
-                        >
+                        <div key={title} className="flex flex-col gap-3">
                             <Icon
                                 aria-hidden="true"
-                                className="size-5 text-violet-300"
+                                className="size-5 text-zinc-400"
                                 strokeWidth={1.5}
                             />
-                            <div className="mt-6">
-                                <h3 className="text-sm font-medium leading-5 text-white">
+                            <div>
+                                <h3 className="text-sm font-medium text-white">
                                     {title}
                                 </h3>
-                                <p className="mt-2 text-xs leading-5 text-zinc-400">
+                                <p className="mt-2 text-sm leading-6 text-zinc-500">
                                     {description}
                                 </p>
                             </div>
-                        </article>
+                        </div>
                     ))}
                 </div>
             </div>

@@ -96,10 +96,6 @@ export default function InfoSection() {
                         transition={{ duration: 0.65 }}
                         className="max-w-2xl"
                     >
-                        <p className="mb-5 font-mono text-xs uppercase text-cyan-300">
-                            Nuestro tercer producto
-                        </p>
-
                         <h2 className="font-display text-4xl leading-tight text-white sm:text-5xl">
                             LeveyQC
                         </h2>
@@ -125,9 +121,12 @@ export default function InfoSection() {
                             href="https://wa.me/56932912943?text=Hola%2C%20quiero%20solicitar%20una%20demostraci%C3%B3n%20de%20LeveyQC."
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="mt-9 inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-white px-6 py-3 text-sm font-medium text-black transition-colors hover:bg-zinc-200"
+                            className="group mt-9 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-medium text-black transition-colors hover:bg-zinc-200"
                         >
-                            <MessageCircle aria-hidden="true" className="size-4" />
+                            <MessageCircle
+                                aria-hidden="true"
+                                className="size-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                            />
                             Solicitar una demostración
                         </a>
                     </motion.div>
@@ -137,9 +136,9 @@ export default function InfoSection() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, amount: 0.25 }}
                         transition={{ duration: 0.65, delay: 0.08 }}
-                        className="overflow-hidden rounded-md border border-white/10 bg-black/70 backdrop-blur-sm"
+                        className="overflow-hidden rounded-2xl border border-white/5 bg-black/70 backdrop-blur-sm"
                     >
-                        <div className="flex flex-col gap-3 border-b border-white/10 px-5 py-4 sm:flex-row sm:items-center sm:justify-between">
+                        <div className="flex flex-col gap-3 border-b border-white/5 px-5 py-4 sm:flex-row sm:items-center sm:justify-between">
                             <div>
                                 <p className="font-mono text-xs uppercase text-zinc-500">
                                     Levey-Jennings
@@ -217,7 +216,7 @@ export default function InfoSection() {
                             </svg>
                         </div>
 
-                        <div className="grid grid-cols-3 border-t border-white/10">
+                        <div className="grid grid-cols-3 border-t border-white/5">
                             {[
                                 { label: "Media", value: "102.4" },
                                 { label: "CV", value: "2.1%" },
@@ -225,7 +224,7 @@ export default function InfoSection() {
                             ].map(({ label, value }, index) => (
                                 <div
                                     key={label}
-                                    className={`px-4 py-4 ${index > 0 ? "border-l border-white/10" : ""}`}
+                                    className={`px-4 py-4 ${index > 0 ? "border-l border-white/5" : ""}`}
                                 >
                                     <p className="font-mono text-xs text-zinc-600">{label}</p>
                                     <p className="mt-1 text-sm font-medium text-zinc-200">{value}</p>
@@ -245,17 +244,12 @@ export default function InfoSection() {
                         </p>
                     </div>
 
-                    <div className="grid sm:grid-cols-2">
-                        {leveyBenefits.map(({ title, description, icon: Icon }, index) => (
-                            <div
-                                key={title}
-                                className={`flex gap-4 border-t border-white/10 py-5 sm:px-5 ${
-                                    index % 2 === 1 ? "sm:border-l sm:border-white/10" : ""
-                                }`}
-                            >
+                    <div className="grid gap-x-10 gap-y-10 sm:grid-cols-2">
+                        {leveyBenefits.map(({ title, description, icon: Icon }) => (
+                            <div key={title} className="flex gap-4">
                                 <Icon
                                     aria-hidden="true"
-                                    className="mt-0.5 size-5 shrink-0 text-cyan-300"
+                                    className="mt-0.5 size-5 shrink-0 text-zinc-400"
                                     strokeWidth={1.5}
                                 />
                                 <div>
