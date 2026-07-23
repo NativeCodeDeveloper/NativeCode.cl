@@ -52,15 +52,15 @@ export default function FeatureGrid() {
                             Agenda Clínica
                         </h2>
 
-                        <p className="mt-5 max-w-xl text-justify text-xl leading-8 text-zinc-100 sm:text-2xl">
+                        <p className="mt-5 max-w-xl text-xl leading-8 text-zinc-100 sm:text-2xl">
                             Gestión clínica y administrativa en una sola plataforma.
                         </p>
 
                         <div className="mt-7 flex max-w-xl flex-col gap-4 text-base leading-7 text-zinc-400">
-                            <p className="text-justify">
+                            <p>
                                 Agenda Clínica ayuda a profesionales y centros de salud a organizar sus citas, pacientes y procesos clínicos de manera simple, segura y eficiente.
                             </p>
-                            <p className="text-justify">
+                            <p>
                                 Automatiza la reserva de horas, reduce tareas administrativas y mantén toda la información de tu centro centralizada, desde la agenda hasta la ficha clínica.
                             </p>
                         </div>
@@ -113,7 +113,7 @@ export default function FeatureGrid() {
                                 <h3 className="text-sm font-medium text-white">
                                     {title}
                                 </h3>
-                                <p className="mt-2 text-justify text-sm leading-6 text-zinc-500">
+                                <p className="mt-2 text-sm leading-6 text-zinc-500">
                                     {description}
                                 </p>
                             </div>
