@@ -15,10 +15,10 @@ export default function Navbar() {
                 {/* Logo */}
                 <Link href="/" className="flex items-center hover:opacity-80 transition-opacity font-sawah text-xs text-zinc-400 hover:text-white uppercase tracking-widest">
                     <Image
-                        src="/logo2.png"
+                        src="/logos/nativecodelogonuevo1.PNG"
                         alt="NativeCode Logo"
                         width={160}
-                        height={72}
+                        height={107}
                         className="w-40 h-auto object-contain"
                         priority
                     />

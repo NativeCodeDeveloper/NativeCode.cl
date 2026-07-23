@@ -73,7 +73,7 @@ export default function CortexSection() {
                 <div className="mx-auto w-full max-w-7xl">
                     <div className="flex flex-col gap-8 rounded-3xl border border-white/5 bg-white/[0.03] px-8 py-10 sm:px-12 sm:py-12 lg:flex-row lg:items-center lg:justify-between">
                         <div className="max-w-xl">
-                            <p className="font-display text-2xl leading-9 text-white sm:text-3xl">
+                            <p className="text-2xl font-semibold leading-9 text-white sm:text-3xl">
                                 Menos clics, menos tareas repetitivas y más tiempo para tus pacientes.
                             </p>
                             <p className="mt-3 text-base leading-7 text-zinc-400">

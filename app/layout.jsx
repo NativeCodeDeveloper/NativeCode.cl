@@ -75,9 +75,9 @@ export const metadata = {
         },
     },
     icons: {
-        icon: '/favicon.ico',
-        shortcut: '/favicon.ico',
-        apple: '/logos/ico2.png',
+        icon: '/logos/solologonc.PNG',
+        shortcut: '/logos/solologonc.PNG',
+        apple: '/logos/solologonc.PNG',
     },
     openGraph: {
         type: 'website',
