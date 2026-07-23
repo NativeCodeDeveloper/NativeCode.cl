@@ -16,6 +16,7 @@ export default function Hero() {
 
             <div className="pointer-events-none absolute inset-0 z-10 bg-[linear-gradient(180deg,rgba(0,0,0,0.28)_0%,rgba(0,0,0,0.62)_55%,rgba(0,0,0,0.96)_100%)] md:bg-[linear-gradient(90deg,rgba(0,0,0,0.96)_0%,rgba(0,0,0,0.88)_38%,rgba(0,0,0,0.42)_64%,rgba(0,0,0,0.08)_100%)]" />
             <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-36 bg-linear-to-t from-black via-black/45 to-transparent" />
+            <div className="pointer-events-none absolute bottom-0 right-0 z-10 h-16 w-56 bg-[radial-gradient(circle_at_bottom_right,rgba(0,0,0,0.98)_0%,rgba(0,0,0,0.9)_45%,transparent_75%)]" />
 
             <motion.div
                 initial="hidden"
@@ -53,7 +54,7 @@ export default function Hero() {
                     <motion.p
                         variants={reveal}
                         transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
-                        className="mt-7 max-w-2xl font-michroma text-xs leading-6 text-zinc-300 drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)] sm:text-sm md:mt-8 md:text-base"
+                        className="mt-7 max-w-2xl text-balance font-michroma text-xs leading-6 text-zinc-300 drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)] sm:text-sm md:mt-8 md:text-base"
                     >
                         Tecnología que conecta, <span className="text-white">innova</span> y <span className="text-white">transforma</span>
                     </motion.p>
