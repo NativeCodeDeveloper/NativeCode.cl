@@ -65,15 +65,25 @@ export default function CortexSection() {
                                 No funciona como un producto independiente ni como un chat aislado. Forma parte del flujo de Agenda Clínica y acompaña al profesional mientras trabaja dentro de la plataforma.
                             </p>
                         </div>
+                    </div>
+                </div>
+            </div>
 
-                        <div className="mt-10">
-                            <p className="font-display text-lg leading-8 text-white sm:text-xl">
+            <div className="border-t border-white/10 bg-black px-6 py-16 sm:py-20">
+                <div className="mx-auto w-full max-w-7xl">
+                    <div className="flex flex-col gap-8 rounded-3xl border border-white/5 bg-white/[0.03] px-8 py-10 sm:px-12 sm:py-12 lg:flex-row lg:items-center lg:justify-between">
+                        <div className="max-w-xl">
+                            <p className="font-display text-2xl leading-9 text-white sm:text-3xl">
                                 Menos clics, menos tareas repetitivas y más tiempo para tus pacientes.
                             </p>
-                            <p className="mt-3 text-sm leading-6 text-zinc-400">
+                            <p className="mt-3 text-base leading-7 text-zinc-400">
                                 Cortex AI no solo conversa contigo. Trabaja dentro de Agenda Clínica.
                             </p>
                         </div>
+
+                        <span className="inline-flex min-h-12 w-fit shrink-0 cursor-default items-center justify-center rounded-full bg-white/10 px-6 py-3 text-sm font-medium text-zinc-300">
+                            Coming soon
+                        </span>
                     </div>
                 </div>
             </div>

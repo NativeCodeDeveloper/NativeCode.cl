@@ -43,18 +43,15 @@ export default function Hero() {
                     <motion.h1
                         variants={reveal}
                         transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
-                        className="max-w-[56rem] font-display text-xl leading-[1.3] text-white drop-shadow-[0_2px_18px_rgba(0,0,0,0.75)] sm:text-2xl md:text-3xl lg:text-4xl xl:text-[2.75rem]"
+                        className="max-w-[46rem] font-display text-sm uppercase tracking-[0.2em] text-white drop-shadow-[0_2px_18px_rgba(0,0,0,0.75)] sm:text-base md:text-lg"
                     >
-                        Ingeniería de software
-                        <span className="mt-2 block text-3xl text-white sm:text-4xl md:text-5xl lg:text-6xl">
-                            en salud
-                        </span>
+                        Ingeniería de software en salud
                     </motion.h1>
 
                     <motion.p
                         variants={reveal}
                         transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
-                        className="mt-7 max-w-2xl text-balance font-michroma text-xs leading-6 text-zinc-300 drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)] sm:text-sm md:mt-8 md:text-base"
+                        className="mt-5 max-w-2xl text-balance font-michroma text-xs leading-6 text-zinc-300 drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)] sm:text-sm md:mt-6 md:text-base"
                     >
                         Tecnología que conecta, <span className="text-white">innova</span> y <span className="text-white">transforma</span>
                     </motion.p>
