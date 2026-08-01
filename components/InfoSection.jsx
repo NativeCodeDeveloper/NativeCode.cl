@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import {
     BellRing,
@@ -96,8 +97,17 @@ export default function InfoSection() {
                         transition={{ duration: 0.65 }}
                         className="max-w-2xl"
                     >
-                        <h2 className="font-display text-4xl leading-tight text-white sm:text-5xl">
+                        <h2 className="flex items-center gap-4 font-display text-4xl leading-tight text-white sm:text-5xl">
                             LeveyQC
+                            <span className="relative block size-16 shrink-0 sm:size-20">
+                                <Image
+                                    src="/logos/leveyqc.png"
+                                    alt=""
+                                    fill
+                                    sizes="80px"
+                                    className="scale-[1.6] object-contain"
+                                />
+                            </span>
                         </h2>
 
                         <p className="mt-5 max-w-xl text-xl leading-8 text-zinc-100 sm:text-2xl">

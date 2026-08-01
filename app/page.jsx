@@ -1,4 +1,6 @@
 import Hero from "@/components/Hero";
+import SolucionesSection from "@/components/SolucionesSection";
+import MisionSection from "@/components/MisionSection";
 import FeatureGrid from "@/components/FeatureGrid";
 import CortexSection from "@/components/CortexSection";
 import InfoSection from "@/components/InfoSection";
@@ -9,6 +11,12 @@ export default function Home() {
         <main className="min-h-screen bg-black text-white font-sans selection:bg-purple-500 selection:text-white">
             {/* Hero Section */}
             <Hero />
+
+            {/* Solutions */}
+            <SolucionesSection />
+
+            {/* Mission */}
+            <MisionSection />
 
             {/* Services Grid */}
             <FeatureGrid />

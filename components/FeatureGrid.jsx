@@ -90,13 +90,13 @@ export default function FeatureGrid() {
                         </div>
                     </div>
 
-                    <div className="relative min-h-72 overflow-hidden sm:min-h-96 lg:min-h-[30rem]">
+                    <div className="relative isolate min-h-72 overflow-hidden sm:min-h-96 lg:min-h-[30rem]">
                         <Image
-                            src="/logos/agendaclinica-logo-transparente.png"
-                            alt="Agenda Clínica, Healthcare Information System"
+                            src="/aclogo.png"
+                            alt="Logo de Agenda Clínica"
                             fill
                             sizes="(min-width: 1024px) 608px, calc(100vw - 48px)"
-                            className="object-contain object-center"
+                            className="-z-10 scale-[1.22] object-contain object-center"
                         />
                     </div>
                 </div>

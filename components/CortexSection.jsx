@@ -49,8 +49,17 @@ export default function CortexSection() {
 
                 <div className="mx-auto w-full max-w-7xl px-6 py-20 sm:py-24 lg:py-28">
                     <div className="max-w-2xl">
-                        <h2 className="font-display text-4xl leading-tight text-white sm:text-5xl">
+                        <h2 className="flex items-center gap-4 font-display text-4xl leading-tight text-white sm:text-5xl">
                             Cortex AI
+                            <span className="relative block size-16 shrink-0 sm:size-20">
+                                <Image
+                                    src="/logos/cortex.png"
+                                    alt=""
+                                    fill
+                                    sizes="80px"
+                                    className="scale-125 object-contain invert opacity-90"
+                                />
+                            </span>
                         </h2>
 
                         <p className="mt-5 max-w-xl text-xl leading-8 text-zinc-100 sm:text-2xl">
