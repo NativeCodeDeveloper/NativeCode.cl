@@ -43,7 +43,7 @@ export default function CortexSection() {
                     alt="Imagen cerebral que representa Cortex AI"
                     fill
                     sizes="100vw"
-                    className="-z-30 scale-105 object-cover object-[100%_40%] opacity-85"
+                    className="-z-30 scale-125 object-cover object-[100%_40%] opacity-85"
                 />
                 <div className="pointer-events-none absolute inset-0 -z-20 bg-[linear-gradient(90deg,rgba(0,0,0,0.98)_0%,rgba(0,0,0,0.9)_42%,rgba(0,0,0,0.42)_72%,rgba(0,0,0,0.08)_100%)]" />
                 <div className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-40 bg-linear-to-t from-black to-transparent" />

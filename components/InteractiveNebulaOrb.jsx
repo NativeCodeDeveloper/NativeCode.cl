@@ -64,7 +64,7 @@ void mainImage(out vec4 outputColor, in vec2 fragCoord) {
 
   vec2 centered = (fragCoord - resolution * 0.5) / min(resolution.x, resolution.y);
   float radialDistance = length(centered);
-  float circle = 1.0 - smoothstep(0.42, 0.52, radialDistance);
+  float circle = 1.0 - smoothstep(0.38, 0.56, radialDistance);
   float innerRim = smoothstep(0.18, 0.44, radialDistance) * circle;
   float strength = max(max(source.r, source.g), source.b);
   float alpha = circle * mix(0.1, 0.95, smoothstep(0.02, 0.72, strength));
@@ -267,7 +267,7 @@ export function InteractiveNebulaOrb({ className = "", pixelRatio = 3, isThinkin
     };
 
     const render = (now) => {
-      if (now - lastRender >= 1000 / 30 || motionPreference.matches) {
+      if (now - lastRender >= 1000 / 30) {
         lastRender = now;
         frame += 1;
         resize();
@@ -301,7 +301,7 @@ export function InteractiveNebulaOrb({ className = "", pixelRatio = 3, isThinkin
         gl.drawArrays(gl.TRIANGLES, 0, 3);
       }
 
-      if (!motionPreference.matches && !document.hidden) {
+      if (!document.hidden) {
         animationFrame = window.requestAnimationFrame(render);
       }
     };
