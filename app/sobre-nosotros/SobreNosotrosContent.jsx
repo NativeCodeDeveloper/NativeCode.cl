@@ -12,7 +12,7 @@ export default function SobreNosotrosContent() {
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-5xl md:text-7xl font-display font-bold tracking-tight"
+                        className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold tracking-tight"
                     >
                         Sobre Nosotros.
                     </motion.h1>
@@ -75,7 +75,7 @@ export default function SobreNosotrosContent() {
                     viewport={{ once: true }}
                     className="mt-48 pt-24 border-t border-zinc-900 text-center"
                 >
-                    <h2 className="text-2xl font-display mb-8">¿Listo para construir el futuro?</h2>
+                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold tracking-tight mb-8">¿Listo para construir el futuro?</h2>
                     <a
                         href="https://wa.me/56932912943"
                         target="_blank"

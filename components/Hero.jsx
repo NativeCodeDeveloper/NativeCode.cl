@@ -28,18 +28,10 @@ export default function Hero() {
                 className="pointer-events-none relative z-20 mx-auto flex min-h-[100svh] w-full max-w-[1920px] items-center px-6 pb-14 pt-28 sm:px-10 md:px-16 lg:px-[5.75vw] lg:pb-24 lg:pt-32"
             >
                 <div className="w-full max-w-[980px] lg:translate-y-4">
-                    <motion.p
-                        variants={reveal}
-                        transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
-                        className="bg-linear-to-r from-fuchsia-300 via-violet-200 to-sky-300 bg-clip-text font-michroma text-[10px] uppercase tracking-[0.28em] text-transparent sm:text-xs lg:text-[13px]"
-                    >
-                        Tecnología especializada en salud
-                    </motion.p>
-
                     <motion.h1
                         variants={reveal}
                         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-                        className="relative mt-7 aspect-[28/5] w-full max-w-[840px] overflow-hidden"
+                        className="relative aspect-[28/5] w-full max-w-[840px] overflow-hidden"
                     >
                         <span className="sr-only">NativeCode</span>
                         <Image
@@ -65,19 +57,17 @@ export default function Hero() {
                         transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
                         className="pointer-events-auto mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center"
                     >
-                        <span className="inline-flex rounded-[16px] bg-linear-to-r from-fuchsia-500 via-violet-500 to-sky-400 p-px shadow-[0_0_24px_rgba(124,58,237,0.38)]">
-                            <Link
-                                href="#soluciones"
-                                className="flex items-center gap-3 rounded-[15px] bg-[#03050d]/95 px-6 py-4 font-michroma text-[9px] uppercase tracking-[0.18em] text-white transition-colors hover:bg-[#0b0d18] sm:px-7 lg:text-[10px]"
-                            >
-                                Conoce nuestras soluciones
-                                <span aria-hidden="true" className="text-base leading-none">↓</span>
-                            </Link>
-                        </span>
+                        <Link
+                            href="#soluciones"
+                            className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-4 text-sm font-medium text-black transition-colors hover:bg-zinc-200"
+                        >
+                            Conoce nuestras soluciones
+                            <span aria-hidden="true" className="text-base leading-none">↓</span>
+                        </Link>
 
                         <Link
                             href="#nativecode"
-                            className="rounded-[15px] border border-white/20 bg-black/20 px-6 py-4 font-michroma text-[9px] uppercase tracking-[0.18em] text-zinc-200 backdrop-blur-sm transition-colors hover:border-white/40 hover:bg-white/5 lg:text-[10px]"
+                            className="rounded-full border border-white/20 bg-black/20 px-7 py-4 text-sm font-medium text-zinc-200 backdrop-blur-sm transition-colors hover:border-white/40 hover:bg-white/5"
                         >
                             Descubre NativeCode
                         </Link>

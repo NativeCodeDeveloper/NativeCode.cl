@@ -73,15 +73,15 @@ export default function PoliticasContent() {
                     <div className="mt-9 grid grid-cols-1 gap-3 sm:grid-cols-3">
                         <div className="rounded-xl border border-[rgba(255,255,255,0.12)] bg-white/[0.02] px-4 py-3">
                             <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-zinc-500">Última revisión</p>
-                            <p className="mt-1 text-sm font-medium text-white">Marzo 2026</p>
+                            <p className="mt-1 text-sm font-medium text-white">Julio 2026</p>
                         </div>
                         <div className="rounded-xl border border-[rgba(255,255,255,0.12)] bg-white/[0.02] px-4 py-3">
                             <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-zinc-500">Jurisdicción</p>
-                            <p className="mt-1 text-sm font-medium text-white">República de Chile y Países de Sudamérica</p>
+                            <p className="mt-1 text-sm font-medium text-white">República de Chile</p>
                         </div>
                         <div className="rounded-xl border border-[rgba(255,255,255,0.12)] bg-white/[0.02] px-4 py-3">
                             <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-zinc-500">Versión</p>
-                            <p className="mt-1 text-sm font-medium text-white">v1.0</p>
+                            <p className="mt-1 text-sm font-medium text-white">v2.0</p>
                         </div>
                     </div>
                 </header>
@@ -132,80 +132,117 @@ function PrivacidadContent() {
             </h2>
 
             <p className="leading-relaxed text-zinc-300">
-                En NativeCode respetamos y protegemos la información personal de nuestros clientes y usuarios. Esta
-                política describe cómo recopilamos, utilizamos y protegemos los datos.
+                En NativeCode respetamos y protegemos la privacidad de quienes interactúan con nosotros. Esta política
+                describe cómo recopilamos, usamos y protegemos la información personal de nuestros clientes, usuarios
+                y visitantes.
             </p>
 
             <div className="space-y-7">
-                <Section title="Datos que recopilamos">
-                    Podemos recopilar:
-                    <ul className="ml-6 mt-2 list-disc space-y-2 text-zinc-300 marker:text-zinc-500">
-                        <li>Nombre y apellido</li>
-                        <li>Correo electrónico</li>
-                        <li>Número de teléfono</li>
-                        <li>Información entregada mediante formularios</li>
-                        <li>Datos necesarios para la prestación del servicio</li>
-                    </ul>
-                </Section>
-
-                <Section title="Finalidad del tratamiento">
-                    Los datos se utilizan para:
-                    <ul className="ml-6 mt-2 list-disc space-y-2 text-zinc-300 marker:text-zinc-500">
-                        <li>Responder consultas comerciales</li>
-                        <li>Gestionar proyectos contratados</li>
-                        <li>Brindar soporte técnico</li>
-                        <li>Enviar información relacionada con los servicios</li>
-                    </ul>
-                </Section>
-
-                <Section title="Datos sensibles">
-                    En sistemas como Agenda Clínica, los datos de pacientes pertenecen exclusivamente al cliente.
-                    NativeCode actúa como proveedor tecnológico y no utiliza dichos datos para fines propios.
-                </Section>
-
-                <Section title="Almacenamiento y seguridad">
-                    Los datos se almacenan en infraestructuras seguras y protegidas mediante controles de acceso,
-                    cifrado en tránsito (HTTPS) y buenas prácticas de desarrollo seguro.
-                </Section>
-
-                <Section title="Compartición de datos">
-                    NativeCode no vende ni comercializa datos personales. Solo podrán compartirse cuando sea necesario
-                    para la prestación del servicio (por ejemplo, proveedores de hosting) bajo estándares de seguridad
-                    adecuados.
-                </Section>
-
-                <Section title="Derechos del titular de los datos">
-                    El usuario puede solicitar:
-                    <ul className="ml-6 mt-2 list-disc space-y-2 text-zinc-300 marker:text-zinc-500">
-                        <li>Acceso a sus datos</li>
-                        <li>Rectificación</li>
-                        <li>Eliminación</li>
-                        <li>Revocación del consentimiento</li>
-                    </ul>
+                <Section title="Quiénes somos">
+                    NativeCode SpA, RUT 78.184.828-K, es una empresa de ingeniería de software especializada en
+                    sistemas para el sector salud, con domicilio en Santiago, Chile. Operamos los productos
+                    AgendaClinica, Cortex AI y LeveyQC, además de servicios de desarrollo de software para clínicas y
+                    empresas.
                     <p className="mt-3 text-zinc-300">
-                        escribiendo a{" "}
+                        Contacto de privacidad:{" "}
                         <a
-                            href="mailto:contacto@nativecode.cl"
+                            href="mailto:ingenieria.software@nativecode.cl"
                             className="text-white underline underline-offset-4 hover:text-zinc-300"
                         >
                             ingenieria.software@nativecode.cl
                         </a>
-                        .
                     </p>
                 </Section>
 
-                <Section title="Conservación de los datos">
-                    Los datos se conservarán únicamente durante el tiempo necesario para cumplir con la finalidad para
-                    la cual fueron recopilados o mientras exista una relación contractual.
+                <Section title="Datos que recopilamos">
+                    <p className="text-zinc-300">A través del sitio web (nativecode.cl)</p>
+                    <ul className="ml-6 mt-2 list-disc space-y-2 text-zinc-300 marker:text-zinc-500">
+                        <li>Nombre y correo electrónico cuando completas un formulario de contacto o solicitud de demo.</li>
+                        <li>Información que proporcionas voluntariamente en la conversación comercial.</li>
+                        <li>Datos de navegación anónimos (páginas visitadas, tiempo en el sitio) a través de herramientas de analítica.</li>
+                    </ul>
+
+                    <p className="mt-4 text-zinc-300">A través de proyectos y contratos</p>
+                    <ul className="ml-6 mt-2 list-disc space-y-2 text-zinc-300 marker:text-zinc-500">
+                        <li>Datos de identificación y representación legal del cliente (nombre, RUT, cargo).</li>
+                        <li>Información técnica y operacional necesaria para el desarrollo del proyecto.</li>
+                        <li>Datos de facturación.</li>
+                    </ul>
+
+                    <p className="mt-4 text-zinc-300">A través de los productos (AgendaClinica, Cortex AI, LeveyQC)</p>
+                    <p className="mt-2 text-zinc-300">
+                        Los datos de usuarios y pacientes gestionados a través de nuestros productos se rigen por las
+                        políticas de privacidad específicas de cada producto. En el caso de AgendaClinica, los datos
+                        clínicos de pacientes son propiedad del cliente (la clínica o el profesional) y NativeCode
+                        actúa como custodio técnico sin usarlos para fines propios.
+                    </p>
+                </Section>
+
+                <Section title="Para qué usamos los datos">
+                    <ul className="ml-6 list-disc space-y-2 text-zinc-300 marker:text-zinc-500">
+                        <li>Responder consultas comerciales y técnicas.</li>
+                        <li>Gestionar proyectos, contratos y facturación.</li>
+                        <li>Brindar soporte técnico y postventa.</li>
+                        <li>Enviar comunicaciones relacionadas con los servicios contratados.</li>
+                        <li>Mejorar nuestros productos y servicios.</li>
+                    </ul>
+                    <p className="mt-3 text-zinc-300">
+                        No utilizamos datos personales con fines publicitarios ni los cedemos a terceros para ese
+                        propósito.
+                    </p>
+                </Section>
+
+                <Section title="Compartición de datos">
+                    NativeCode no vende ni comercializa datos personales. Solo los comparte cuando es estrictamente
+                    necesario para prestar el servicio —con proveedores de infraestructura cloud, servicios de
+                    mensajería u otros subprocesadores—, bajo obligaciones de confidencialidad equivalentes a las de
+                    esta política.
+                </Section>
+
+                <Section title="Seguridad">
+                    Implementamos controles técnicos y organizativos para proteger la información: cifrado en tránsito
+                    y en reposo, control de acceso por roles, monitoreo de seguridad y formación del equipo en buenas
+                    prácticas. Los detalles se describen en la Política de Seguridad.
+                </Section>
+
+                <Section title="Conservación de datos">
+                    Los datos personales de contacto se conservan mientras exista una relación comercial activa o
+                    potencial, y hasta por 3 años desde el último contacto. Los datos de proyectos y contratos se
+                    conservan por el plazo exigido por la normativa tributaria y comercial chilena. Puedes solicitar
+                    la eliminación de tus datos en cualquier momento (ver &quot;Tus derechos&quot;).
                 </Section>
 
                 <Section title="Cookies">
-                    El sitio puede utilizar cookies técnicas y analíticas para mejorar la experiencia del usuario. No se
-                    utilizan para identificar personalmente a los visitantes.
+                    El sitio nativecode.cl utiliza cookies técnicas necesarias para la navegación, y puede utilizar
+                    herramientas de analítica web anónima. No utilizamos cookies de publicidad dirigida ni redes de
+                    tracking.
+                </Section>
+
+                <Section title="Tus derechos">
+                    Puedes ejercer en cualquier momento los siguientes derechos:
+                    <ul className="ml-6 mt-2 list-disc space-y-2 text-zinc-300 marker:text-zinc-500">
+                        <li>Acceder a los datos que almacenamos sobre ti.</li>
+                        <li>Solicitar la corrección de datos inexactos o incompletos.</li>
+                        <li>Solicitar la eliminación de tus datos personales.</li>
+                        <li>Revocar el consentimiento para comunicaciones comerciales.</li>
+                    </ul>
+                    <p className="mt-3 text-zinc-300">
+                        Escríbenos a{" "}
+                        <a
+                            href="mailto:ingenieria.software@nativecode.cl"
+                            className="text-white underline underline-offset-4 hover:text-zinc-300"
+                        >
+                            ingenieria.software@nativecode.cl
+                        </a>{" "}
+                        con el asunto &quot;Solicitud de Privacidad&quot;. Respondemos dentro de 15 días hábiles.
+                    </p>
                 </Section>
 
                 <Section title="Modificaciones">
-                    NativeCode podrá actualizar esta política para adaptarla a cambios legales o tecnológicos.
+                    Podemos actualizar esta política para adaptarla a cambios en nuestros servicios o en la normativa
+                    aplicable. Las actualizaciones importantes serán comunicadas a nuestros clientes activos. La
+                    versión vigente siempre estará disponible en esta página.
+                    <p className="mt-3 text-sm text-zinc-500">Última actualización: Julio 2026.</p>
                 </Section>
             </div>
         </div>
@@ -220,65 +257,70 @@ function TerminosContent() {
             </h2>
 
             <p className="leading-relaxed text-zinc-300">
-                Los presentes términos regulan la contratación de servicios de desarrollo de software y soluciones
-                digitales ofrecidas por NativeCode SpA.
+                El uso del sitio web nativecode.cl y la contratación de los servicios de NativeCode SpA implican la
+                aceptación de los presentes Términos y Condiciones.
             </p>
 
             <div className="space-y-7">
-                <Section title="Alcance de los servicios">
-                    El alcance de cada proyecto será definido en la cotización aceptada. Cualquier funcionalidad no
-                    contemplada requerirá una nueva cotización o un plan de mantenimiento.
+                <Section title="Acerca de NativeCode">
+                    NativeCode SpA, RUT 78.184.828-K, es una empresa de ingeniería de software con domicilio en
+                    Santiago, Chile. Diseñamos y construimos soluciones tecnológicas para el sector salud, incluyendo
+                    AgendaClinica, Cortex AI y LeveyQC, además de otros servicios de desarrollo.
                 </Section>
 
-                <Section title="2. Inicio del proyecto">
-                    El proyecto inicia una vez aprobado el presupuesto, pagado el anticipo y entregados los insumos
-                    necesarios. Los plazos comienzan desde ese momento.
-                </Section>
-
-                <Section title="Responsabilidades del cliente">
-                    <ul className="ml-6 list-disc space-y-2 text-zinc-300 marker:text-zinc-500">
-                        <li>Entregar contenidos y accesos en los plazos acordados.</li>
-                        <li>Validar avances dentro de los tiempos definidos.</li>
-                        <li>No modificar el sistema sin autorización.</li>
+                <Section title="Uso del sitio web">
+                    El sitio nativecode.cl es de carácter informativo y comercial. Está permitido navegar, leer sus
+                    contenidos y contactarnos a través de los canales disponibles. No está permitido:
+                    <ul className="ml-6 mt-2 list-disc space-y-2 text-zinc-300 marker:text-zinc-500">
+                        <li>Copiar, reproducir o distribuir los contenidos del sitio sin autorización expresa.</li>
+                        <li>Intentar acceder a sistemas, bases de datos o infraestructura de NativeCode de forma no autorizada.</li>
+                        <li>Usar el sitio para enviar comunicaciones no solicitadas o contenido malicioso.</li>
                     </ul>
                 </Section>
 
-                <Section title="Condiciones de pago">
-                    Los pagos se realizarán según la cotización. El incumplimiento puede suspender temporalmente el
-                    servicio.
+                <Section title="Servicios y productos">
+                    Los servicios y productos de NativeCode se rigen por los contratos y términos específicos
+                    acordados con cada cliente. Esta página presenta términos generales; los detalles de cada servicio
+                    quedan establecidos en los documentos contractuales correspondientes (Contrato de Servicios, SLA,
+                    Garantía Técnica y Términos de cada producto).
                 </Section>
 
                 <Section title="Propiedad intelectual">
-                    El código fuente y componentes propietarios pertenecen a NativeCode. El cliente obtiene una licencia
-                    de uso. Los datos son propiedad del cliente.
-                </Section>
-
-                <Section title="Garantía">
-                    NativeCode ofrece una garantía de 90 días que cubre errores de software en funcionalidades entregadas.
-                    No incluye nuevas funcionalidades ni cambios posteriores.
-                </Section>
-
-                <Section title="Soporte y mantenimiento">
-                    Finalizada la garantía, el soporte estará disponible mediante la contratación de un plan de
-                    mantenimiento.
-                </Section>
-
-                <Section title="Disponibilidad del sistema">
-                    Objetivo de disponibilidad de 99.5% mensual en horario operativo, excluyendo fallas de terceros o
-                    fuerza mayor.
+                    Todo el contenido del sitio nativecode.cl —textos, imágenes, logotipos, diseño y código— es
+                    propiedad de NativeCode SpA o se utiliza bajo licencia. El código fuente, arquitectura y
+                    metodología de los productos desarrollados por NativeCode son propiedad intelectual de la empresa.
+                    <p className="mt-3 text-zinc-300">
+                        Los clientes retienen la propiedad de los datos y contenidos que aportan al desarrollo o que
+                        gestionan a través de los productos de NativeCode.
+                    </p>
                 </Section>
 
                 <Section title="Limitación de responsabilidad">
-                    NativeCode no será responsable por daños indirectos o lucro cesante. La responsabilidad máxima se
-                    limita al monto contratado.
+                    NativeCode no garantiza que el sitio web esté disponible de forma ininterrumpida ni libre de
+                    errores. La información publicada es referencial; los términos definitivos de cada servicio quedan
+                    establecidos en los contratos firmados.
+                    <p className="mt-3 text-zinc-300">
+                        NativeCode no será responsable por daños indirectos, pérdida de negocio o cualquier otro
+                        perjuicio derivado del uso del sitio o de la interpretación de su contenido fuera del marco
+                        contractual.
+                    </p>
                 </Section>
 
-                <Section title="Cancelación">
-                    Cualquiera de las partes podrá cancelar el servicio con aviso previo de 30 días.
+                <Section title="Privacidad">
+                    El tratamiento de datos personales en el sitio y en los servicios de NativeCode se rige por la
+                    Política de Privacidad disponible en esta misma página.
                 </Section>
 
-                <Section title="Jurisdicción">
-                    Estos términos se rigen por la legislación chilena.
+                <Section title="Modificaciones">
+                    NativeCode puede actualizar estos Términos en cualquier momento. La versión vigente estará siempre
+                    disponible en esta página.
+                </Section>
+
+                <Section title="Ley aplicable">
+                    Estos Términos se rigen por las leyes de la República de Chile. Las controversias que no puedan
+                    resolverse de forma directa se someterán a los tribunales ordinarios con asiento en Santiago de
+                    Chile.
+                    <p className="mt-3 text-sm text-zinc-500">Última actualización: Julio 2026.</p>
                 </Section>
             </div>
         </div>
@@ -293,38 +335,99 @@ function SeguridadContent() {
             </h2>
 
             <p className="leading-relaxed text-zinc-300">
-                NativeCode aplica prácticas de desarrollo seguro para proteger la información gestionada en las
-                plataformas desarrolladas.
+                La seguridad de la información es un pilar central en NativeCode, especialmente dado que operamos en
+                el sector salud. Esta política describe los controles y prácticas que aplicamos para proteger los
+                datos de nuestros clientes y sus pacientes.
             </p>
 
             <div className="space-y-7">
-                <Section title="Desarrollo seguro">
+                <Section title="Alcance">
+                    Esta política aplica a todos los productos y servicios de NativeCode SpA: AgendaClinica, Cortex
+                    AI, LeveyQC y los proyectos de desarrollo de software a medida para clientes.
+                </Section>
+
+                <Section title="Gestión de accesos">
                     <ul className="ml-6 list-disc space-y-2 text-zinc-300 marker:text-zinc-500">
-                        <li>Validación de datos de entrada.</li>
-                        <li>Control de accesos por roles.</li>
-                        <li>Uso de HTTPS.</li>
-                        <li>Manejo seguro de credenciales.</li>
-                        <li>Protección contra inyección de código.</li>
+                        <li>Principio de mínimo privilegio: cada integrante del equipo accede únicamente a los sistemas y datos necesarios para su función.</li>
+                        <li>Autenticación segura con contraseñas fuertes y autenticación de dos factores para accesos a sistemas críticos.</li>
+                        <li>Control de acceso basado en roles (RBAC) en todos los productos.</li>
+                        <li>Revisión periódica de privilegios y revocación inmediata ante cambios de rol o salida del equipo.</li>
                     </ul>
                 </Section>
 
-                <Section title="Almacenamiento de datos">
-                    Los datos se almacenan en infraestructuras seguras con acceso restringido mediante autenticación y
-                    permisos.
+                <Section title="Seguridad de los datos">
+                    <ul className="ml-6 list-disc space-y-2 text-zinc-300 marker:text-zinc-500">
+                        <li>Cifrado en tránsito mediante TLS/HTTPS en todas las comunicaciones entre cliente y servidor.</li>
+                        <li>Cifrado en reposo para datos almacenados en infraestructura cloud.</li>
+                        <li>Copias de seguridad periódicas con verificación de integridad y retención mínima de 30 días.</li>
+                        <li>Separación de entornos: los datos de producción no se utilizan en ambientes de desarrollo o pruebas.</li>
+                    </ul>
                 </Section>
 
-                <Section title="Copias de seguridad">
-                    Los respaldos están garantizados solo cuando forman parte de un plan de soporte contratado.
+                <Section title="Seguridad de la infraestructura">
+                    <ul className="ml-6 list-disc space-y-2 text-zinc-300 marker:text-zinc-500">
+                        <li>Infraestructura alojada en proveedores cloud con certificaciones de seguridad internacionales reconocidas.</li>
+                        <li>Monitoreo continuo de disponibilidad y detección de anomalías.</li>
+                        <li>Aplicación sistemática de parches y actualizaciones de seguridad.</li>
+                        <li>Revisión periódica de la configuración de seguridad de los sistemas.</li>
+                    </ul>
                 </Section>
 
-                <Section title="Incidentes de seguridad">
-                    Ante un incidente se realizará diagnóstico técnico, notificación al cliente y aplicación de medidas
-                    correctivas.
+                <Section title="Desarrollo seguro">
+                    <ul className="ml-6 list-disc space-y-2 text-zinc-300 marker:text-zinc-500">
+                        <li>Revisión de código orientada a la detección de vulnerabilidades (OWASP Top 10 como referencia).</li>
+                        <li>Gestión de dependencias con revisión de vulnerabilidades conocidas.</li>
+                        <li>Control de versiones y auditoría de cambios en el código fuente.</li>
+                        <li>Variables de entorno y secretos gestionados de forma segura, nunca expuestos en el código.</li>
+                    </ul>
                 </Section>
 
-                <Section title="Responsabilidad compartida">
-                    La seguridad también depende de la correcta gestión de accesos del cliente y de la infraestructura de
-                    terceros utilizada.
+                <Section title="Capacitación del equipo">
+                    Todo el personal de NativeCode recibe formación en buenas prácticas de seguridad y está sujeto a
+                    acuerdos de confidencialidad. La seguridad es responsabilidad de todos, no solo del área técnica.
+                </Section>
+
+                <Section title="Gestión de incidentes">
+                    Contamos con un protocolo documentado de respuesta ante incidentes de seguridad:
+                    <ul className="ml-6 mt-2 list-disc space-y-2 text-zinc-300 marker:text-zinc-500">
+                        <li>Detección y contención del incidente.</li>
+                        <li>Evaluación del alcance e impacto sobre los datos afectados.</li>
+                        <li>Notificación al cliente dentro de las 72 horas de detectar el incidente.</li>
+                        <li>Implementación de medidas correctivas y preventivas.</li>
+                        <li>Documentación y lecciones aprendidas.</li>
+                    </ul>
+                </Section>
+
+                <Section title="Datos clínicos: protección reforzada">
+                    Los datos clínicos de pacientes gestionados a través de AgendaClinica reciben protección
+                    adicional: ningún integrante del equipo accede a ellos salvo en casos de soporte técnico
+                    estrictamente necesario, con registro de la acción y conocimiento del cliente.
+                </Section>
+
+                <Section title="Reporte de vulnerabilidades">
+                    Si encuentras una vulnerabilidad de seguridad en alguno de nuestros productos o en el sitio web, te
+                    pedimos que nos lo comuniques de forma responsable antes de hacerlo público:
+                    <ul className="ml-6 mt-2 list-disc space-y-2 text-zinc-300 marker:text-zinc-500">
+                        <li>
+                            Correo:{" "}
+                            <a
+                                href="mailto:ingenieria.software@nativecode.cl"
+                                className="text-white underline underline-offset-4 hover:text-zinc-300"
+                            >
+                                ingenieria.software@nativecode.cl
+                            </a>
+                        </li>
+                        <li>Asunto: &quot;Reporte de Seguridad – [nombre del producto]&quot;</li>
+                    </ul>
+                    <p className="mt-3 text-zinc-300">
+                        Respondemos dentro de 24 horas hábiles y tomamos todos los reportes en serio.
+                    </p>
+                </Section>
+
+                <Section title="Revisión de esta política">
+                    Esta política se revisa y actualiza al menos una vez al año, o ante cambios relevantes en los
+                    sistemas o en las amenazas del entorno.
+                    <p className="mt-3 text-sm text-zinc-500">Última actualización: Julio 2026.</p>
                 </Section>
             </div>
         </div>

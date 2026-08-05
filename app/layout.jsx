@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Michroma } from 'next/font/google';
+import { Geist, Geist_Mono, Archivo, Michroma } from 'next/font/google';
 import localFont from 'next/font/local';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -143,8 +143,14 @@ const geistMono = Geist_Mono({
     subsets: ['latin'],
 });
 
+const archivo = Archivo({
+    variable: '--font-archivo',
+    subsets: ['latin'],
+    weight: ['500', '600', '700', '800'],
+});
+
 const michroma = Michroma({
-    variable: '--font-michroma',
+    variable: '--font-michroma-solo',
     subsets: ['latin'],
     weight: '400',
 });
@@ -161,7 +167,7 @@ export default function RootLayout({
     return (
         <html lang="es" className="dark scroll-smooth">
             <body
-                className={`${geistSans.variable} ${geistMono.variable} ${michroma.variable} ${sawah.variable} antialiased bg-black text-white selection:bg-white selection:text-black`}
+                className={`${geistSans.variable} ${geistMono.variable} ${archivo.variable} ${michroma.variable} ${sawah.variable} antialiased bg-black text-white selection:bg-white selection:text-black`}
             >
                 <script
                     type="application/ld+json"

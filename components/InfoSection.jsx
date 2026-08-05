@@ -97,7 +97,7 @@ export default function InfoSection() {
                         transition={{ duration: 0.65 }}
                         className="max-w-2xl"
                     >
-                        <h2 className="flex items-center gap-4 font-display text-4xl leading-tight text-white sm:text-5xl">
+                        <h2 className="flex items-center gap-4 font-display text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl">
                             LeveyQC
                             <span className="relative block size-16 shrink-0 sm:size-20">
                                 <Image

@@ -6,6 +6,7 @@ import {
     Zap,
 } from "lucide-react";
 import { StarsBackground } from "@/components/animate-ui/components/backgrounds/stars";
+import { InteractiveNebulaOrb } from "@/components/InteractiveNebulaOrb";
 
 const cortexBenefits = [
     {
@@ -36,29 +37,23 @@ export default function CortexSection() {
             id="cortex-ai"
             className="border-b border-white/10 bg-black"
         >
-            <div className="relative isolate overflow-hidden">
+            <div className="relative isolate flex min-h-[480px] items-center overflow-hidden sm:min-h-[560px] lg:min-h-[640px]">
                 <Image
                     src="/portadanueva.png"
                     alt="Imagen cerebral que representa Cortex AI"
                     fill
                     sizes="100vw"
-                    className="-z-30 object-cover object-[68%_center] opacity-80 lg:object-contain lg:object-right"
+                    className="-z-30 scale-105 object-cover object-[100%_40%] opacity-85"
                 />
                 <div className="pointer-events-none absolute inset-0 -z-20 bg-[linear-gradient(90deg,rgba(0,0,0,0.98)_0%,rgba(0,0,0,0.9)_42%,rgba(0,0,0,0.42)_72%,rgba(0,0,0,0.08)_100%)]" />
                 <div className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-40 bg-linear-to-t from-black to-transparent" />
 
                 <div className="mx-auto w-full max-w-7xl px-6 py-20 sm:py-24 lg:py-28">
                     <div className="max-w-2xl">
-                        <h2 className="flex items-center gap-4 font-display text-4xl leading-tight text-white sm:text-5xl">
+                        <h2 className="flex items-center gap-4 font-display text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl">
                             Cortex AI
-                            <span className="relative block size-16 shrink-0 sm:size-20">
-                                <Image
-                                    src="/logos/cortex.png"
-                                    alt=""
-                                    fill
-                                    sizes="80px"
-                                    className="scale-125 object-contain invert opacity-90"
-                                />
+                            <span className="relative flex size-16 shrink-0 items-center justify-center sm:size-20">
+                                <InteractiveNebulaOrb className="size-16 sm:size-20" />
                             </span>
                         </h2>
 

@@ -48,7 +48,7 @@ export default function FeatureGrid() {
             <div className="relative z-10 mx-auto w-full max-w-7xl px-6 py-20 sm:py-24 lg:py-28">
                 <div className="grid items-center gap-14 lg:grid-cols-[minmax(0,0.95fr)_minmax(32rem,1.05fr)] lg:gap-16">
                     <div className="max-w-2xl">
-                        <h2 className="font-display text-4xl leading-tight text-white sm:text-5xl">
+                        <h2 className="font-display text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl">
                             Agenda Clínica
                         </h2>
 

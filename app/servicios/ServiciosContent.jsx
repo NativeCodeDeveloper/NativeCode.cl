@@ -48,7 +48,7 @@ export default function ServiciosContent() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
-                        className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-tight mb-8 text-white"
+                        className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight mb-8 text-white font-display"
                     >
                         Servicios
                     </motion.h1>
@@ -117,7 +117,7 @@ export default function ServiciosContent() {
                         transition={{ duration: 0.6 }}
                         className="text-center space-y-8"
                     >
-                        <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-white">
+                        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white font-display">
                             ¿Listo para comenzar?
                         </h2>
                         <p className="text-lg md:text-xl text-zinc-400">

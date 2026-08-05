@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { InteractiveNebulaOrb } from "@/components/InteractiveNebulaOrb";
 
 export default function SolucionesSection() {
     return (
@@ -10,10 +11,7 @@ export default function SolucionesSection() {
 
             <div className="relative mx-auto w-full max-w-7xl px-6 py-20 sm:py-24 lg:px-8 lg:py-28">
                 <div className="mx-auto max-w-3xl text-center">
-                    <p className="font-michroma text-[9px] uppercase tracking-[0.3em] text-violet-300 sm:text-[10px]">
-                        Productos NativeCode
-                    </p>
-                    <h2 className="mt-5 font-display text-3xl leading-tight text-white sm:text-4xl lg:text-5xl">
+                    <h2 className="font-display text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
                         Soluciones creadas para problemas reales de salud
                     </h2>
                     <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-zinc-400 sm:text-lg">
@@ -37,7 +35,7 @@ export default function SolucionesSection() {
                                 className="object-contain"
                             />
                         </div>
-                        <h3 className="mt-5 font-display text-2xl text-white">Agenda Clínica</h3>
+                        <h3 className="mt-5 font-display text-2xl font-semibold tracking-tight text-white">Agenda Clínica</h3>
                         <p className="mt-3 text-sm text-zinc-500">Gestión clínica integral</p>
                         <span className="mt-6 font-michroma text-[8px] uppercase tracking-[0.2em] text-zinc-500 transition-colors group-hover:text-fuchsia-300">
                             Conocer solución ↘
@@ -59,7 +57,7 @@ export default function SolucionesSection() {
                                 className="scale-125 object-contain"
                             />
                         </div>
-                        <h3 className="mt-5 font-display text-2xl text-white">LeveyQC</h3>
+                        <h3 className="mt-5 font-display text-2xl font-semibold tracking-tight text-white">LeveyQC</h3>
                         <p className="mt-3 text-sm text-zinc-500">Control de calidad analítica</p>
                         <span className="mt-6 font-michroma text-[8px] uppercase tracking-[0.2em] text-zinc-500 transition-colors group-hover:text-violet-300">
                             Conocer solución ↘
@@ -72,16 +70,10 @@ export default function SolucionesSection() {
                     >
                         <div className="pointer-events-none absolute inset-x-14 bottom-0 h-px bg-linear-to-r from-transparent via-sky-400/70 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
                         <p className="font-michroma text-[8px] tracking-[0.25em] text-zinc-600">03</p>
-                        <div className="relative mt-5 h-28 w-40">
-                            <Image
-                                src="/logos/cortex.png"
-                                alt="Logo de Cortex A.I."
-                                fill
-                                sizes="160px"
-                                className="scale-125 object-contain invert opacity-90"
-                            />
+                        <div className="relative mt-5 flex h-28 w-40 items-center justify-center">
+                            <InteractiveNebulaOrb className="size-24" />
                         </div>
-                        <h3 className="mt-5 font-display text-2xl text-white">Cortex A.I.</h3>
+                        <h3 className="mt-5 font-display text-2xl font-semibold tracking-tight text-white">Cortex A.I.</h3>
                         <p className="mt-3 text-sm text-zinc-500">Inteligencia clínica integrada</p>
                         <span className="mt-6 font-michroma text-[8px] uppercase tracking-[0.2em] text-zinc-500 transition-colors group-hover:text-sky-300">
                             Conocer solución ↘

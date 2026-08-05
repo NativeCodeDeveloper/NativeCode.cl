@@ -7,14 +7,9 @@ export default function MisionSection() {
             <div className="relative mx-auto w-full max-w-7xl px-6 py-24 sm:py-28 lg:px-8 lg:py-36">
                 <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start lg:gap-24">
                     <div>
-                        <p className="font-michroma text-[10px] uppercase tracking-[0.3em] text-violet-300 sm:text-xs">
-                            Nuestra misión
-                        </p>
-                        <h2 className="mt-6 font-display text-4xl leading-tight text-white sm:text-5xl lg:text-6xl">
+                        <h2 className="font-michroma-solo text-4xl leading-tight text-white sm:text-5xl lg:text-6xl">
                             Somos
-                            <span className="block bg-linear-to-r from-fuchsia-300 via-violet-200 to-sky-300 bg-clip-text text-transparent">
-                                NativeCode
-                            </span>
+                            <span className="block">NativeCode</span>
                         </h2>
                     </div>
 
@@ -32,10 +27,7 @@ export default function MisionSection() {
                     <div className="pointer-events-none absolute -right-24 -top-24 size-64 rounded-full bg-violet-600/10 blur-3xl" />
                     <div className="relative grid gap-7 lg:grid-cols-[0.75fr_1.25fr] lg:items-center lg:gap-16">
                         <div>
-                            <p className="font-michroma text-[9px] uppercase tracking-[0.24em] text-sky-300">
-                                Respaldo en cada etapa
-                            </p>
-                            <h3 className="mt-4 font-display text-2xl leading-tight text-white sm:text-3xl">
+                            <h3 className="font-display text-2xl font-semibold leading-tight tracking-tight text-white sm:text-3xl">
                                 No estás solo en el proceso.
                             </h3>
                         </div>

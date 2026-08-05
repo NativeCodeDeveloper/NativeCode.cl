@@ -34,10 +34,10 @@ export default function Navbar() {
                 </div>
 
                 {/* CTA */}
-                <div className="hidden rounded-[13px] bg-linear-to-r from-fuchsia-500 via-violet-500 to-sky-400 p-px lg:flex">
+                <div className="hidden lg:flex">
                     <Link
                         href="/#soluciones"
-                        className="whitespace-nowrap rounded-[12px] bg-[#03050d]/95 px-5 py-3 font-michroma text-[9px] uppercase tracking-[0.18em] text-white transition-colors hover:bg-[#0a0d17] lg:text-[10px]"
+                        className="whitespace-nowrap rounded-full bg-white px-5 py-3 text-xs font-medium text-black transition-colors hover:bg-zinc-200"
                     >
                         Conoce nuestras soluciones
                     </Link>
