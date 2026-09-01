@@ -96,7 +96,7 @@ export default function FeatureGrid() {
                             alt="Logo de Agenda Clínica"
                             fill
                             sizes="(min-width: 1024px) 608px, calc(100vw - 48px)"
-                            className="-z-10 scale-[1.22] object-contain object-center"
+                            className="-z-10 object-contain object-center"
                         />
                     </div>
                 </div>
