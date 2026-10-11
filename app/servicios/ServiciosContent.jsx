@@ -1,39 +1,38 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { jetbrains } from "next/font/google";
-import { ArrowUpRight, Smartphone, Globe, Database, Code2, Zap, Shield } from "lucide-react";
+import { ArrowUpRight, ShoppingBag, Target, HeartPulse, PanelsTopLeft, Cable, Activity } from "lucide-react";
 
 const services = [
     {
-        icon: Smartphone,
-        title: "Plataformas de Agendamiento Clínico",
-        description: "Una plataforma de gestión de salud robusta, probada en clínicas reales, que configuramos y adaptamos al flujo de trabajo de tu centro: agendamiento, fichas clínicas y gestión de pacientes en un solo lugar.",
+        icon: ShoppingBag,
+        title: "E-commerce de alto rendimiento",
+        description: "Tiendas a medida diseñadas para recibir miles de visitas y acompañar campañas de alta demanda. Conectamos catálogo, pagos y operación comercial con una arquitectura pensada para crecer.",
     },
     {
-        icon: Globe,
-        title: "Plataformas Web",
-        description: "Sitios y portales para clínicas y profesionales de la salud, pensados para generar confianza y convertir visitas en pacientes agendados — rápidos, seguros y fáciles de mantener.",
+        icon: Target,
+        title: "Landing pages de captación",
+        description: "Páginas para campañas, servicios y lanzamientos, diseñadas para captar, filtrar y convertir prospectos. Adaptamos el mensaje y el recorrido a tu audiencia y a los objetivos de tu negocio.",
     },
     {
-        icon: Database,
-        title: "Infraestructura Cloud",
-        description: "Arquitecturas en la nube preparadas para la disponibilidad y trazabilidad que exige el dato clínico. AWS, Azure & Google Cloud Platform, arquitecturas serverless y microservicios, CI/CD automatizado.",
+        icon: HeartPulse,
+        title: "Plataformas para salud",
+        description: "Desarrollo especializado para clínicas, centros médicos y laboratorios. Portales de pacientes, gestión clínica y herramientas que responden a los procesos particulares de cada organización.",
     },
     {
-        icon: Code2,
-        title: "Arquitectura de Software",
-        description: "Sistemas construidos para evolucionar junto a tu operación, sin reescrituras completas cada vez que creces. Clean Architecture & SOLID, patrones de diseño modernos, testing automatizado (TDD).",
+        icon: PanelsTopLeft,
+        title: "Portales y sistemas a medida",
+        description: "Portales de clientes, plataformas de gestión y sistemas internos para centralizar información, coordinar equipos y automatizar tareas. Software diseñado alrededor de tu forma de trabajar.",
     },
     {
-        icon: Zap,
-        title: "Performance & SEO",
-        description: "Plataformas rápidas y bien posicionadas para que los pacientes te encuentren y agenden sin fricción. Core Web Vitals optimizados, Lighthouse 100/100, SEO técnico avanzado.",
+        icon: Cable,
+        title: "Integraciones de negocio",
+        description: "Conectamos tus plataformas con Impuestos Internos (SII), WhatsApp, Gmail y pasarelas de pago. Diseñamos flujos de datos y comunicaciones según los requisitos de tu operación.",
     },
     {
-        icon: Shield,
-        title: "Seguridad & Cumplimiento",
-        description: "Protección de datos clínicos alineada a la Ley 19.628 de Protección de Datos Personales. Autenticación OAuth 2.0 & JWT, encriptación end-to-end, buenas prácticas de seguridad de la industria.",
+        icon: Activity,
+        title: "Interoperabilidad HL7",
+        description: "Integramos sistemas de información clínica mediante HL7 para facilitar el intercambio de datos entre plataformas de salud. Definimos el alcance de cada integración según los sistemas de origen y destino.",
     }
 ];
 
@@ -50,7 +49,7 @@ export default function ServiciosContent() {
                         transition={{ duration: 0.6 }}
                         className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight mb-8 text-white font-display"
                     >
-                        Servicios
+                        Desarrollo a medida para tu negocio.
                     </motion.h1>
 
                     <motion.p
@@ -59,7 +58,7 @@ export default function ServiciosContent() {
                         transition={{ duration: 0.6, delay: 0.1 }}
                         className="text-xl md:text-2xl text-zinc-400 leading-relaxed max-w-3xl"
                     >
-                        Construimos la infraestructura digital que necesitan clínicas, centros médicos y empresas que operan en salud — con la misma disciplina de ingeniería que exigen los productos digitales globales.
+                        E-commerce de alto rendimiento, landing pages, plataformas especializadas e integraciones. Construimos el software que tu empresa necesita para vender, operar y escalar.
                     </motion.p>
                 </div>
             </section>
@@ -76,7 +75,7 @@ export default function ServiciosContent() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="group relative p-12 transition-colors hover:bg-white/5 flex flex-col justify-between min-h-100"
+                                className="group relative p-7 sm:p-10 transition-colors hover:bg-white/5 flex flex-col justify-between min-h-100"
                             >
                                 {/* Header */}
                                 <div className="space-y-6">
@@ -118,10 +117,10 @@ export default function ServiciosContent() {
                         className="text-center space-y-8"
                     >
                         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white font-display">
-                            ¿Listo para comenzar?
+                            Conversemos sobre tu próximo proyecto.
                         </h2>
                         <p className="text-lg md:text-xl text-zinc-400">
-                            Conversemos sobre tu proyecto y cómo podemos ayudarte.
+                            Cuéntanos qué necesitas construir, qué sistemas utilizas y qué volumen de operación esperas. Definamos una solución a tu medida.
                         </p>
                         <div className="pt-4">
                             <a

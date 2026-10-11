@@ -28,7 +28,7 @@ export default function Footer() {
                             />
                         </div>
                         <p className="mb-6 max-w-xl text-sm leading-relaxed text-zinc-400 md:text-left">
-                            Soluciones digitales de alto valor para clínicas, centros de salud y empresas que buscan excelencia tecnológica.
+                            Desarrollo de software a medida: e-commerce de alto rendimiento, landing pages, plataformas web e integraciones. Soluciones especializadas por suscripción para salud y laboratorios.
                         </p>
                         <div className="space-y-2.5">
                             <a href="mailto:ingenieria.software@nativecode.cl" className="flex items-center gap-2 text-sm text-zinc-500 transition-colors hover:text-white">
@@ -51,10 +51,10 @@ export default function Footer() {
                         <h4 className="mb-6 text-sm font-mono uppercase tracking-wider text-zinc-500 md:mb-8">Servicios</h4>
                         <ul className="space-y-3.5">
                             {[
-                                { name: 'Desarrollo Native', href: '/servicios' },
-                                { name: 'Plataformas Web', href: '/servicios' },
-                                { name: 'Infraestructura Cloud', href: '/servicios' },
-                                { name: 'Consultoría Digital', href: '/servicios' },
+                                { name: 'E-commerce de alto rendimiento', href: '/servicios' },
+                                { name: 'Landing pages y prospectos', href: '/servicios' },
+                                { name: 'Plataformas y portales web', href: '/servicios' },
+                                { name: 'Integraciones e interoperabilidad', href: '/servicios' },
                             ].map((service) => (
                                 <li key={service.name}>
                                     <Link href={service.href} className="text-base text-zinc-400 hover:text-white transition-colors">
@@ -88,7 +88,7 @@ export default function Footer() {
                 <div className="flex flex-col gap-6 text-xs text-zinc-500 md:flex-row md:items-center md:justify-between">
                     <div className="flex flex-col items-center gap-3 text-center md:flex-row md:items-center md:gap-4 md:text-left">
                         <p>© {new Date().getFullYear()} NativeCode ®. Todos los derechos reservados.</p>
-                        <div className="flex items-center justify-center gap-4 md:justify-start px-45 py-6">
+                        <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start py-6">
                             <Link href="/politicas#privacidad" className="hover:text-white transition-colors">Privacidad</Link>
                             <Link href="/politicas#terminos" className="hover:text-white transition-colors">Términos</Link>
                             <Link href="/politicas#seguridad" className="hover:text-white transition-colors">Seguridad</Link>

@@ -97,6 +97,7 @@ export default function InfoSection() {
                         transition={{ duration: 0.65 }}
                         className="max-w-2xl"
                     >
+                        <p className="mb-5 text-xs font-medium uppercase tracking-[0.2em] text-cyan-200">Solución por suscripción</p>
                         <h2 className="flex items-center gap-4 font-display text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl">
                             LeveyQC
                             <span className="relative block size-16 shrink-0 sm:size-20">

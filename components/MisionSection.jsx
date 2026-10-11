@@ -15,10 +15,10 @@ export default function MisionSection() {
 
                     <div className="border-l border-white/15 pl-6 sm:pl-10 lg:mt-8">
                         <p className="max-w-3xl text-xl leading-9 text-zinc-200 sm:text-2xl sm:leading-10">
-                            Creamos tecnología para una salud más simple y eficiente.
+                            Ingeniería de software para empresas que necesitan crecer, integrar y automatizar.
                         </p>
                         <p className="mt-6 max-w-3xl text-base leading-8 text-zinc-400 sm:text-lg">
-                            Somos una empresa de software enfocada en transformar procesos clínicos en soluciones digitales confiables.
+                            Construimos soluciones a medida para comercio, servicios y salud. Combinamos desarrollo web, integración de sistemas y conocimiento de procesos para convertir necesidades complejas en herramientas útiles para tu negocio.
                         </p>
                     </div>
                 </div>
@@ -28,12 +28,12 @@ export default function MisionSection() {
                     <div className="relative grid gap-7 lg:grid-cols-[0.75fr_1.25fr] lg:items-center lg:gap-16">
                         <div>
                             <h3 className="font-display text-2xl font-semibold leading-tight tracking-tight text-white sm:text-3xl">
-                                No estás solo en el proceso.
+                                Tecnología con conocimiento de tu operación.
                             </h3>
                         </div>
 
                         <p className="text-base leading-8 text-zinc-400 sm:text-lg">
-                            Nuestro equipo multidisciplinario reúne especialistas en calidad analítica de laboratorio, profesionales de la salud y expertos en seguridad de la información. Te acompañamos con soporte 24/7 para entregarte respaldo técnico y humano en cada etapa.
+                            Nuestro equipo reúne experiencia en desarrollo de software, salud, calidad analítica y seguridad de la información. Esa combinación nos permite entender tanto los desafíos técnicos como los procesos de quienes usan nuestras plataformas cada día.
                         </p>
                     </div>
                 </div>

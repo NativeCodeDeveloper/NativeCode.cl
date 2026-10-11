@@ -1,10 +1,7 @@
 import Hero from "@/components/Hero";
-import SolucionesSection from "@/components/SolucionesSection";
-import MisionSection from "@/components/MisionSection";
-import FeatureGrid from "@/components/FeatureGrid";
-import CortexSection from "@/components/CortexSection";
-import InfoSection from "@/components/InfoSection";
-import Portfolio from "@/components/Portfolio";
+import PathToResilienceOrbitalTimeline from "@/components/PathToResilienceOrbitalTimeline";
+import HeroSection_05 from "@/components/HeroSection05";
+import { CinematicHero } from "@/components/ui/cinematic-landing-hero";
 
 export default function Home() {
     return (
@@ -12,23 +9,28 @@ export default function Home() {
             {/* Hero Section */}
             <Hero />
 
-            {/* Solutions */}
-            <SolucionesSection />
+            {/* Título introductorio (video) */}
+            <section className="bg-black px-6 pt-6 sm:px-10 sm:pt-8" aria-label="NativeCode">
+                <div className="relative mx-auto aspect-[5/1] w-full max-w-5xl overflow-hidden">
+                    <video
+                        className="absolute inset-0 h-full w-full object-cover"
+                        src="/video/nativecode_intro_1080p.mp4"
+                        autoPlay
+                        muted
+                        playsInline
+                        preload="metadata"
+                    />
+                </div>
+            </section>
 
-            {/* Mission */}
-            <MisionSection />
+            <PathToResilienceOrbitalTimeline />
 
-            {/* Services Grid */}
-            <FeatureGrid />
+            <HeroSection_05 />
 
-            {/* Cortex AI */}
-            <CortexSection />
-
-            {/* Info Section (SuperGrok style) */}
-            <InfoSection />
-
-            {/* Portfolio Section (x.ai News Style) */}
-            <Portfolio />
+            {/* Hero cinematográfico de cierre */}
+            <div className="w-full overflow-x-hidden">
+                <CinematicHero />
+            </div>
         </main>
     );
 }

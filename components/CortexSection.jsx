@@ -86,7 +86,7 @@ export default function CortexSection() {
                         </div>
 
                         <span className="inline-flex min-h-12 w-fit shrink-0 cursor-default items-center justify-center rounded-full bg-white/10 px-6 py-3 text-sm font-medium text-zinc-300">
-                            Coming soon
+                            Próximamente
                         </span>
                     </div>
                 </div>

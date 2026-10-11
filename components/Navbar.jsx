@@ -19,7 +19,7 @@ export default function Navbar() {
                         alt="NativeCode Logo"
                         width={230}
                         height={107}
-                        className="h-auto w-40 object-contain sm:w-48 lg:-ml-6 lg:w-[260px]"
+                        className="h-auto w-[min(416px,calc(100vw-5rem))] object-contain sm:w-64 lg:-ml-6 lg:w-[352px]"
                         priority
                     />
 
@@ -28,8 +28,8 @@ export default function Navbar() {
                 {/* Desktop Links */}
                 <div className="ml-auto mr-[2.55vw] hidden items-center gap-[2.4vw] font-michroma text-[8px] uppercase tracking-[0.18em] text-zinc-300 lg:flex lg:text-[10px]">
                     <Link href="/" className="hover:text-white transition-colors">Inicio</Link>
-                    <Link href="/servicios" className="hover:text-white transition-colors">Soluciones</Link>
-                    <Link href="/proyectos" className="hover:text-white transition-colors">Productos</Link>
+                    <Link href="/servicios" className="hover:text-white transition-colors">A medida</Link>
+                    <Link href="/proyectos" className="hover:text-white transition-colors">Proyectos</Link>
                     <Link href="/sobre-nosotros" className="hover:text-white transition-colors">Sobre nosotros</Link>
                 </div>
 
@@ -56,8 +56,8 @@ export default function Navbar() {
             {isOpen && (
                 <div className="absolute top-20 left-0 right-0 flex flex-col gap-6 border-b border-white/10 bg-black p-6 animate-in slide-in-from-top-2 lg:hidden">
                     <Link href="/" className="text-zinc-400 hover:text-white font-mono uppercase tracking-widest text-sm" onClick={() => setIsOpen(false)}>Inicio</Link>
-                    <Link href="/servicios" className="text-zinc-400 hover:text-white font-mono uppercase tracking-widest text-sm" onClick={() => setIsOpen(false)}>Soluciones</Link>
-                    <Link href="/proyectos" className="text-zinc-400 hover:text-white font-mono uppercase tracking-widest text-sm" onClick={() => setIsOpen(false)}>Productos</Link>
+                    <Link href="/servicios" className="text-zinc-400 hover:text-white font-mono uppercase tracking-widest text-sm" onClick={() => setIsOpen(false)}>A medida</Link>
+                    <Link href="/proyectos" className="text-zinc-400 hover:text-white font-mono uppercase tracking-widest text-sm" onClick={() => setIsOpen(false)}>Proyectos</Link>
                     <Link href="/sobre-nosotros" className="text-zinc-400 hover:text-white font-mono uppercase tracking-widest text-sm" onClick={() => setIsOpen(false)}>Sobre nosotros</Link>
                     <Link href="/#soluciones" className="w-full text-center py-3 border border-white/20 rounded-full font-mono uppercase text-xs" onClick={() => setIsOpen(false)}>
                         Conoce nuestras soluciones
