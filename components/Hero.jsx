@@ -33,7 +33,7 @@ export default function Hero() {
                         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
                         className="relative aspect-[28/5] w-full max-w-[840px] overflow-hidden"
                     >
-                        <span className="sr-only">NativeCode</span>
+                        <span className="sr-only">NativeCode: desarrollo web, tiendas online y software de salud en Chile</span>
                         <Image
                             src="/logo3.png"
                             alt="NativeCode"
@@ -49,7 +49,7 @@ export default function Hero() {
                         transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
                         className="mt-7 max-w-3xl text-base leading-8 text-zinc-300 drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)] sm:text-lg lg:text-xl lg:leading-9"
                     >
-                        Creamos plataformas especializadas que ordenan procesos, fortalecen la gestión clínica y simplifican el trabajo de profesionales, centros de salud y laboratorios.
+                        Desarrollamos sitios web, plataformas corporativas y tiendas online a la medida de tu negocio, junto a soluciones especializadas para profesionales, centros de salud y laboratorios.
                     </motion.p>
 
                     <motion.div
@@ -58,18 +58,18 @@ export default function Hero() {
                         className="pointer-events-auto mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center"
                     >
                         <Link
-                            href="#soluciones"
+                            href="#servicios-digitales"
                             className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-4 text-sm font-medium text-black transition-colors hover:bg-zinc-200"
                         >
-                            Conoce nuestras soluciones
+                            Servicios a medida
                             <span aria-hidden="true" className="text-base leading-none">↓</span>
                         </Link>
 
                         <Link
-                            href="#nativecode"
+                            href="#soluciones"
                             className="rounded-full border border-white/20 bg-black/20 px-7 py-4 text-sm font-medium text-zinc-200 backdrop-blur-sm transition-colors hover:border-white/40 hover:bg-white/5"
                         >
-                            Descubre NativeCode
+                            Soluciones en salud
                         </Link>
                     </motion.div>
                 </div>

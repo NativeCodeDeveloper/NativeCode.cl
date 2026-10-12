@@ -101,10 +101,10 @@ export default function Portfolio() {
             <div className="max-w-7xl mx-auto px-6 space-y-24">
 
                 <header className="max-w-4xl">
-                    <p className="font-mono text-xs uppercase text-zinc-500">
+                    <p className="font-sans text-sm text-zinc-400">
                         Clientes que ya confían en NativeCode
                     </p>
-                    <h2 className="mt-5 font-display text-3xl leading-tight text-white sm:text-4xl md:text-5xl">
+                    <h2 className="mt-4 font-sans text-4xl font-normal leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-[3.5rem]">
                         Tecnología diseñada para operar, crecer y permanecer.
                     </h2>
                     <p className="mt-6 max-w-2xl text-base leading-7 text-zinc-400 sm:text-lg">

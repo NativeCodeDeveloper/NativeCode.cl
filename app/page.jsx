@@ -1,8 +1,8 @@
 import Hero from "@/components/Hero";
 import SolucionesSection from "@/components/SolucionesSection";
+import ServiciosDigitalesSection from "@/components/ServiciosDigitalesSection";
 import MisionSection from "@/components/MisionSection";
 import FeatureGrid from "@/components/FeatureGrid";
-import CortexSection from "@/components/CortexSection";
 import InfoSection from "@/components/InfoSection";
 import Portfolio from "@/components/Portfolio";
 
@@ -12,6 +12,9 @@ export default function Home() {
             {/* Hero Section */}
             <Hero />
 
+            {/* Servicios digitales a medida */}
+            <ServiciosDigitalesSection />
+
             {/* Solutions */}
             <SolucionesSection />
 
@@ -20,9 +23,6 @@ export default function Home() {
 
             {/* Services Grid */}
             <FeatureGrid />
-
-            {/* Cortex AI */}
-            <CortexSection />
 
             {/* Info Section (SuperGrok style) */}
             <InfoSection />

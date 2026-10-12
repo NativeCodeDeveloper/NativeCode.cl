@@ -10,58 +10,70 @@ import './globals.css';
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://nativecode.cl';
 
+const siteTitle = 'NativeCode | Desarrollo Web, Tiendas Online y Software de Salud';
+const siteDescription =
+    'Sitios web a medida, webs corporativas y tiendas online, junto a software para clínicas y laboratorios: Agenda Clínica y LeveyQC. Calidad premium en Chile.';
+
 export const metadata = {
     metadataBase: new URL(siteUrl),
     applicationName: 'NativeCode',
     title: {
-        default: 'NativeCode | Software para Sistemas de Salud',
+        default: siteTitle,
         template: '%s | NativeCode',
     },
-    description: 'Diseñamos y construimos la infraestructura de software que hace funcionar a clínicas y centros de salud: agendamiento, fichas clínicas, cobros y automatización de procesos, con estándares de ingeniería internacionales.',
+    description: siteDescription,
     keywords: [
-        'software para clínicas',
-        'sistemas de salud digital',
-        'automatización clínica',
-        'ficha clínica digital',
-        'agendamiento médico',
-        'software para centros médicos',
         'NativeCode',
+        'desarrollo web',
+        'diseño web',
         'páginas web',
         'paginas web',
         'crear página web',
+        'sitio web a medida',
         'sitios web profesionales',
-        'automatización de procesos',
-        'fichas clínicas',
-        'aplicaciones web',
-        'desarrollo de software',
-        'agendamiento',
-        'clínicas',
-        'software a medida',
+        'web corporativa',
+        'página web para empresas',
+        'tienda online',
         'ecommerce',
-        'e - commerce',
+        'e-commerce',
+        'crear tienda online',
         'landing page',
-        'diseño web',
-        'desarrollo web',
-        'desarrollo a medida',
-        'automatizacion',
-        'wordpress',
-        'shopify',
-        'agencia web',
-        'Valdivia',
+        'agencia de desarrollo web',
+        'desarrollo de software',
+        'software a medida',
+        'aplicaciones web',
+        'software para clínicas',
+        'agendamiento médico',
+        'ficha clínica digital',
+        'software de salud',
+        'software para centros médicos',
+        'software para laboratorio clínico',
+        'reglas de Westgard',
+        'gráficos Levey-Jennings',
+        'control de calidad laboratorio',
+        'Agenda Clínica',
+        'LeveyQC',
+        'Chile',
         'Santiago de Chile',
+        'Valdivia',
         'Concepción',
         'Temuco',
         'Puerto Montt',
         'Rancagua',
         'Chillán',
         'Antofagasta',
-        'Chile'
     ],
     authors: [{ name: 'NativeCode', url: siteUrl }],
     creator: 'NativeCode',
     publisher: 'NativeCode',
+    category: 'technology',
     alternates: {
         canonical: '/',
+    },
+    formatDetection: {
+        telephone: false,
+        email: false,
+        address: false,
     },
     robots: {
         index: true,
@@ -74,62 +86,99 @@ export const metadata = {
             'max-snippet': -1,
         },
     },
-    icons: {
-        icon: '/logos/solologonc.PNG',
-        shortcut: '/logos/solologonc.PNG',
-        apple: '/logos/solologonc.PNG',
+    appleWebApp: {
+        title: 'NativeCode',
+        statusBarStyle: 'black-translucent',
     },
     openGraph: {
         type: 'website',
         locale: 'es_CL',
         url: '/',
         siteName: 'NativeCode',
-        title: 'NativeCode | Software para Sistemas de Salud',
-        description: 'Diseñamos y construimos la infraestructura de software que hace funcionar a clínicas y centros de salud: agendamiento, fichas clínicas, cobros y automatización de procesos, con estándares de ingeniería internacionales.',
-        images: [
-            {
-                url: '/logos/logo-native-new.png',
-                width: 1024,
-                height: 1024,
-                alt: 'NativeCode — Ingeniería de Software para Sistemas de Salud',
-            },
-        ],
+        title: siteTitle,
+        description: siteDescription,
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'NativeCode | Software para Sistemas de Salud',
-        description: 'Diseñamos y construimos la infraestructura de software que hace funcionar a clínicas y centros de salud: agendamiento, fichas clínicas, cobros y automatización de procesos, con estándares de ingeniería internacionales.',
-        images: ['/logos/logo-native-new.png'],
+        title: siteTitle,
+        description: siteDescription,
     },
 };
 
 export const viewport = {
     themeColor: '#000000',
+    colorScheme: 'dark',
 };
 
-const organizationJsonLd = {
+const servicio = (name, description) => ({
+    '@type': 'Offer',
+    itemOffered: { '@type': 'Service', name, description, provider: { '@id': `${siteUrl}/#organization` } },
+});
+
+const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'NativeCode',
-    alternateName: 'NativeCode.cl',
-    url: siteUrl,
-    logo: `${siteUrl}/logos/logo-native-new.png`,
-    description: 'Empresa de ingeniería de software especializada en la automatización de sistemas de salud: agendamiento clínico, fichas médicas digitales y cobros para clínicas y centros de salud.',
-    email: 'ingenieria.software@nativecode.cl',
-    telephone: '+56932912943',
-    address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'Santiago',
-        addressCountry: 'CL',
-    },
-    areaServed: 'CL',
-    knowsAbout: [
-        'Software para clínicas',
-        'Automatización de sistemas de salud',
-        'Agendamiento médico',
-        'Fichas clínicas digitales',
-        'Arquitectura de software',
-        'Infraestructura cloud',
+    '@graph': [
+        {
+            '@type': ['Organization', 'ProfessionalService'],
+            '@id': `${siteUrl}/#organization`,
+            name: 'NativeCode',
+            alternateName: ['NativeCode.cl', 'NativeCode SpA'],
+            url: siteUrl,
+            logo: {
+                '@type': 'ImageObject',
+                url: `${siteUrl}/brand/icon-512.png`,
+                width: 512,
+                height: 512,
+            },
+            image: `${siteUrl}/opengraph-image`,
+            description: siteDescription,
+            email: 'ingenieria.software@nativecode.cl',
+            telephone: '+56932912943',
+            address: {
+                '@type': 'PostalAddress',
+                addressLocality: 'Santiago',
+                addressRegion: 'Región Metropolitana',
+                addressCountry: 'CL',
+            },
+            areaServed: { '@type': 'Country', name: 'Chile' },
+            contactPoint: {
+                '@type': 'ContactPoint',
+                contactType: 'sales',
+                telephone: '+56932912943',
+                email: 'ingenieria.software@nativecode.cl',
+                areaServed: 'CL',
+                availableLanguage: ['Spanish'],
+            },
+            knowsAbout: [
+                'Desarrollo web a medida',
+                'Diseño web',
+                'Comercio electrónico',
+                'Desarrollo de software',
+                'Software para clínicas',
+                'Agendamiento médico',
+                'Control de calidad de laboratorio clínico',
+            ],
+            hasOfferCatalog: {
+                '@type': 'OfferCatalog',
+                name: 'Servicios de NativeCode',
+                itemListElement: [
+                    servicio('Web a Medida', 'Diseño y desarrollo de sitios web exclusivos, sin plantillas.'),
+                    servicio('Web Corporativa', 'Sitios corporativos sólidos y preparados para crecer.'),
+                    servicio('Tienda Online', 'E-commerce con catálogo, variantes, ofertas, carrito y checkout.'),
+                    servicio('Agenda Clínica', 'Plataforma de gestión clínica y agendamiento para centros de salud.'),
+                    servicio('LeveyQC', 'Control de calidad interno para laboratorios clínicos.'),
+                ],
+            },
+        },
+        {
+            '@type': 'WebSite',
+            '@id': `${siteUrl}/#website`,
+            url: siteUrl,
+            name: 'NativeCode',
+            description: siteDescription,
+            inLanguage: 'es-CL',
+            publisher: { '@id': `${siteUrl}/#organization` },
+        },
     ],
 };
 
@@ -165,13 +214,13 @@ export default function RootLayout({
     children,
 }) {
     return (
-        <html lang="es" className="dark scroll-smooth">
+        <html lang="es-CL" className="dark scroll-smooth">
             <body
                 className={`${geistSans.variable} ${geistMono.variable} ${archivo.variable} ${michroma.variable} ${sawah.variable} antialiased bg-black text-white selection:bg-white selection:text-black`}
             >
                 <script
                     type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
                 />
                 <Navbar />
                 {children}

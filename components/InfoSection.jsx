@@ -97,7 +97,7 @@ export default function InfoSection() {
                         transition={{ duration: 0.65 }}
                         className="max-w-2xl"
                     >
-                        <h2 className="flex items-center gap-4 font-display text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl">
+                        <h2 className="flex items-center gap-4 font-sans text-4xl font-normal leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-[3.5rem]">
                             LeveyQC
                             <span className="relative block size-16 shrink-0 sm:size-20">
                                 <Image
@@ -123,7 +123,7 @@ export default function InfoSection() {
                             </p>
                         </div>
 
-                        <p className="mt-8 max-w-xl font-display text-lg leading-8 text-white">
+                        <p className="mt-8 max-w-xl font-sans text-lg leading-8 text-white">
                             ¿Tu laboratorio todavía depende de planillas, cálculos manuales o registros dispersos?
                         </p>
 
@@ -246,7 +246,7 @@ export default function InfoSection() {
 
                 <div className="mt-20 grid gap-10 border-t border-white/10 pt-12 lg:grid-cols-[0.7fr_1.3fr] lg:gap-16">
                     <div className="max-w-md">
-                        <p className="font-display text-2xl leading-9 text-white sm:text-3xl">
+                        <p className="font-sans text-2xl font-normal leading-9 tracking-tight text-white sm:text-3xl">
                             Más que generar gráficos.
                         </p>
                         <p className="mt-4 text-base leading-7 text-zinc-400">

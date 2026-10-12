@@ -46,13 +46,13 @@ export default function FeatureGrid() {
                 className="pointer-events-none absolute inset-0 opacity-35"
             />
             <div className="relative z-10 mx-auto w-full max-w-7xl px-6 py-20 sm:py-24 lg:py-28">
-                <div className="grid items-center gap-14 lg:grid-cols-[minmax(0,0.95fr)_minmax(32rem,1.05fr)] lg:gap-16">
+                <div className="grid items-center gap-14 lg:grid-cols-[minmax(32rem,1.05fr)_minmax(0,0.95fr)] lg:gap-16">
                     <div className="max-w-2xl">
-                        <h2 className="font-display text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl">
+                        <h2 className="font-sans text-4xl font-normal leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-[3.5rem]">
                             Agenda Clínica
                         </h2>
 
-                        <p className="mt-5 max-w-xl text-xl leading-8 text-zinc-100 sm:text-2xl">
+                        <p className="mt-5 max-w-xl font-sans text-xl leading-8 text-zinc-100 sm:text-2xl">
                             Gestión clínica y administrativa en una sola plataforma.
                         </p>
 
@@ -90,7 +90,7 @@ export default function FeatureGrid() {
                         </div>
                     </div>
 
-                    <div className="relative isolate min-h-72 overflow-hidden sm:min-h-96 lg:min-h-[30rem]">
+                    <div className="relative isolate min-h-72 overflow-hidden sm:min-h-96 lg:order-first lg:min-h-[30rem]">
                         <Image
                             src="/aclogo.png"
                             alt="Logo de Agenda Clínica"
