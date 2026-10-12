@@ -22,7 +22,7 @@ export default function SobreNosotrosContent() {
                         transition={{ delay: 0.1 }}
                         className="text-xl text-zinc-400 max-w-3xl font-light leading-relaxed"
                     >
-                        Somos NativeCode, una empresa de desarrollo de software a medida. Creamos e-commerce de alto rendimiento, landing pages, portales e integraciones, con especialización en plataformas para salud.
+                        Somos una empresa de ingeniería de software especializada en sistemas de salud, enfocada en construir el futuro digital de Chile y el mundo.
                     </motion.p>
                 </header>
 
@@ -37,10 +37,10 @@ export default function SobreNosotrosContent() {
                         <h2 className="text-sm font-mono text-zinc-500 uppercase tracking-[0.3em]">Nuestra Misión</h2>
                         <div className="space-y-4">
                             <p className="text-2xl font-light leading-relaxed text-white">
-                                Transformar procesos complejos en soluciones digitales que ayuden a las empresas a vender, operar y crecer. Construimos cada proyecto alrededor de sus usuarios y necesidades reales.
+                                Democratizar el acceso a la tecnología de punta, creando herramientas que permitan a clínicas, centros de salud y empresas competir en un mercado global cada vez más complejo.
                             </p>
                             <p className="text-zinc-400 leading-relaxed font-light">
-                                Junto al desarrollo a medida, creamos productos propios por suscripción: Agenda Clínica para la gestión de centros de salud y LeveyQC para el control de calidad analítica en laboratorios.
+                                Creemos que el código no es solo una herramienta, sino un arte que, cuando se ejecuta con precisión, tiene el poder de transformar industrias y mejorar vidas.
                             </p>
                         </div>
                     </motion.section>

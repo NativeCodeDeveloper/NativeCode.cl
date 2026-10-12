@@ -1,8 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, Code2, Package } from "lucide-react";
 import { HeroSplineBackground } from "@/components/ui/galaxy-interactive-hero-section";
 
 const reveal = {
@@ -27,46 +27,49 @@ export default function Hero() {
                 transition={{ staggerChildren: 0.14, delayChildren: 0.1 }}
                 className="pointer-events-none relative z-20 mx-auto flex min-h-[100svh] w-full max-w-[1920px] items-center px-6 pb-14 pt-28 sm:px-10 md:px-16 lg:px-[5.75vw] lg:pb-24 lg:pt-32"
             >
-                <div className="w-full max-w-[1320px] lg:translate-y-4">
+                <div className="w-full max-w-[980px] lg:translate-y-4">
                     <motion.h1
                         variants={reveal}
-                        transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
-                        className="text-5xl leading-[1.05] font-bold tracking-tight sm:text-6xl lg:text-7xl xl:text-[5.25rem]"
+                        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                        className="relative aspect-[28/5] w-full max-w-[840px] overflow-hidden"
                     >
-                        Soluciones de Software
-                        <span className="block font-light text-white/90">Empresariales</span>
+                        <span className="sr-only">NativeCode</span>
+                        <Image
+                            src="/logo3.png"
+                            alt="NativeCode"
+                            fill
+                            sizes="(min-width: 1024px) 840px, calc(100vw - 48px)"
+                            className="scale-[1.18] object-cover object-center"
+                            priority
+                        />
                     </motion.h1>
 
                     <motion.p
                         variants={reveal}
                         transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
-                        className="mt-8 max-w-2xl text-lg leading-relaxed text-zinc-400 sm:text-xl"
+                        className="mt-7 max-w-3xl text-base leading-8 text-zinc-300 drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)] sm:text-lg lg:text-xl lg:leading-9"
                     >
-                        Creamos plataformas especializadas que ordenan procesos,
-                        fortalecen la gestión y simplifican el trabajo de tu empresa.
+                        Creamos plataformas especializadas que ordenan procesos, fortalecen la gestión clínica y simplifican el trabajo de profesionales, centros de salud y laboratorios.
                     </motion.p>
 
                     <motion.div
                         variants={reveal}
                         transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
-                        className="pointer-events-auto mt-12 flex flex-col items-start gap-4 sm:flex-row sm:items-center"
+                        className="pointer-events-auto mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center"
                     >
                         <Link
-                            href="/servicios"
-                            className="inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-medium text-black transition-colors hover:bg-zinc-200"
+                            href="#soluciones"
+                            className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-4 text-sm font-medium text-black transition-colors hover:bg-zinc-200"
                         >
-                            <Code2 aria-hidden="true" className="h-5 w-5" />
-                            Desarrollo a medida
-                            <ArrowRight aria-hidden="true" className="h-5 w-5" />
+                            Conoce nuestras soluciones
+                            <span aria-hidden="true" className="text-base leading-none">↓</span>
                         </Link>
 
                         <Link
-                            href="/proyectos"
-                            className="inline-flex items-center gap-3 rounded-full border border-white/20 bg-black/20 px-8 py-4 text-sm font-medium text-zinc-200 backdrop-blur-sm transition-colors hover:border-white/40 hover:bg-white/5"
+                            href="#nativecode"
+                            className="rounded-full border border-white/20 bg-black/20 px-7 py-4 text-sm font-medium text-zinc-200 backdrop-blur-sm transition-colors hover:border-white/40 hover:bg-white/5"
                         >
-                            <Package aria-hidden="true" className="h-5 w-5" />
-                            Productos mensuales
-                            <ArrowRight aria-hidden="true" className="h-5 w-5" />
+                            Descubre NativeCode
                         </Link>
                     </motion.div>
                 </div>

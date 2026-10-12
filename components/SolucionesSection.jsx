@@ -4,19 +4,18 @@ import { InteractiveNebulaOrb } from "@/components/InteractiveNebulaOrb";
 export default function SolucionesSection() {
     return (
         <section
-            id="productos"
+            id="soluciones"
             className="relative scroll-mt-24 overflow-hidden border-b border-white/10 bg-black"
         >
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(109,40,217,0.14),transparent_38%),radial-gradient(circle_at_85%_65%,rgba(37,99,235,0.09),transparent_28%)]" />
 
             <div className="relative mx-auto w-full max-w-7xl px-6 py-20 sm:py-24 lg:px-8 lg:py-28">
                 <div className="mx-auto max-w-3xl text-center">
-                    <p className="mb-5 text-xs font-medium uppercase tracking-[0.2em] text-violet-300">Productos propios · Por suscripción</p>
                     <h2 className="font-display text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
-                        Software especializado para tu día a día.
+                        Soluciones creadas para problemas reales de salud
                     </h2>
                     <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-zinc-400 sm:text-lg">
-                        Además del desarrollo a medida, ofrecemos Agenda Clínica y LeveyQC por suscripción: dos soluciones especializadas para centros de salud y laboratorios. Cortex AI complementa Agenda Clínica.
+                        Tres plataformas especializadas para organizar la gestión clínica, fortalecer la calidad analítica y simplificar el trabajo diario.
                     </p>
                 </div>
 
@@ -37,7 +36,7 @@ export default function SolucionesSection() {
                             />
                         </div>
                         <h3 className="mt-5 font-display text-2xl font-semibold tracking-tight text-white">Agenda Clínica</h3>
-                        <p className="mt-3 text-sm text-zinc-400">Gestión clínica integral · Por suscripción</p>
+                        <p className="mt-3 text-sm text-zinc-500">Gestión clínica integral</p>
                         <span className="mt-6 font-michroma text-[8px] uppercase tracking-[0.2em] text-zinc-500 transition-colors group-hover:text-fuchsia-300">
                             Conocer solución ↘
                         </span>
@@ -59,7 +58,7 @@ export default function SolucionesSection() {
                             />
                         </div>
                         <h3 className="mt-5 font-display text-2xl font-semibold tracking-tight text-white">LeveyQC</h3>
-                        <p className="mt-3 text-sm text-zinc-400">Calidad analítica · Por suscripción</p>
+                        <p className="mt-3 text-sm text-zinc-500">Control de calidad analítica</p>
                         <span className="mt-6 font-michroma text-[8px] uppercase tracking-[0.2em] text-zinc-500 transition-colors group-hover:text-violet-300">
                             Conocer solución ↘
                         </span>
@@ -75,7 +74,7 @@ export default function SolucionesSection() {
                             <InteractiveNebulaOrb className="size-24" />
                         </div>
                         <h3 className="mt-5 font-display text-2xl font-semibold tracking-tight text-white">Cortex A.I.</h3>
-                        <p className="mt-3 text-sm text-zinc-400">Complemento de Agenda Clínica · Próximamente</p>
+                        <p className="mt-3 text-sm text-zinc-500">Inteligencia clínica integrada</p>
                         <span className="mt-6 font-michroma text-[8px] uppercase tracking-[0.2em] text-zinc-500 transition-colors group-hover:text-sky-300">
                             Conocer solución ↘
                         </span>

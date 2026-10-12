@@ -1,22 +1,22 @@
 import ServiciosContent from "./ServiciosContent";
 
 export const metadata = {
-    title: "Desarrollo a Medida e Integraciones",
+    title: "Servicios de Software para Clínicas y Centros de Salud",
     description:
-        "E-commerce de alto rendimiento, landing pages, portales y plataformas para salud. Integraciones con SII, WhatsApp, Gmail, pasarelas de pago e interoperabilidad HL7.",
+        "Agendamiento clínico, infraestructura cloud, arquitectura de software y seguridad alineada a la Ley 19.628. Ingeniería de software especializada en sistemas de salud.",
     alternates: {
         canonical: "/servicios",
     },
     openGraph: {
-        title: "Desarrollo a Medida e Integraciones | NativeCode",
+        title: "Servicios de Software para Clínicas y Centros de Salud | NativeCode",
         description:
-            "E-commerce, landing pages y plataformas especializadas. Conectamos tu operación con SII, WhatsApp, Gmail, pagos e interoperabilidad HL7.",
+            "Agendamiento clínico, infraestructura cloud, arquitectura de software y seguridad alineada a la Ley 19.628 de Protección de Datos Personales.",
         url: "/servicios",
     },
     twitter: {
-        title: "Desarrollo a Medida e Integraciones | NativeCode",
+        title: "Servicios de Software para Clínicas y Centros de Salud | NativeCode",
         description:
-            "E-commerce, landing pages y plataformas especializadas. Conectamos tu operación con SII, WhatsApp, Gmail, pagos e interoperabilidad HL7.",
+            "Agendamiento clínico, infraestructura cloud, arquitectura de software y seguridad alineada a la Ley 19.628 de Protección de Datos Personales.",
     },
 };
 
