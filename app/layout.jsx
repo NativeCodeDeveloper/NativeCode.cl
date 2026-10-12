@@ -1,5 +1,7 @@
 import { Geist, Geist_Mono, Archivo, Michroma } from 'next/font/google';
 import localFont from 'next/font/local';
+import { GoogleAnalytics } from '@next/third-parties/google';
+import AnalyticsEvents from '@/components/AnalyticsEvents';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import './globals.css';
@@ -9,6 +11,8 @@ import './globals.css';
 // ==========================
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://nativecode.cl';
+const gaId = process.env.NEXT_PUBLIC_GA_ID || 'G-EQBV3P2PFX';
+const isProduction = process.env.NODE_ENV === 'production';
 
 const siteTitle = 'NativeCode | Desarrollo Web, Tiendas Online y Software de Salud';
 const siteDescription =
@@ -225,7 +229,9 @@ export default function RootLayout({
                 <Navbar />
                 {children}
                 <Footer />
+                <AnalyticsEvents />
             </body>
+            {isProduction && <GoogleAnalytics gaId={gaId} />}
         </html>
     );
 }
